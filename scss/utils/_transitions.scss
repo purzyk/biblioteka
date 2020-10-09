@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains all transitions
+// -----------------------------------------------------------------------------
+
+.home{
+	.content-area{
+		article{
+		}
+		article:hover{
+			img{
+				transform: scale(1.03);
+				opacity:0.8;
+			}
+		}
+		img{
+			transition: all 1s ease-in-out;
+			&:hover{
+				transform: scale(1.03);
+				opacity:0.8;
+			}
+		}
+	}
+}
+
+
+.single-zdjecia, .powiazania, .top_articles, .archive_post, .autorzy_lista{
+	img{
+		transition: all 1s ease-in-out;
+		&:hover{
+				transform: scale(1.03);
+				opacity:0.8;
+			}
+	}
+}
+.archive_post{
+
+}
+
+.slide{
+	img{
+		&:hover{
+			transform: scale(1);
+				opacity:1;
+		}
+	}
+}
+.wiecej a, .do_gory a, .poprzedni, .nastepny, .autorzy_wiecej{
+	transition: all .1s ease-in-out;
+}
+.wiecej a:hover, .do_gory a:hover, .poprzedni:hover, .nastepny:hover, .autorzy_wiecej:hover{
+	background:#000!important;
+	color:#fff!important;
+	text-decoration: none;
+}

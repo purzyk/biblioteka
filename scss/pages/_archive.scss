@@ -1,0 +1,1200 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the archive page.
+// -----------------------------------------------------------------------------
+.archive .main, .page .main, .search .main{
+    position: relative;
+}
+.archive #top_links, .page #top_links{
+    background-color: #787878!important;
+}
+
+.archive #content, .page #content{
+	padding:0px;
+	margin-top:0px;
+	@include container(100%);
+    @include breakpoint($xl-large){
+        @include container(1425px); 
+    }
+}
+.archive, .page, .search{
+	#main .archive_left{
+        @include span(full);
+@include breakpoint($medium){
+		@include span (2 of 12 wide);
+        padding-left: 10px;
+    }
+    @include breakpoint($large){
+        @include span (2 of 12 wide);
+        padding-left:20px;
+    }
+     @include breakpoint($large85){
+        @include span (2 of 12 wide);
+        padding-left:30px;
+    }
+    @include breakpoint($xl-large){
+        @include span (2 of 12 wide);
+        padding-left:inherit;
+    }
+        float: left;
+        margin-right: 0;
+        text-align: center;
+        img{
+           width: 100%;
+           height: auto;
+       }
+       h4{
+           display:block;
+           border-bottom:1px solid #000;
+           position: relative;
+           @include font-size(16px);
+           span{
+              background: #fff;
+              top:9px;
+              padding:0 14px;
+              text-transform: uppercase;
+              position: relative;
+              font-family: "Lato", "Arial", sans-serif;
+
+          }
+      }
+  }
+  #main .archive_right{
+    /*padding-left: 42px;*/
+    @include span(full);
+@include breakpoint($medium){
+    @include span (9 of 12 last);
+}
+@include breakpoint($large){
+    padding-right: 50px;
+}
+@include breakpoint($large85){
+    padding-right: 20px;
+}
+@include breakpoint($xl-large){
+    padding-right: inherit;
+}
+    background-color:#f0f2f2;
+    @include prefix (1 of 12);
+}
+.side_logo{
+    margin-top:76px;
+    margin-bottom: 60px;
+    display: block;
+    img{
+        max-width: 263px;
+        @include breakpoint($medium){
+             max-width:inherit;
+        }
+    }
+}
+h4.premiera{
+    margin-bottom: 40px;
+}
+a.premiera_ksiazka{
+    display: block;
+    margin-bottom: 50px;
+}
+#menu-sidebar_categories{
+    margin:30px 0 46px 0px;
+    text-align: left;
+    float: left;
+    width:100%;
+    li{
+        position: relative;
+        padding-left: 60px;
+        margin-bottom: 6px;
+        padding-top:2px;
+        padding-bottom:2px;        
+         width:100%;
+        ul.sub-menu{
+            width:240px;
+            display:none;
+            margin:0;
+            position: absolute;
+            right:-240px;
+            top:-2px;
+
+            li{
+                background: none;
+                width: 100%;
+                border:2px solid #c6c6c6;
+                text-align: center;
+                padding-left:0px;
+                margin-bottom:-2px;
+                padding-top:0px;
+                padding-bottom:0px;
+
+
+                a{
+                    font-family: "Lato", "Arial", sans-serif;
+                    @include font-size(14px);
+                    color:#000;
+                     background:none;
+                     padding-left:0px;
+                     span{
+                        padding-right:0px;
+                        background: none;
+                     }
+                    &:hover{
+                        color:$yellow;
+                        font-weight: normal;
+                    }
+
+                }
+            }
+        }
+
+        a{
+                    background: url(../img/top_menu_yellow_big.png) left 2px;
+        background-repeat: no-repeat;
+        padding-left: 13px;
+            color: #000;
+            font-family: "Lato", "Arial", sans-serif;
+            text-transform: uppercase;
+            @include font-size(16px);
+            span{
+                background: url(../img/addow_down.png) right center;
+        background-repeat: no-repeat;
+        padding-right: 17px;
+            }
+        }
+        &:hover {
+            border:2px solid #c6c6c6;
+             padding-top:0px;
+        padding-bottom:0px;    
+                -webkit-box-shadow: 0px 23px 15px -23px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 23px 15px -23px rgba(0,0,0,0.75);
+box-shadow: 0px 23px 15px -23px rgba(0,0,0,0.75);
+
+
+            a{
+                text-decoration: none;
+                span{
+                background: url(../img/arrow_right_ywllow.png) right center;
+        background-repeat: no-repeat;
+        padding-right: 17px;
+            }
+
+            }
+            ul.sub-menu{
+                -webkit-box-shadow: 0px 23px 15px -23px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 23px 15px -23px rgba(0,0,0,0.75);
+box-shadow: 0px 23px 15px -23px rgba(0,0,0,0.75);
+                display:block;
+                li{ background-color:#fff;
+
+                 a{
+                    font-weight: normal;
+                    &:hover{
+                 }
+             }
+         }
+     }
+
+ }
+
+}
+
+}
+.rankingi_ul{
+    margin:43px 0;
+    li{
+        text-align: left;
+        background: url(../img/top_menu_yellow_big.png) left 6px;
+        background-repeat: no-repeat;
+        padding-left: 13px;
+        a{
+            color: #000;
+            font-family: "Lato", "Arial", sans-serif;
+            text-transform: uppercase;
+            @include font-size(16px);
+            font-weight: 500;
+
+            &:hover{
+                color:$yellow;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+h4.empty{
+    margin:0 0 30px 0;
+}
+.widget_tag_cloud {
+    list-style: none;
+    h3{
+        display:none;
+    }
+    .tagcloud{
+        display: block;
+        float: left;
+        margin-top:38px;
+        a{
+            text-transform: uppercase;
+            border:1px solid #b8b8b8;
+            color:#b8b8b8;
+            float:left;
+            font-size:12px!important;
+            padding:5px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 14px;
+        }
+    }
+}
+h4.szukaj_h4{
+    margin-bottom:26px;
+}
+#searchform_sidebar, #searchform_sidebar2{
+    float: left;
+    margin-bottom: 45px;
+    width: 100%;
+    position: relative;
+}
+input#searchsubmit_sidebar {
+    background: url(../img/arrow_right_search_sidebar.png) center center;
+    width:42px;
+    height:42px;
+    background-size: 11px 25px;
+    background-repeat: no-repeat;
+    border-radius: 0px;
+    box-shadow:none;
+    text-indent: 19999px;
+    float:left;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border:0px;
+    border-left:2px solid #c6c6c6;
+
+}
+input#s{
+    float:left;
+    border:2px solid #c6c6c6;
+    border-radius: 0px;
+    padding:8px;
+    width: 100%;
+
+}
+article.archive_post{
+}
+.archive_post {
+    background-color:#ffffff;
+    margin-bottom:50px;
+    padding-bottom:2px;
+    h4{
+        font-family: 'TungstenSemibold';
+        font-size: 60px;
+        font-size: 3.75rem;
+        line-height: 60px;
+        text-align: center;
+        margin:40px 0 30px 0;
+        padding:0 25px;
+    }
+    .archive_meta{
+        text-align: center;
+
+        margin-bottom: 40px;
+        span{
+            color:#898989;
+            font-family: "Lato", "Arial", sans-serif;
+            @include font-size(14px);
+        }
+        .archive_category{
+            margin:0 16px;
+            .big{
+            text-transform: uppercase;
+            color:$yellow;
+        }
+        }
+        .archive_category,.archive_name{
+            text-transform: capitalize;
+        }
+        .big{
+            text-transform: uppercase;
+        }
+
+    }
+    p{
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        @include font-size(19px);
+        line-height:28px;
+        text-align: center;
+        padding:0 20px;
+        text-transform: none;
+
+    }
+    .wiecej{
+        display: block;
+        text-align: center;
+        margin:38px 0;
+        a{
+            color:#898989;
+            font-family: "Lato", "Arial", sans-serif;
+            @include font-size(14px);
+            padding:5px 15px;
+            border:1px solid #898989;
+        }
+    }
+
+
+}
+
+
+text-transform: uppercase;
+}
+.alm-listing{
+    float: left;
+}
+.alm-btn-wrap{
+    float: left;
+}
+
+
+.top_articles article{
+
+}
+
+
+.top_articles{
+
+    article{
+        position: relative;
+        margin-right: 10px;
+    }
+    
+    .reveal{
+        padding:0;
+        margin:0;
+        text-align:right;
+        right:10px;
+        bottom:10px;
+        top:auto;
+        left:auto;
+        border:none!important;
+        position:absolute;
+         text-shadow: rgba(0,0,0,.75) 1px 1px 1px;
+        h4{
+            @include font-size(29px);
+            text-align: right;
+        }
+        span.category{
+            text-align: right;
+        }
+    }
+}
+
+
+.top_articles .reveal span.category {
+    display: block;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color:#ffc807;
+    text-shadow: none;
+}
+
+.top_articles .reveal h5 {
+    font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 20px;
+    margin-bottom: 8px;
+    color:#fff;
+    text-transform: capitalize;
+    display: inline-block;
+    span.nazwisko{
+        text-transform: uppercase;
+    }
+}
+
+.top_articles .typ_small .reveal h4 {
+    font-size: 20px;
+    text-align: right;
+    color:#fff;
+}
+.top_articles{
+    margin-top:40px;
+}
+.top_articles .reveal h4 {
+    font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+    color:#fff;
+    text-transform: uppercase;
+}
+.top_articles .typ_small{
+
+}
+.archwiumtop_carousell{
+
+}
+.archive_breadcrumbs{
+    float: left;
+    margin:55px 0 40px 0;
+    width: 100%;
+    display:block;
+    color: #898989;
+    font-family: "Lato", "Arial", sans-serif;
+    text-transform: uppercase;
+    @include font-size(14px);
+
+}
+.bread_outside{
+    .breadcrumbs{
+     position: relative;
+     top: 5px;
+     background-color: #f0f2f2;
+     display: inline;
+     padding-right: 10px;
+ }
+ position: relative;
+ /*
+ @include span(6 of 8 no-gutter);
+ */
+ @include span (full);
+ border-bottom:1px solid #898989;
+ font-weight: 900;
+ a{
+    font-weight: 500;
+    color: #898989;
+}
+}
+.archive_sort{
+    @include span(2  of 8 wide no-gutter);
+    text-align: right;
+}
+
+select:required:invalid {
+    color: #999;
+}
+option[value=””][disabled] {
+    display: none;
+}
+option {
+    color: #000;
+}
+
+.archive_sort select{
+    width: 162px;
+    font-family: "Lato", "Arial", sans-serif;
+    text-transform: uppercase;
+    @include font-size(14px);
+    color:#898989;
+    text-align: center;
+    border:2px solid #c6c6c6;
+    padding: 4px 0 4px 10px;
+    margin-left: 11px;
+}
+
+
+.alm-btn-wrap {
+    float: left;
+    width: 100%;
+    border-top: 1px solid #6a6a6a;
+    overflow: visible;
+}
+
+button.alm-load-more-btn{   
+    background:#fff!important;
+    font-size:14px!important;
+    font-family: "Lato", "Arial", sans-serif!important;
+    color:#898989!important;
+     border: 1px solid #6a6a6a!important;
+     height:22px!important;
+     line-height: 22px!important;
+     border-radius: 0px;
+     box-shadow: none;
+     position: relative;
+     top:-27px;
+}
+
+.right_bck{
+ background-color: #f0f2f2;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    min-height: 100%;
+    bottom: 0px;
+    z-index: -1;
+   }
+
+   .top_articles, .archive_breadcrumbs{
+    background-color:#f0f2f2;
+   }
+   .top_articles{
+        padding-top: 40px;
+        margin-top:0px;
+   }
+   .archive_breadcrumbs{
+  padding: 55px 0 40px 0;
+  margin:0
+}
+
+
+.autorzy_lista{
+    background: #fff;
+    padding:20px;
+    float: left;
+
+    li{
+        padding-bottom: 29px;   
+        text-align: center;
+        h5{
+        font-family: 'TungstenMedium';
+        font-size: 24px;
+        text-transform: capitalize;           
+
+        }
+        a.autorzy_wiecej{
+                background: white;
+    border: 1px solid #898989;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 14px;
+    color: #898989;
+    text-transform: uppercase;
+    padding: 5px 15px 6px 15px;
+    top: 0px;
+    position: relative;
+        }
+
+    }
+}
+
+.tax-autor{
+    .o_autorze_left{
+        @include span (2 of 8);
+    }
+    .o_autorze_right{
+       @include span (6 of 8 last); 
+    }
+    .przystan_o_autorze{
+        padding:30px 20px;
+        background-color: white;
+    }
+    .o_autorze_bio{
+        font-size: 14px !important;
+    }
+    .listCat{
+        position: relative;
+    }
+}
+
+
+.page-template-page-indeks {
+    padding-top:40px;
+    .zasob{
+        border-bottom: 1px solid black;
+        padding-bottom:30px;
+        margin-bottom:24px;
+            display: block;
+    float: left;
+    width: 100%;
+        .data_zasoby{
+            @include span (1 of 8);
+            font-family: "Lato", "Arial", sans-serif;
+            font-size: 14px!important;
+            color:#898989;
+        }
+        .content_zasoby{
+             .tax-title{
+                display: block;
+                font-family: 'TungstenSemibold';
+        font-size: 20px;
+        color:#010000;
+        a{
+            color:#010000;
+        }
+            }
+            @include span (7 of 8 last);
+            font-family: "Lato", "Arial", sans-serif;
+            font-size: 14px!important;
+            color:#898989;
+            a.cat_lin{
+             color:#898989;
+                font-family: "Lato", "Arial", sans-serif;
+            font-size: 14px!important;
+            display: block;
+            b{
+                color:#ffc807;
+                font-weight: bold;
+            }
+           
+            }
+        }
+    }
+    .tytul_ksiazki_autor{
+        display: block;
+        a{
+            font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        font-style: italic;
+            font-size: 18px!important;
+            color:#000000;
+            &:hover{
+                  font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-style: italic;
+            }
+
+        }
+    }
+    a.strona_autora{
+        @include span (2 of 8);
+          font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        @include font-size(18px);
+         background: url(../img/plus.png) left -2px;
+         background-repeat: no-repeat;
+             padding: 3px 0 10px 38px;
+         color:#000;
+
+    }
+    .taby{
+        @include span (6 of 8 last);
+        nav{
+            margin-bottom: 20px;
+            a{
+                font-family: "Lato", "Arial", sans-serif;
+                font-weight: 900;
+                font-size: 14px;
+                color:#000;
+                margin-right: 80px;
+            }
+        }
+    }
+    .tab_content{
+        @include span (full);
+    }
+    display: block;
+    clear: both;
+}
+
+
+.archive_sort{
+    p,form{
+        display: inline-block;
+    }
+}
+
+
+.teksty_autora {
+    padding-top:0;
+    .zasob{
+        border-bottom: 2px solid black;
+        padding-bottom:30px;
+        margin-bottom:24px;
+            display: block;
+    float: left;
+    width: 100%;
+        .data_zasoby{
+            @include span (1 of 8);
+            font-family: "Lato", "Arial", sans-serif;
+            font-size: 14px!important;
+            color:#898989;
+        }
+        .content_zasoby{
+             .tax-title{
+                display: block;
+                font-family: 'TungstenSemibold';
+        font-size: 20px;
+        color:#010000;
+        a{
+            color:#010000;
+        }
+            }
+            @include span (7 of 8 last);
+            font-family: "Lato", "Arial", sans-serif;
+            font-size: 14px!important;
+            color:#898989;
+            a.cat_lin{
+             color:#898989;
+                font-family: "Lato", "Arial", sans-serif;
+            font-size: 14px!important;
+            display: block;
+            b{
+                color:#ffc807;
+                font-weight: bold;
+            }
+           
+            }
+        }
+    }
+    .tytul_ksiazki_autor{
+        display: block;
+        a{
+              font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        font-style: italic;
+            font-size: 18px!important;
+            color:#000000;
+            &:hover{
+                  font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-style: italic;
+            }
+
+        }
+    }
+
+    .taby{
+        @include span (6 of 8 last);
+        nav{
+            margin-bottom: 20px;
+            a{
+                font-family: "Lato", "Arial", sans-serif;
+                font-weight: 900;
+                font-size: 14px;
+                color:#000;
+                margin-right: 80px;
+            }
+        }
+    }
+    .tab_content{
+        @include span (full);
+    }
+    display: block;
+    clear: both;
+}
+
+
+.tax-autor .listCat {
+margin-top: 10px;
+
+}
+.listCat {
+
+font-family: 'TungstenMedium';
+@include font-size(15px);
+}
+
+.pagination_links{
+    border-bottom:1px solid #000000;
+    margin-bottom:100px;
+    @include span(full);
+    .pagination{
+        text-align: center;
+        position: relative;
+                top:16px;
+        span{
+            background:#f0f2f2;
+            font-family: "Lato", "Arial", sans-serif;
+            @include font-size(20px);
+            color:#000000;
+            padding:0 10px;
+            span{
+                color:#979797;
+                padding:0;
+            }
+            div.next{
+                position: relative;
+                top:8px;
+                display:inline-block;
+                background: url('../img/pagination_left_grey.png') center center no-repeat;
+                &:hover{
+                   background: url('../img/pagination_left_black.png') center center no-repeat;
+                }
+                width:16px;
+                height: 34px;
+            }
+             div.prev{
+                position: relative;
+                top:8px;
+                display:inline-block;
+                background: url('../img/pagination_lright_grey.png') center center no-repeat;
+                &:hover{
+                   background: url('../img/pagination_lright_black.png') center center no-repeat;
+                }
+                width:16px;
+                height: 34px;
+            }
+
+        }
+    }
+}
+
+
+span.tytul_cyklu{
+    font-family: 'TungstenMedium';
+    @include font-size(24px);
+    text-align: center;
+    display: block;
+    margin-top:50px;
+    margin-bottom:3px;
+}
+.post-type-archive-felietony h4{
+    margin-top:0!important;
+    margin-bottom:10px!important;
+}
+.post-type-archive-felietony .archive_meta {
+    margin-bottom: 16px!important;
+}
+
+
+.widget_sp_image {
+    h3{
+    display: none;
+}
+list-style: none;
+}
+.sidebar h4.premiera,  .sidebar h4.empty{
+    margin-bottom: 40px!important;
+}
+
+span.kategoria_debaty{
+ font-family: 'TungstenSemibold';
+ @include font-size(24px);
+ text-align: center;
+ display: block;
+ padding-top:40px;  
+ a{
+    color:#000;
+    &:hover, &:active,&:focus, &:visited{
+       color:#000; 
+    }
+ }
+
+}
+.post-type-archive-debaty h4, .post-type-archive-felietony h4{
+    margin-top:10px!important;
+    margin-bottom:15px!important;
+}
+
+.tax-cykle-nazwy{
+    .site-content{
+        margin-top: -270px!important;
+    }
+}
+
+
+.post-type-archive-felieton{
+    .top_articles .reveal h5{
+        text-transform: none;
+    }
+    .reveal{
+        h5{
+            text-transform: uppercase;
+            span{
+                text-transform: none;
+            }
+        }
+    }
+}
+.post-type-archive-felietony{
+    .top_articles .typ_small .reveal h4{
+        margin:0!important;
+        line-height: 22px!important;
+    }
+    h5{
+        text-transform:uppercase;
+        span{
+            text-transform: capitalize;
+        }
+    }
+}
+
+.post-type-archive{
+    .master_slider{
+        display:none;
+    }
+}
+.zdjecia_przed{
+    width: 100%;
+    height: 45px;
+     background:#000 url(../img/klisza.png) center center no-repeat;
+}
+.zdjecia_po{
+    width: 100%;
+    height: 45px;
+     background:#000 url(../img/klisza.png) center center no-repeat;
+     clear:both;
+     position: relative;
+     top:-30px;
+}
+
+
+
+.tax-autor{
+    .master_slider{
+        display: none;
+    }
+}
+
+.search{
+    .master_slider{
+    display:none;
+}
+    .site-content{
+margin-top:0;
+padding-top: 0;
+    }
+    header.site-header{
+        display:none;
+    }
+    #content{
+        padding-top:0;
+    }
+} 
+
+
+.szukaj2{
+    article{
+        padding:25px 0!important;
+        border-bottom:1px solid black;
+        margin:0!important;
+    }
+    a{
+        color:#000;
+        &:visited, &:hover{
+           color:#000; 
+        }
+        text-align: left;
+    }
+    background-color: #fff;
+    text-align: left;
+    padding:28px 97px;
+    h4{
+padding:0!important;
+margin:0!important;
+text-align: left!important;
+font-size:30px!important;
+    }
+    p{
+padding:0!important;
+margin:0!important;
+text-align: left!important;
+font-size:18px!important;
+    }
+   
+}
+.search{
+     #searchform_sidebar2{
+        max-width: 240px;
+        margin-bottom:30px;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+h5.search-title{
+ font-family: "Lato", "Arial", sans-serif;
+ font-size:14px;
+ color:#898989;
+ span{
+    color:#000000;
+ }   
+}
+
+
+.tax-wywiady-kategorie, .tax-dzwieki-kategorie, .tax-ksiazki-kategorie, .tax-nagrania-kategorie, .tax-recenzje-kategorie, .tax-utwory-kategorie, .tax-zdjecia-kategorie, .tax-cykle-kategorie, .tax-debaty-kategorie, .tax-felietony-kategorie {
+    .master_slider{
+        display:none;
+    }
+}
+.tax-wywiady-kategorie, .post-type-archive-wywiady,
+.tax-recenzje-kategorie, .post-type-archive-recenzje,
+.tax-ksiazki-kategorie, .post-type-archive-ksiazki,
+.tax-utwory-kategorie, .post-type-archive-utwory,
+.tax-debaty-kategorie, .post-type-archive-debaty,
+.tax-dzwieki-kategorie, .post-type-archive-dzwieki,
+.tax-felietony-kategorie, .post-type-archive-felietony,
+.tax-nagrania-kategorie, .post-type-archive-nagrania,
+.tax-zdjecia-kategorie, .post-type-archive-zdjecia, {
+    .post_auth{
+        display:none!important;
+    }
+}
+
+
+.felietony_cont{
+    article{
+        @include span(full);
+        @include breakpoint($medium){
+             @include gallery (6 of 12);
+        }
+        @include breakpoint($large){
+             @include gallery (4 of 12);
+        }
+       
+    }
+}
+
+
+
+/** kartoteka */
+
+.filters{
+    @include span(full);
+    .filter{
+        display: inline-block;
+        cursor: pointer;
+        font-family: "Lato", "Arial", sans-serif;
+        @include font-size(14px);
+        color:#898989;
+        margin-right: 4px;
+        &:hover{
+            font-weight: 900;
+        }
+        &.active{
+            font-weight: 900;
+        }
+    }
+}
+input.nazwisko_autora{
+        float: left;
+    border: 2px solid #c6c6c6;
+    border-radius: 0px;
+    padding: 12px;
+    text-align: center;
+    width: 240px;
+        color: #666;
+          font-family: "Lato", "Arial", sans-serif;
+          @include font-size(12px);
+          margin:17px 0 36px 0;
+}
+#users{
+    @include span(full);
+}
+#autorzy_filtr{
+    @include span(full); 
+}
+#autorzy_filtr .mix{
+    width:25%;
+    padding-right: 9px;
+}
+
+.page-template-page-kartoteka{
+    .archive_breadcrumbs {
+    padding: 55px 0 20px 0;
+    margin: 0;
+}
+.autorzy_lista li a.autorzy_wiecej{
+        padding: 3px 15px 3px 15px;
+}
+}
+
+.o_autorze_big{
+    @include span(full);
+    position: relative;
+    .o_autorze_right .o_autorze_bio {
+        padding-bottom:50px;
+    }
+}
+.tax-autor .listCat {
+    margin-top: 10px;
+    position: absolute;
+}
+
+.listCat
+{
+    .counter{
+        margin-right: 3px;
+        &:last-child{
+            margin-right:0;
+        }
+    }
+    @include font-size(18px);
+   a{
+    color:#9f9f9f;
+
+    &:hover{
+         color:#000000;
+    }
+
+    span{
+        color:#000000;
+    }
+} 
+}
+
+
+a.strona_autora{
+
+    text-transform: initial;
+    padding: 7px 0 10px 45px!important;
+}
+.tytul_ksiazki_autor{
+    margin-bottom: 8px;
+}
+.teksty_autora .taby nav a{
+    font-weight: 400;
+}
+.teksty_autora .taby nav a:hover, .teksty_autora .taby nav a.fs-tabs-active{
+    font-weight: 900!important;
+}
+.teksty_autora{
+    #tab-one{
+            padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid black;
+    }
+}
+
+.teksty_autora .taby nav {
+    margin-bottom: 26px;
+}
+.teksty_autora .zasob .data_zasoby{
+    width:100%;
+}
+
+.teksty_autora .zasob .content_zasoby a.cat_lin{
+
+    display:inline-block;
+}
+.teksty_autora .zasob .content_zasoby a.cat_lin.taxon{
+     color: #ffc807;
+     font-weight: bold;
+}
+.auth_name_zasoby{
+    text-transform: capitalize;
+    font-family: "Lato", "Arial", sans-serif;
+          @include font-size(14px);
+    span{
+        text-transform: uppercase;
+    }
+}
+.data_zasoby{
+    padding-bottom:10px;
+}
+.content_zasoby{
+    padding-left: 15px;
+    .category{
+       
+    }
+    .tax-title{
+        margin-top:4px;
+        margin-bottom:8px;
+    }
+}
+
+    a.strona_autora{
+        font-family: "Lato", "Arial", sans-serif;
+          @include font-size(14px);
+         background: url(../img/plus.png) left -2px;
+         background-repeat: no-repeat;
+             padding: 7px 0 10px 38px;
+         color:#000;
+
+    }
+
+.teksty_autora ul.ui-tabs-nav 
+{
+           margin-bottom: 26px;
+        li {
+    display: inline-block;
+    &:first-child{
+            margin-right: 80px;
+    }
+    a{
+                font-family: "Lato", "Arial", sans-serif;
+          @include font-size(14px);
+           color:#000;
+           &:hover{
+            font-weight: 900;
+           }
+    }
+}
+}
+h5.name span{
+    text-transform: uppercase;
+}

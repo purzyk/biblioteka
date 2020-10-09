@@ -1,0 +1,220 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+$susy:(
+	columns: 12,
+	gutters: 1/4
+	);
+
+$off-canvas-width: span(3 wide);
+.transformer {
+
+	transition: transform 0.3s ease;
+	&.is-open {
+		transform: translate3d($off-canvas-width, 0, 0);
+	}
+}
+
+
+.off-canvas {
+	position: absolute;
+	width: 260px;
+	left: -260px;
+	top: 0;
+	bottom: 0;
+}
+.site-content, .inner{
+	@include container();
+	padding:0 8px;
+	@include breakpoint($large){
+		padding:0;
+	}
+	@include breakpoint($medium){
+		@include container(); 
+		padding:0 35px;
+	}
+	@include breakpoint($xl-large){
+		@include container(1425px); 
+	} 
+}
+
+.site-content{
+	background:#fff;
+	margin-top:160px;
+	@include breakpoint($medium){
+		margin-top:240px;
+	}
+	@include breakpoint($xl-large){
+		margin-top:440px;
+	}
+}
+#content{
+	@include breakpoint($medium){
+		/*
+padding:26px 40px 0;
+*/
+padding:26px 10px 0;
+}
+@include breakpoint($xl-large){
+	/*
+	padding:26px 114px 0;
+	*/
+	padding:26px 0 0;
+}
+}
+#page{
+	overflow: hidden;
+}
+.home .site-content, .single .site-content{
+	@include breakpoint($xl-large){	
+		@include container(1645px);
+		padding-left:110px!important;
+		padding-right:110px!important;
+		
+	}
+}
+
+
+article.typ_1{
+	position: relative;
+	a.cat_lin{
+		float: initial;
+	}
+}
+
+.tax-cykle-nazwy div#content{
+	@include breakpoint($xl-large){	
+		max-width: 1645px!important;
+		    padding: 30px 0 0!important;
+    position: relative;
+        padding-left: 110px !important;
+    padding-right: 110px !important;
+	}
+	
+}
+
+.tax-cykle-nazwy{
+
+		.pagination_links .pagination span{
+		background-color: #fff;
+		}
+
+	#main section.single_right{
+		margin-top: 0px!important;
+		article{
+			padding-top:47px;
+			padding-bottom:36px;
+			border-bottom:1px solid black;
+			&:first-child{
+				padding-top:0;
+			}
+			&:last-child{
+				border-bottom:0;
+				border-bottom: 0px;
+			}
+			span.date{
+				 font-family: $lato;
+				 color:#898989;
+				 @include font-size(14px);
+				 text-align: left;
+				 padding-bottom: 30px;
+				 margin-top:0;
+
+			}
+			h4{
+ @include font-size(30px);
+				 color:#010000;
+				 text-transform: uppercase;
+				 
+		    	font-family: 'TungstenSemibold';
+		    	padding-bottom: 45px;
+			}
+			p{
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+ padding-bottom:20px;
+ line-height: 24px;
+ color:#000000;
+ text-transform: none;
+			}
+			span{
+				    display: block;
+    text-align: center;
+    margin: 38px 0 0 0;
+    a{
+    	    color: #898989;
+    font-family: "Lato", "Arial", sans-serif;
+     @include font-size(14px);
+    padding: 5px 15px;
+    border: 1px solid #898989;
+    }
+			}
+		}
+	}
+	.single_left{
+		h1{
+			margin:0;
+			padding:0;
+
+				 @include font-size(60px);
+				 color:#000;
+				 
+		    	font-family: 'TungstenSemibold';
+		    	line-height: 58px;
+		}
+h4{
+	text-transform: none;
+
+	padding:20px 0 56px 0;
+	span{
+		text-transform: uppercase;
+	}
+
+				 @include font-size(30px);
+			}
+		p{
+
+				 @include font-size(16px);
+				 line-height: 24px;
+				        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+				 background: url("../img/ksztat.png") no-repeat right bottom;
+				 padding-bottom:20px;
+				 margin-bottom:80px;
+				 text-transform: none;
+			}
+			img{
+				max-width: 241px;
+			}
+			h6{
+
+				 @include font-size(22px);
+				 text-transform: none;
+			        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+				 span{
+				 	text-transform: uppercase;
+				 }
+			}
+			p.o_autorze_bio{
+
+				 @include font-size(13px);
+				 line-height: 19px;
+				        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+				 background:transparent;
+				 margin-bottom: 0;
+			}
+	}
+}
+
+
+.pagination{
+	a{
+		img{
+			position: relative;
+    top: 8px;
+		}
+		}
+	}

@@ -1,0 +1,739 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the single page.
+// -----------------------------------------------------------------------------
+.single #content{
+	padding:30px 10px 0 10px;
+	@include breakpoint($large85){
+padding:30px 30px 0 30px;
+	}
+	@include breakpoint($xl-large){
+	padding: 30px 0 0;
+}
+
+	position: relative;
+}
+.single, .tax-cykle-nazwy{
+	.logo{
+		@include span(full);
+		text-align: center;
+@include breakpoint($medium){
+		@include span(3 of 12 wider no-gutters);
+		text-align: right;
+	}
+	@include breakpoint($large85){
+
+		@include span(3 of 12 wider no-gutters);
+		margin-left: 0;
+		text-align: right;
+	}
+	@include breakpoint($xl-large){
+		@include span(3 of 12 wider no-gutters);
+		text-align: right;
+	}
+		
+	}
+	.main-links{
+		@include span(full);
+@include breakpoint($medium){
+		@include span(8 of 12 no-gutters last);
+	}
+		text-align: right;
+		margin-top: 18px;
+		@include breakpoint($medium){
+	margin-top: -9px;
+		}
+		@include breakpoint($large){
+	margin-top: 18px;
+		}
+		
+		
+		
+	}
+	.content-area{
+		margin-top:80px;
+	}
+	ul#menu-menu-links{
+		text-align: center;
+		@include breakpoint($medium){
+			text-align: right;
+		}
+		@include breakpoint($large){
+			text-align: left;
+		}
+		@include breakpoint($large85){
+			text-align: right;
+		}
+				li{
+					background: url(../img/top_menu_yellow.png) left 10px;
+    background-repeat: no-repeat;
+    padding-left: 9px;
+    margin: 0 14px;
+    @include breakpoint($medium){
+        margin: 0 11px;
+    }
+     @include breakpoint($large){
+        margin: 0 30px;
+    }
+      @include breakpoint($large85){
+        margin: 0 8px;
+    }
+     @include breakpoint($xl-large){
+        margin: 0 11px;
+    }
+				    a{
+				    	@include font-size(13px);
+				    }
+				    &:first-child{
+				    	margin-left:0px!important;
+				    }
+				    &:last-child{
+				    	margin-right:0px!important;
+				    }
+				}
+			}
+	
+}
+#main section{
+	&.single_left{
+		@include span(full);
+@include breakpoint($large){
+		@include span(3 of 12 wider no-gutters);
+	}
+	@include breakpoint($xl-large){
+
+		
+	}
+		text-align: left;
+		@include breakpoint($medium){
+	text-align: right;
+		}
+
+		    .category{
+		    	@include font-size(14px);
+		    	color:#898989;
+		    	text-transform: uppercase;
+		    	font-family: $lato;
+		    	b{
+		    		color:#ffc807;
+		    	}
+		    }
+		    .title_h1{
+		    	margin:22px 0;
+		    	font-family: 'TungstenSemibold';
+		    	@include font-size(60px);
+		    	line-height:60px;
+		    	text-transform: uppercase;
+		    	text-align: left;
+		    	@include breakpoint($large){
+		    		text-align: right;
+		    	}
+		    }
+		    .title_autor{
+		    	font-family: 'TungstenMedium';
+		    	@include font-size(30px);
+		    	color:#000;
+		    }
+		    p.excerpt{
+		    	margin-top:84px;
+		    	        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+		    	@include font-size(19px);
+		    	line-height:28px;
+		    	    background: url('../img/ksztat.png') no-repeat right bottom;
+    padding-bottom: 38px;
+		    }
+		    @include breakpoint($medium){
+		    		text-align: left;
+		    	}
+		    @include breakpoint($large){
+		    		text-align: right;
+		    	}
+		}
+	&.single_right{
+		@include span(full);
+@include breakpoint($large){
+		@include span(8 of 12 no-gutters last);
+	}
+		text-align:left;
+		margin-top:53px;
+		p{
+		  font-family: 'Playfair Display', serif;
+        font-weight: 400;
+			@include font-size(20px);
+			line-height:33px;
+			margin-bottom:42px;
+		}
+		}
+			
+}
+
+
+.przystan_o_autorze {
+	clear:both;
+	@include span(full);
+    float: left;
+    position: relative;
+    display: block;
+    margin-top:30px;
+    
+}
+.przystan_o_autorze h5 {
+	font-family: 'TungstenMedium';
+	@include font-size(30px);
+	margin-bottom:35px;
+}
+.o_autorze_left {
+	@include span (full);
+	@include breakpoint($large){
+		@include span (3 of 8 no-gutters);
+	}
+    
+}
+.o_autorze_right {
+	 @include span (full);
+	@include breakpoint($large){
+    @include span (5 of 8 wide last);
+    padding-left: 20px;
+    @include breakpoint($large){
+    	  padding-left: 0px;
+    }
+}
+}
+.o_autorze_left img {
+    max-width: 100%;
+    height: auto;
+}
+.o_autorze_right h6 {
+    color: #000;
+    font-weight: normal;
+       font-family: $lato;
+       text-transform: capitalize;
+			@include font-size(22px);
+			font-weight:bold;
+			line-height:26px;
+			span.ur{
+				  font-family: 'Playfair Display', serif;
+        font-weight: 400;
+				@include font-size(17px);
+				text-transform: lowercase;
+				margin-left:4px;
+			}
+			margin-bottom:20px;
+}
+.o_autorze_right h6 span {
+    text-transform: uppercase;
+}
+
+.o_autorze_right .o_autorze_bio {
+       font-family: 'Playfair Display', serif;
+        font-weight: 400;
+    color: #000;
+    font-size: 16px!important;
+    line-height:24px!important;
+    text-align: justify;
+    text-transform: none;
+}
+.listCat {
+    bottom: 38px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    @include font-size(10px);
+    color:#9f9f9f;
+    a{
+    	color:#000;
+    }
+    position: absolute;
+    bottom: 1px;
+}
+
+.powiazania{
+margin-top:80px;
+
+}
+
+
+.powiazania{
+	/*border-bottom:2px solid black;*/
+	/*margin-bottom:130px;
+	padding-bottom:30px; */
+	article{
+		margin-right: 20px;
+	}
+	nav{
+		margin-bottom: 37px;
+		a{
+			font-family: $lato;
+			font-weight: 500;
+			@include font-size(15px);
+			text-transform: uppercase;
+			text-decoration: underline;
+			padding-bottom:2px;
+			color:#b1b1b1;
+			margin-right: 48px;
+			&.fs-tabs-active, &:hover{
+				color:#000;
+				font-weight: 900;
+				padding-bottom:1px;
+			}
+		}
+	}
+	ul{
+		margin-bottom: 37px;
+		li{
+			margin-right: 48px;
+			display: inline-block;
+			a{
+				font-family: $lato;
+			font-weight: 500;
+			@include font-size(15px);
+			text-transform: uppercase;
+			text-decoration: underline;
+			padding-bottom:2px;
+			color:#b1b1b1;
+			}
+			&.ui-tabs-active{
+				a{
+					color:#000;
+				font-weight: 900;
+				padding-bottom:1px;
+				}
+			}
+		}
+	}
+}
+
+.single{
+	h2{
+		border-bottom: 2px solid #000;
+		span{
+			padding-right:10px;
+		}
+	}
+}
+
+.single .single_right{
+	ul{
+		list-style: initial;
+		list-style-position: inside;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	ol{
+		list-style: initial;
+		list-style-type: decimal;
+		list-style-position: inside;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+
+	}
+	h1{
+		@include font-size(48px);
+		font-family:$lato;
+		color:#000;
+		line-height:48px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	h2{
+		@include font-size(18px);
+		font-family:$lato;
+		font-weight: normal;
+		color:#000;
+		line-height:40px;
+		border-bottom:0px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	h3{
+		@include font-size(34px);
+		font-family:$lato;
+		color:#000;
+		line-height:34px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	h4{
+		@include font-size(28px);
+		font-family:$lato;
+		color:#000;
+		line-height:28px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	h5{
+		@include font-size(24px);
+		font-family:$lato;
+		color:#000;
+		line-height:24px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	blockquote{
+		background: url(../img/blackquote.jpg) left top;
+    background-repeat: no-repeat;
+    @include prefix(1 of 7);
+	}
+	blockquote,blockquote p {
+		
+		font-family: 'TungstenSemibold'!important;
+
+		font-size:48px!important;
+		line-height:52px!important;
+
+	}
+
+}
+
+.przystan_o_autorze h2{
+	font-family:$lato;
+	font-size:18px!important;
+	color:$black;
+	text-align: left;
+	display: block;
+	border-bottom: 1px solid $black!important;
+	position: relative;
+	margin-bottom:80px!important;
+	span{
+		background-color:#fff;
+		text-transform: uppercase;
+		position: relative;
+		top:41px;
+		border-top:2px solid black;
+		padding-right: 0px;
+		padding-top: 8px;
+	}
+}
+
+.powiazania h2{
+	margin-bottom:26px;
+}
+
+ul.galeria {
+	list-style: none;
+	li{
+		list-style: none;
+		@include gallery (3 of 12);
+	}
+}
+
+
+.auth_bottom{
+	clear:both;
+	
+}
+.single_ksiazka{
+		margin-top:123px;
+		img{
+			max-height: 370px;
+			    border: 1px solid #E2E2E2;
+		}
+		.ksiazka_autor{
+			.auth_nazwisko{
+				text-transform: uppercase;
+			}
+			margin-top:10px;
+			display:block;
+			text-align: right;
+			@include font-size(14px);
+			  font-family: 'Playfair Display', serif;
+        font-weight: 700;
+		}
+		.tytul_wydawca{
+			display:block;
+			text-align: right;
+			@include font-size(14px);
+			  font-family: 'Playfair Display', serif;
+        font-weight: 400;
+			.bold_italic{
+				   font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-style: italic;
+			}
+		}
+		.kup_ksiazke{
+			margin-top:25px;
+			display:block;
+			text-align: left;
+			@include breakpoint($medium){
+text-align: left;
+			}
+			@include breakpoint($large){
+text-align: right;
+			}
+			@include font-size(27px);
+			font-family: 'TungstenMedium';
+			text-transform: uppercase;
+			a{
+				color:#000;
+				background: url('../img/kup_arrow.png') no-repeat right center;
+				padding-right:20px;
+			}
+		}
+	}
+
+.strona_debaty{
+	margin-top:100px;
+	display:block;
+	    background: url("../img/ksztat.png") no-repeat right bottom;
+    padding-bottom: 20px;
+	p{
+		color:#ffc90d;
+		font-family: $lato;
+			font-weight: 500;
+			@include font-size(14px);
+			text-transform: uppercase;
+	}
+	a{
+		font-family: 'TungstenSemibold';
+		    	@include font-size(30px);
+		    	color:#000;
+		    	text-transform: uppercase;
+	}
+}
+
+
+
+
+
+.debata {
+	.strona_debaty{
+		display: none;
+	}
+	.o_autorze{
+		display: none;
+	}
+}
+
+
+.single_right{
+	/*
+	p{
+		padding-left:0!important;
+	}
+	h2{
+		padding-left:0!important;
+	}
+	*/
+}
+
+hr{
+	border-bottom: 1px solid black;
+}
+
+
+.autor_pole{
+@include span(full);
+position: relative;
+margin-bottom:70px;
+&:last-child{
+	margin-bottom: 0;
+}
+}
+
+
+.single-felietony{
+	.single_left{
+		img{
+			max-width: 240px;
+			padding-bottom: 16px;
+
+		}
+		h6{
+
+font-weight: bold;
+@include font-size(22px);
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+
+span{
+	text-transform: uppercase;
+}
+
+			}
+			p{
+	
+				@include font-size(14px);
+				line-height: 22px;
+				font-weight: 400;
+				  font-family: 'Playfair Display', serif;
+        font-weight: 400;
+			}
+	}
+	.strona_debaty{
+
+		margin-bottom:70px;
+		.kategoria_debaty{
+			    padding-top: 0px;
+			    text-align: right;
+		}
+	}
+}
+
+
+
+.single{
+	.single_right{
+		h1{
+			font-family: 'Playfair Display', serif;
+      	  font-weight: 700;
+			@include font-size(36px);
+			line-height: 34px;
+			text-transform: uppercase;
+			display: block;
+		}
+		p{
+			font-family: 'Playfair Display', serif;
+			@include font-size(36px);
+			line-height: 33px;display: block;
+		}
+		h2{
+font-family: 'Playfair Display', serif;
+      	  font-weight: 700;
+			@include font-size(30px);
+			line-height: 39px;
+			margin-bottom:45px;
+			text-transform: uppercase;
+			display: block;
+		}
+		span.wiersz{
+			@include font-size(20px);
+			line-height: 48px;
+			font-family: 'Playfair Display', serif;
+			font-weight: 400;
+			margin-bottom:75px;
+			display: block;
+
+		}
+		span.przypis{
+			display: block;
+			font-family: 'Playfair Display', serif;
+			font-weight: 400;
+			@include font-size(16px);
+			line-height: 24px;
+			letter-spacing: 0.048em;
+			margin-bottom: 75px;
+		}
+		hr{
+			margin:20px 0 70px 0;
+		}
+		h3{
+ font-family: $lato;
+      	  font-weight: 500;
+			@include font-size(18px);
+			line-height: 24px;
+			margin-bottom:45px;
+			text-transform: uppercase;
+			display: block;
+			letter-spacing: 0.024em;
+		}
+		h4{
+			 font-family: $lato;
+      	  font-weight: 400;
+			@include font-size(30px);
+			line-height: 37px;
+			margin-bottom:45px;
+			text-transform: uppercase;
+			display: block;
+			letter-spacing: 0.024em;
+		}
+	}
+}
+
+
+.cykle_next_prev{
+	border-bottom: 1px solid #898989;
+	margin-bottom: 80px;
+	a{	
+		position: relative;
+		top:-10px;
+		background-color: #fff;
+		 font-family: $lato;
+		 font-size: 14px;
+		 color:#898989;
+		 text-transform: uppercase;
+		 padding:5px 10px;
+		 border:1px solid #898989;
+		 &.poprzedni{
+		 	float:left;
+		 	background:#fff url(../img/post_prev.png) left center no-repeat;
+		 	padding-left: 15px;
+		 }
+		 &.nastepny{
+		 	float:right;
+		 	background:#fff url(../img/post_next.png) right center no-repeat;
+		 	padding-right: 15px;
+		 }
+	}
+}
+
+.related-items{
+	list-style: none!important;
+	li{
+		text-align: center;
+		@include span (full);
+		@include breakpoint($medium){
+			@include gallery (4 of 12);
+		}
+		
+		a{
+		    	span.data_debaty{
+		    		@include font-size(14px);
+		    		color:#898989;
+		    		font-family: $lato;
+		    	}
+		    	h4{
+		    		font-family: 'TungstenSemiBold'!important;
+		    		text-transform: uppercase;
+		    		font-size:26px!important;
+		    		color:#000;
+		    		margin-bottom:0px!important;
+		    		line-height: 26px!important;
+		    	}
+		    	p{
+		    		font-family: 'TungstenMedium'!important;
+		    		text-transform: none;
+		    		font-size:18px!important;
+		    		color:#000;
+		    		span{
+
+		    		}text-transform: uppercase;
+		    	}
+		}
+	}
+}
+
+.single-dzwieki{
+	.przystan_o_autorze{
+		margin-top:200px;
+	}
+}
+
+p.realizator{
+
+	margin-top:30px;
+		    	        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+		    	@include font-size(16px);
+		    	line-height:28px;
+		    	span{
+		    		text-transform: uppercase;
+		    	}
+}
+
+ul.galeria{
+	@include span (full);
+}

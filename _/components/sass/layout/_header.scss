@@ -1,0 +1,312 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.master_slider{
+	position: absolute;
+	z-index:-1;
+	width:100%;
+	img{
+		width:100%;
+	}
+
+}
+#top_links{
+	background-color:rgba(120, 120, 120, 0.7);
+	padding-top:24px;
+}
+.site_branding{
+	img{
+		width: 100%;
+    position: relative;
+    top: -3px;
+	}
+	@include span(6 of 12 wide no-gutter);
+	@include breakpoint($large){
+		@include span(2 of 12 wide no-gutter);
+	}
+	}
+	.top_nav{
+		@include span(4 of 12 no-gutter);
+
+		@include breakpoint($large){
+			@include span(8 of 12 wide no-gutter);
+			    margin-left: 6.75458%;
+
+			.menu-toggle-btn{display:none;}
+		}
+	}
+	.social{
+		@include span(2 of 12 last);
+		@include breakpoint($large){
+			@include span(1 of 12 last wide);
+		}
+		a{
+			margin-left: -1px;
+			@include breakpoint($xl-large){ 
+			margin-left: 15px;
+		}
+			&:first-child{
+				margin-left: 0px;
+			}
+		}
+	}
+#menu-top-links-1, #menu-top-links {
+	margin-top:8px;
+	li{
+	display: inline-block;
+    background: url(../img/top_menu.png) left 10px;
+    background-repeat: no-repeat;
+    padding-left: 9px;  
+     margin-left:2%;
+    @include breakpoint($xl-large){ 
+    margin-left:55px;
+}
+    &:first-child{
+    	margin-left:0px;
+    }
+	@include breakpoint($xl-large){
+    	margin-left:55px;
+    }
+	a{
+		text-transform: uppercase;
+		color:#fff;
+		font-family: $lato;
+		font-weight:500;
+		@include font-size(13px);
+		@include breakpoint($xl-large){ 
+		@include font-size(14px);
+	}
+		&:hover{
+			font-weight:900;
+			text-decoration: none;
+		}
+	}
+	}
+}
+
+#menu-top-links-1{
+	display:none;
+	@include breakpoint($large){
+		display:block;
+		text-align: left;
+	}
+}
+.social a img{
+	margin-top:10px;
+	width:20px;
+	@include breakpoint($xl-large){ 
+width:24px
+	}
+
+}
+
+.main-links{
+	@include span(full);
+	text-align: center;
+	ul{
+		text-align: left;
+	}
+		@include breakpoint($xl-large){
+		@include span(5 of 12 no-gutter);
+		text-align: right;
+	}
+		margin-top:44px;
+		li{
+			display: inline-block;
+			margin-right:21px;
+			@include breakpoint($xl-large){
+			margin-right:35px;
+		}
+			&:last-child{
+				margin:0;
+			}
+			a{
+				@include font-size(16px);
+				color:#000;
+				font-family:$lato;
+				text-transform: uppercase;
+			}
+			background: url(../img/top_menu_yellow.png) left 10px;
+    background-repeat: no-repeat;
+    padding-left: 9px;
+				    a{
+				    	@include font-size(13px);
+				    }
+				    &:first-child{
+				    	margin-left:0px!important;
+				    }
+				    &:last-child{
+				    	margin-right:0px!important;
+				    }
+		}
+		&.right{
+			text-align:left;
+		
+			li{
+				margin-right:31px;
+			}
+		}
+	}
+	.logo{
+		@include span(full);
+		@include breakpoint($medium){
+		@include span(6 of 12 no-gutter);
+		}
+		text-align:left;
+		@include breakpoint($xl-large){
+			text-align:center;
+			@include span(2 of 12 wider no-gutter);
+		}
+	}
+	.main-links.right{
+		@include span(6 of 12 last);
+		@include breakpoint($medium){
+		@include span(5 of 12 last);
+		ul{
+			text-align: right;
+		}
+	}
+	}
+	.w-sieci-od{
+		margin-top:-5px;
+		@include span (4 of 12);
+		@include push(4 of 12);
+		text-align:center;
+		.data{
+			@include font-size(20px);
+			font-family: $lato;
+			color:#000;
+			font-weight: bold;
+			strong{
+			color:#898989;
+			}
+			
+		}
+		.od{
+			@include font-size(16px);
+			color:$light-grey;
+			border-left:1px solid $light-grey;
+			margin-left:6px;
+			padding-left:8px;
+		}
+	}
+	.szukaj{
+		form#searchform{
+			border-right:1px solid #939393;
+			padding-right:5px;
+		}
+		margin-top:20px;
+		@include span(full);
+		@include breakpoint($medium){
+		@include span(6 of 12 last);
+	}
+		@include breakpoint($xl-large){
+			@include span(4 of 12 last);
+		}
+		input#s{
+			background:url(../img/search.jpg) left center;
+			background-repeat: no-repeat;
+			padding-left:20px;
+			@include font-size(18px);
+			outline: 0;
+			 border: none !important;
+			 background-color: White;
+			 text-align:right;
+			 width:140px;
+			 padding: 0 0 0 30px;
+			 height:25px;
+			 @include transition-property(width);
+  			@include transition-duration(0.2s);
+			&:focus{
+				width:250px;
+				color:#fff;
+				background-color:#000;
+			}
+		}
+
+		input#searchsubmit{
+			background:url(../img/submit.jpg) center center;
+			background-repeat: no-repeat;
+			width:9px;
+			height:21px;
+			border: none !important;
+			 background-color: White;
+			 text-indent:100000px;
+			  box-shadow:none!important;
+			 
+
+		}
+	}
+
+	.off-canvas{
+		#menu-top-links-1 li, #menu-top-links li{
+				margin:0;
+				padding:0;
+				display:block;
+				text-align: right;
+
+			a{
+		color:#000;
+		padding-right:10px;
+	}
+		}
+	
+}
+
+header{
+	&.small{
+		@include breakpoint($xl-large){
+			display:none;
+
+		}
+	}
+	&.large{
+		display:none;
+		@include breakpoint($xl-large){
+			display:block;
+		}
+	}
+}
+
+.line {
+    width: 258px;
+    text-align: center;
+    /* display: block; */
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    position: relative;
+    left: 2px;
+}
+.data{
+	background-color: #fff;
+	position: relative;
+	bottom: -14px;
+	padding:0 12px;
+}
+span.nr{
+	@extend %georgia;
+	font-size:14px;
+	color:#000;
+}
+span.numer{
+	@extend %georgia;
+	font-size:25px;
+	color:#000;
+	margin:0 5px 0 4px;
+}
+span.rok{
+	@extend %georgia;
+	font-size:18px;
+	color:#616161;
+}
+
+.post_auth{
+    position: absolute;
+    right: 0px;
+    top: -24px;
+    color: white;
+    font-size: 13px;
+    span{
+    	text-transform: capitalize;
+    }
+}

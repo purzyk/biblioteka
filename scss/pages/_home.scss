@@ -1,0 +1,1146 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.szkice {
+    article {
+        @include span(full);
+        @include breakpoint($medium){
+        @include gallery(6 of 12);
+    }
+    @include breakpoint($large){
+        @include gallery(4 of 12);
+    }
+    }
+}
+/*
+.debaty {
+    article {
+        @include span(4 of 12);
+    }
+}
+*/
+.debaty {
+    article {
+        margin-right:20px;
+    }
+}
+.rozmowy {
+    .reveal {
+         
+
+        padding-top: 5px;
+        @include breakpoint($xl-large){ 
+        padding-top: 20px;
+    }
+        margin: 0;
+        border: 0px;
+         @include breakpoint($medium){ 
+margin: 30px 22px;
+        border: 3px solid white;
+            }
+        color: #fff !important;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        text-align: center;
+
+        h4 {
+            text-shadow: rgba(0,0,0,.75) 1px 1px 1px;
+            font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+            @include font-size(42px);
+            line-height: 42px;
+            @include breakpoint($xl-large){ 
+line-height:inherit;
+            }
+
+            text-transform: uppercase;
+             text-shadow: rgba(0,0,0,.75) 1px 1px 1px;
+        }
+
+        span.category {
+            display: block;
+            text-align: center;
+            font-family: $lato;
+            font-size: 13px;
+            text-transform: uppercase;
+                color: #ffc807;
+        }
+
+        span.imie {
+            text-shadow: rgba(0,0,0,.75) 1px 1px 1px;
+            display: initial;
+            text-align: center;
+            font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+            @include font-size(24px);
+
+            text-transform: capitalize;
+            border-bottom: 3px solid white;
+
+            .nazwisko {
+                text-transform: uppercase;
+            }
+
+            padding-bottom: 10px;
+        }
+
+        h5 {
+            font-family: $text;
+
+            @include font-size(14px);
+
+            line-height: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-top: 15px;
+            font-family: $text;
+            @include font-size(14px);
+            line-height: 15px;
+            
+            font-weight: bold;
+          
+            @include breakpoint($xl-large){ 
+            padding: 7px 80px 0;
+            text-shadow: rgba(0,0,0,.75) 1px 1px 1px;
+        }
+         
+             @include breakpoint($xl-large){
+                 padding: 0 80px 0;
+                 @include font-size(14px);
+            line-height: 20px;
+            text-align: center;
+display: block;
+             }
+        }
+    }
+
+    a:hover {
+        .reveal {
+            color: #fff !important;
+        }
+    }
+
+    .typ_large {
+        @include span(full);
+        @include breakpoint($large){
+            @include span(8 of 12);
+        }
+
+        a {
+            float: left;
+            position: relative;
+        }
+
+        .reveal {
+           /* display: none;*/
+        }
+
+        a:hover {
+            .reveal {
+                display: block;
+            }
+        }
+    }
+
+    .typ_small {
+        article {
+            position: relative;
+        }
+        @include span(full);
+        @include breakpoint($large){
+        @include span(4 of 12 last);
+    }
+
+        .reveal {
+            padding: 0;
+            margin: 0;
+            text-align: right;
+            right: 10px;
+            bottom: 10px;
+            @include breakpoint($xl-large){ 
+                right: 20px;
+            bottom: 25px;
+            padding-left: 35px;
+            p{
+                text-align: right;
+                padding-right: 0!important;
+            }
+        }
+            top: auto;
+            left: auto;
+            border: none !important;
+            position: absolute;
+
+            h4 {
+                @include font-size(22px);
+                line-height: 22px;
+
+                text-align: right;
+                @include breakpoint($xl-large){ 
+@include font-size(29px);
+ line-height: 42px;
+                }
+            }
+
+            span.category {
+                text-align: right;
+            }
+        }
+    }
+}
+
+article {
+    &.typ_1 {
+        margin-bottom: 44px;
+
+        .under_photo {
+            min-height: 137px;
+        }
+
+        img {
+            margin-bottom: 18px;
+        }
+
+        h4 {
+            font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+            @include font-size(29px);
+
+            text-transform: uppercase;
+            line-height: 30px;
+
+        }
+
+        span.category {
+            display: block;
+            text-align: center;
+            font-family: $lato;
+            font-size: 13px;
+
+            a {
+                color: $yellow;
+            }
+
+            color: $yellow;
+            text-transform: uppercase;
+        }
+
+        span.imie {
+            display: block;
+            text-align: center;
+            font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+            @include font-size(21px);
+
+            color: #000;
+            text-transform: capitalize;
+
+            .nazwisko {
+                text-transform: uppercase;
+            }
+        }
+
+        p {
+            font-family: $text;
+          
+            @include font-size(17px);
+            @include breakpoint($large){
+@include font-size(15px);
+            }
+            @include breakpoint($xl-large){
+                @include font-size(17px);
+            }
+
+            color: #404040;
+            line-height: 24px;
+            text-align: center;
+            margin: 10px 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        span.wiecej {
+            display: block;
+            border-bottom: 1px solid $dark-grey;
+            text-align: center;
+            clear: both;
+
+            a {
+                background: white;
+                border: 1px solid $dark-grey;
+                font-family: $lato;
+                font-size: 14px;
+                color: $dark-grey;
+                text-transform: uppercase;
+                padding: 5px 15px 6px 15px;
+                top: 12px;
+                position: relative;
+            }
+        }
+    }
+}
+
+.site-main article {}
+
+.site-main article img {
+    /*	 @include transition(all 0.1s ease-in-out);*/
+}
+
+.site-main article:hover img {
+    /*@include transform(scale(1));*/
+}
+
+.utwory .utwory_left {
+    @include span(full);
+@include breakpoint($medium){
+    @include span(8 of 12);
+}
+
+    p {
+        margin: 10px 0;
+         font-family: 'Playfair Display', serif;
+        font-weight: 400;
+    }
+}
+
+.utwory .utwory_left article {
+    @include span(full);
+@include breakpoint($medium){
+    @include gallery(4 of 8);
+    &:nth-child(3), &:nth-child(4){
+        padding-top:77px;
+    }
+}
+}
+
+.utwory .utwory_right {
+    @include span(full);
+@include breakpoint($medium){
+    @include span(4 of 12 last);
+}
+
+    background-color: #000;
+
+    article {
+        border-bottom: 1px solid #fff;
+        padding: 10px 10px 10px 10px;
+        @include breakpoint($xl-large){
+        padding: 20px 80px 20px 80px;
+    }
+        margin-bottom: 0px;
+
+        &:last-child {
+            border: none !important;
+        }
+
+        h4 {
+            color: #fff;
+
+            @include font-size(21px);
+        }
+
+        span.category {
+            @include font-size(10px);
+        }
+
+        span.imie {
+            color: #fff;
+
+            @include font-size(15px);
+        }
+    }
+}
+
+.recytacje_content {
+      /* background-color: #000;
+padding: 20px 20px 0 20px; */
+    @include span(full);
+    article {
+        margin-right: 20px;
+
+        a {
+            float: left;
+            width: 100%;
+            position: relative;
+        }
+
+        margin-bottom: 20px;
+
+        img {
+            margin: 0px;
+        }
+    }
+}
+
+.nagrania .utwory_left {
+    @include span(full);
+@include breakpoint($medium){
+    @include span(full);
+}
+@include breakpoint($xl-large){
+    /*
+    @include span(8 of 12);
+    */
+     @include span(full);
+}
+    article {
+        a {
+            float: left;
+            position: relative;
+        }
+@include span(full);
+@include breakpoint($medium){
+        @include gallery(4 of 8);
+    }
+    @include breakpoint($xl-large){
+        @include gallery(2 of 8);
+        .aaa{
+            padding:0!important;
+        }
+    }
+
+    }
+}
+
+.nagrania .utwory_right {
+    @include span(full);
+@include breakpoint($medium){
+    @include span(full);
+    article{
+        @include span(6 of 12 last);
+    }
+}
+@include breakpoint($xl-large){
+    @include span(4 of 12 last);
+    article{
+        @include span(full);
+    }
+}
+
+    img {
+        border: 6px solid black;
+
+        @include span(2 of 4);
+    }
+
+    .rest {
+        @include span(2 of 4 last);
+
+        h4 {
+            @include font-size(21px);
+            a{
+                color:#000!important;
+            }
+
+            text-align: left;
+        }
+
+        span.category {
+            @include font-size(9px);
+
+            text-align: left;
+        }
+
+        span.imie {
+            @include font-size(15px);
+
+            text-align: left;
+        }
+    }
+}
+
+.after_ksiazki {
+    padding: 0px;
+    margin-top: 0px !important;
+
+    .content-area {
+        	/*
+        padding: 0 114px;
+        */
+    }
+}
+
+section.ksiazki {
+    background-color: #d5d5d5;
+    article.typ_1{
+        margin-bottom: 2px;
+    }
+
+    h2 {
+        border-bottom: 0px;
+
+        span {
+            background-color: #d5d5d5;
+        }
+    }
+
+    .ksiazki_left {
+        @include span(full);
+@include breakpoint($medium){
+        @include span(5 of 12);
+    }
+
+
+        .premiera_ksiazki {
+            background-color: #000;
+            color: #fff;
+@include span(4 of 10);
+@include breakpoint($medium){
+            @include span(4 of 10);
+        }
+        @include breakpoint($xl-large){
+            @include span(2 of 10);
+        }
+
+            text-align: center;
+            padding: 17px 0;
+            margin-bottom: 25px;
+
+            .premiera {
+                font-family: $lato;
+                text-transform: uppercase;
+
+                @include font-size(17px);
+
+                margin-bottom: 16px;
+                font-weight: 900;
+                display: block;
+            }
+
+            .ksiazki_data {
+                font-family: $lato;
+
+                @include font-size(17px);
+            }
+        }
+
+        .title_ksiazki {
+            @include span(6 of 10 last);
+@include breakpoint($xl-large){
+            @include span(8 of 10 last);
+        }
+
+            h4 {
+                text-align: left;
+
+                   font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;   
+@include font-size(29px);
+    text-transform: uppercase;
+    line-height: 30px;
+
+
+            }
+
+            span.category {
+                text-align: left;
+
+                @include font-size(13px);
+
+                margin-bottom: 5px;
+            }
+
+            span.imie {
+                text-align: left;
+
+                @include font-size(21px);
+                                margin-bottom: 12px;
+                                margin-top:14px;
+
+    font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+    color: #000;
+            }
+        }
+    }
+
+    .ksiazki_right {
+        margin-bottom: 30px;
+@include span(full);
+@include breakpoint($medium){
+        @include span(7 of 12 last);
+    }
+
+        img {
+            border: 4px solid black;
+            float:right;
+        }
+    }
+
+    p {
+        @include span(full);
+          font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        text-align: left;
+        padding-right: 50px;
+    }
+}
+
+.ksiazki .inner {
+    /* padding: 0 114px; */
+}
+
+.rec_nagr {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+
+    .inner_black {
+        display: table;
+
+        /* margin: 0 auto; */
+        width: 100%;
+        height: 100%;
+
+        .black_tran {
+            .aaa {
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 20px 0;
+                overflow: auto;
+
+                a {
+                    color: #ffc807;
+                    text-transform: uppercase;
+
+                    @include font-size(11px);
+
+                    text-align: center;
+                    width: 100%;
+                }
+                   width:100%;
+                @include breakpoint($large){
+                       width: 70%;
+                }
+             
+
+                /* display: inline; */
+                /* float: left; */
+                /* text-align: center; */
+                margin: 0 auto;
+            }
+
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        display: table;
+        margin: 0 auto;
+    }
+
+    span.category {
+        font-size: 11px !important;
+        color: #bdbdbd;
+    }
+
+    h4 {
+        font-size: 26px !important;
+        color: white;
+         font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+    }
+
+    span.imie {
+        font-size: 17px !important;
+        color: white !important;
+    }
+}
+
+.site-main article img {
+    width: 100%;
+}
+
+#main {
+    section {
+        @include span(full);
+
+        &.rozmowy {
+            margin-top: 37px;
+            margin-bottom: 10px;
+
+            .typ_small {
+                article:first-child {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        &.szkice {
+            margin-bottom: 24px;
+        }
+
+        &.ksiazki {
+            margin-bottom: 50px;
+        }
+
+        &.utwory {
+            margin-top: 10px;
+            margin-bottom:40px;
+        }
+
+        &.recytacje {
+            margin-bottom: 15px;
+            margin-top:10px;
+        }
+
+        &.nagrania {
+            margin-top:30px;
+            article.typ_1{
+                margin-bottom:33px;
+                a{
+                    width: 100%;
+                }
+            }
+        }
+
+        &.debaty {
+            margin-top: -40px;
+        }
+
+        &.blogi {
+            margin-top:30px;
+            h3 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.blogi {
+    .blogi_carousel{
+
+article.typ_1{
+    margin-bottom: 0px;
+    padding-top:18px;
+}
+    }
+    article {
+        /*@include span (3 of 12);*/
+        .blog {
+            @include span(full);
+        }
+    }
+
+    .blog_left {
+        @include span(5 of 12);
+    }
+
+    .blog_right {
+        @include span(7 of 12 last);
+
+        text-align: left;
+        padding-left: 12px;
+        padding-right: 20px;
+
+        h4 {
+            text-align: left;
+            font-size: 22px !important;
+            line-height: 22px;
+            color:#000;
+        }
+
+        span.category {
+            text-align: left;
+            font-size: 11px !important;
+            color: $yellow;
+            margin: 5px 0;
+        }
+
+        span.imie {
+            text-align: left;
+            color:#000;
+            font-size: 17px !important;
+        }
+    }
+}
+
+.do_gory {
+    display: block;
+    border-bottom: 1px solid #898989;
+    text-align: center;
+    margin-bottom: 80px;
+    clear: both;
+
+    a {
+        background: #fff url(../img/up.png) 85px;
+        background-repeat: no-repeat;
+        border: 1px solid #898989;
+        font-family: "Lato", "Arial", sans-serif;
+        font-size: 14px;
+        color: #898989;
+        text-transform: uppercase;
+        padding: 5px 30px 5px 15px;
+        top: 12px;
+        position: relative;
+    }
+}
+
+.reveal_outer {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.reveal_inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+a.cat_lin{
+font-family: "Lato", "Arial", sans-serif;
+        font-size: 11px;
+}
+
+
+.rec_nagr h4 a {
+    font-size: 22px !important;
+    color: #fff!important;
+}
+
+.zdjecia h4 a {
+    font-size: 24px !important;
+    color: #fff!important;
+     font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+}
+
+.archive_category .big a{
+    color:#ffc807;
+}
+
+
+.top_articles {
+    padding-top: 14px;
+}
+.top_articles{
+    h6{
+font-family: "Lato", "Arial", sans-serif;
+ text-transform: uppercase;
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    color: #898989;
+    border-bottom: 1px solid #000;
+    margin-bottom: 13px;
+     span{
+        position: relative;
+    top: 5px;
+    background-color: #f0f2f2;
+    padding-right: 10px;
+    }
+}
+}
+
+
+
+span.name_gora{
+
+font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 14px;
+    margin-bottom: 8px;
+    color: #fff;   
+}
+h2 span a{
+    color:#000;
+    &:visited{
+        color:#000;
+    }
+}
+
+
+p{
+    em{
+        font-style: italic;
+    }
+}
+
+
+h4 a{
+    color:#000;
+    &:visited,&:hover, &:visited, &:focus{
+        color:#000; 
+    }
+}
+.utwory_right{
+    h4{
+        a{
+            color:#fff;
+        }
+    }
+}
+
+.master_slider{
+        .fs-carousel-enabled .fs-carousel-control_next {
+            right:10px!important;
+        }
+}
+
+.master_slider{
+        .fs-carousel-enabled .fs-carousel-control_previous {
+            left:10px!important;
+        }
+}
+
+.home, .single, .tax-cykle-nazwy {
+    #top_links{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .site-content {
+            margin-top: 0px;
+        @include breakpoint($xl-large){
+              margin-top: -270px; 
+        }
+
+    background: white;
+        z-index: 2;
+    position: relative;
+    padding-top:20px;
+    @include breakpoint($medium){
+        padding-top:0;
+    }
+}
+.master_slider {
+    figure{
+        padding:0;
+        margin:0;
+        position: relative;
+        background-color: black;
+
+    }
+    /* position: absolute; */
+    z-index: 1;
+    width: 100%;
+    position: relative;
+}
+}
+
+.master_slider_slider{
+    .slide{
+        
+        
+    }
+}
+.wrapperr{
+     position: relative;
+    @include breakpoint($medium){
+         position: absolute;
+         padding:0 50px;
+    }
+    @include breakpoint($xl-large){
+         position: absolute;
+         padding:0;
+    }
+      
+       top:0;
+       @include breakpoint($medium){
+        top:initial;
+        bottom:0;
+       }
+       left:0;
+       width:100%;
+       display: table;
+}
+.wrapper_slide{
+@include container(1425px); 
+position: relative;
+height: 300px;
+top:0px;
+@include breakpoint($medium){
+    top:initial;
+    bottom:24px;
+}
+@include breakpoint($large){
+  bottom:50px;
+}
+@include breakpoint($xl-large){
+bottom:320px;
+}
+
+   .ksiazka_o_poscie{
+  
+   }
+   .info_o_poscie{
+    @include span (5 of 12);
+     position: absolute;
+     bottom: 0;
+     left:20px;
+     @include breakpoint($xl-large){
+left:0
+     }
+     .cat{
+         font-family: $lato;
+            font-size: 13px;
+              padding:8px 14px 8px 0;
+             @include breakpoint($medium){
+            padding:8px 14px;
+        }
+            background-color: rgba(0, 0, 0, 0.3);;
+            color:#fff;
+            text-transform: uppercase;
+               text-shadow: rgba(0,0,0,.75) 1px 1px 1px;
+               padding-bottom:10px;
+     }
+     .title{
+ font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+ font-size:35px;
+ line-height: 35px;
+  color:#fff;
+  text-transform: uppercase;
+     text-shadow: rgba(0,0,0,.75) 1px 1px 1px;
+display:block;
+padding:15px 0 10px ;
+letter-spacing: 0.02em;
+
+     }
+     .auth{
+ font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+  font-size:21px;
+     text-shadow: rgba(0,0,0,.75) 1px 1px 1px;
+ display:block;
+  color:#fff;
+  letter-spacing: 0.013em;
+     }
+   }
+   .ksiazka_o_poscie{
+    text-align: center;
+ @include span (1 of 12 last);
+ background-color: rgba(0, 0, 0, 0.3);;
+ width:162px;
+ padding:20px 20px 0 20px;
+ position: absolute;
+     bottom: 0;
+     right: 20px;
+     @include breakpoint($xl-large){
+right:0
+     }
+     img{
+          max-width: 112px;
+     }
+     .autor_ksiazki{
+ font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+  font-size:18px;
+  color:#fff;
+    text-transform: uppercase;
+     }
+     .tytul_ksiazki{
+ font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+  font-size:18px;
+  color:#fff;
+    text-transform: uppercase;
+    font-style: italic;
+     }
+     a{
+font-family: $lato;
+font-weight: 700;
+font-size:12px;
+color:#ff0000;
+  background: url(../img/ksiazka_kup.png) right center;
+        background-repeat: no-repeat;
+        padding-right: 28px;
+        margin-top:20px;
+     }
+
+   }
+}
+
+.rozmowy .reveal p {
+display: none;
+    }
+    .rozmowy .reveal:hover p {
+        display:block;
+     }
+
+    .rozmowy .typ_small .reveal p {
+display: none;
+    }
+     .rozmowy .typ_small article:nth-child(1):hover .reveal p {
+        display:block;
+     }
+          .rozmowy .typ_small article:nth-child(2):hover .reveal p {
+        display:block;
+     }
+
+
+    .debaty_span{
+        @include span(full);
+        text-align: center;
+        .category{
+            display: inline-block!important;
+            margin-right: 10px;
+        }
+        .imie{
+            display: inline-block!important;
+        }
+        .cat_cykl{
+            display: inline-block!important;
+            float: initial!important;
+            width:initial!important;
+        }
+    }
+
+.aaa{
+    .kategoria_debaty{
+        a.link_cykle{
+                         display: block;
+    text-align: center;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 13px!important;
+    color: #fff!important;
+    text-transform: uppercase;
+        }
+             display: block;
+    text-align: center;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    }
+}
+
+.tytul_wydawca{
+    display:none!important;
+}
+
+
+.ksiazki{
+    article{
+        position: relative;
+        .wiecej{
+                    @include span(full);
+@include breakpoint($medium){
+        @include span(5 of 12);
+        }
+            position: absolute;
+    bottom: 46px;
+    a{
+            background-color: #000!important;
+            color:#fff!important;
+    }
+
+
+    }
+}
+}
+.link_cykl_h4{
+    color:#fff!important;
+}
+.home{
+    span.kategoria_debaty
+    {
+        padding-top: 0;
+    }
+}
+

@@ -1,0 +1,2570 @@
+/* NEW TOP */
+
+.navbar-biblioteka {
+    margin: 0;
+    padding: 10px 0;
+    border: none;
+    background: black;
+}
+
+.navbar-biblioteka .current-menu-item > a {
+    font-weight: bold !important;
+}
+
+.navbar-biblioteka .container {
+    padding: 0;
+    max-width: 1425px;
+}
+
+.navbar-biblioteka .navbar-right {
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar-biblioteka .navbar-right li {
+    display: inline-block;
+}
+
+.navbar-biblioteka .navbar-header {
+    padding: 0 30px;
+}
+
+.navbar-biblioteka .navbar-header .navbar-left {
+    display: inline-flex;
+}
+
+.navbar-biblioteka .navbar-right .active > a {
+    background: transparent;
+}
+
+.z-index-0 {
+    z-index: 0 !important;
+}
+
+@media (min-width: 992px) {
+    .navbar-biblioteka .navbar-header {
+        padding: 0;
+    }
+    .navbar-biblioteka .navbar-right {
+        display: initial;
+        margin: initial;
+        width: initial;
+        text-align: initial;
+    }
+    .navbar-biblioteka .navbar-right li {
+        display: initial;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+}
+
+
+/* site-content-dbs */
+
+.site-content-dbs {
+    position: relative;
+    z-index: 2;
+    margin-top: 0px;
+    padding: 20px 30px 0;
+    background: white;
+}
+
+.site-content-dbs::before {
+    display: table;
+    content: "";
+}
+
+.site-content-dbs::after {
+    display: block;
+    clear: both;
+    content: " ";
+}
+
+@media (min-width: 103em) {
+    .site-content-dbs {
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 110px;
+        padding-left: 110px;
+        min-height: 720px;
+        max-width: 1645px;
+    }
+    .site-content-dbs:after {
+        display: block;
+        clear: both;
+        content: " ";
+    }
+    .post-type-archive-ksiazki #content-dbs {
+        padding-right: 0 !important;
+    }
+}
+
+@media (min-width: 1920px) {
+    .single-autorzy_lista .site-content-dbs {
+        margin-top: -348px !important;
+    }
+}
+
+@media (min-width: 2560px) {
+    .single-autorzy_lista .site-content-dbs {
+        margin-top: -348px !important;
+    }
+    /*
+    .site-content-dbs {
+        margin-top: -27% !important;
+    }
+*/
+    .master_slider .fs-carousel-enabled .fs-carousel-control_previous,
+    .master_slider .fs-carousel-enabled .fs-carousel-control_next {
+        transform: translateY(-200px);
+    }
+    .master_slider .fs-carousel-enabled .fs-carousel-control_previous {
+        left: 13% !important;
+    }
+    .master_slider .fs-carousel-enabled .fs-carousel-control_next {
+        right: 13% !important;
+    }
+}
+
+
+/* BIULETYN NEWS CARDS */
+
+@media (min-width: 103em) {
+    .biuletyn-cards-rwd {
+        margin: 0 !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .biuletyn-cards-rwd article {
+        min-height: 415px;
+        max-height: 415px;
+    }
+    .biuletyn-cards-rwd article figure img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        transition: all 1s ease-in-out;
+
+        object-fit: cover;
+    }
+}
+
+.biuletyn-cards-rwd {
+    margin: 0 15px;
+}
+
+.biuletyn-cards-rwd article {
+    margin: 35px 0 46px 0;
+    -webkit-box-shadow: 2px 0px 17px 3px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 2px 0px 17px 3px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 0px 17px 3px rgba(0, 0, 0, 0.21);
+}
+
+.biuletyn-cards-rwd article figure {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.biuletyn-cards-rwd article figure img {
+    display: block;
+    margin: auto;
+    transition: all 1s ease-in-out;
+}
+
+.biuletyn-cards-rwd article figure a:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.biuletyn-cards-rwd .biuletyn__article-dbs {
+    text-align: center;
+}
+
+
+/* AUTORZY LISTA ARCHIWUM */
+
+@media (min-width: 103em) {
+    #autorzy__lista {
+        margin: 0 -15px !important;
+    }
+}
+
+#autorzy__lista {
+    margin: 0;
+}
+
+#autorzy__lista article {
+    margin-bottom: 20px;
+}
+
+#autorzy__lista article a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+#autorzy__lista article a img {
+    transition: all 1s ease-in-out;
+}
+
+#autorzy__lista article a:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+#autorzy__lista article figure {
+    margin: 0;
+}
+
+#autorzy__lista article a span {
+    color: #000;
+    text-align: center;
+    font-weight: 400;
+    font-size: 21px;
+    font-size: 1.3125rem;
+}
+
+#autorzy__lista article a:hover span {
+    color: #d01117;
+}
+
+#autorzy__lista article a .red {
+    position: relative;
+    top: -2px;
+    margin-right: 5px;
+    color: #d01117;
+    font-weight: bold;
+    font-size: 21px;
+    font-size: 1.3125rem;
+    line-height: 24px;
+}
+
+#autorzy__lista article a .autorzy_lista_imie {
+    text-transform: none;
+}
+
+#autorzy__lista .not-found {
+    text-align: center;
+}
+
+
+/* AUTORZY LISTA SINGLE / HOME */
+
+.single-autorzy_lista .main {
+    position: relative;
+}
+
+.autorzy__master_slider {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.autorzy__master_slider img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*bottom: 0;*/
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    transition: all 1s ease-in-out;
+}
+
+.autor__menu-links {
+    position: absolute;
+    bottom: 25%;
+    left: 15%;
+    transform: translateY(-25%);
+}
+
+.autor__menu-links h1 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 57px;
+    border-left: 5px solid #d01117;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 75px;
+}
+
+.autor__menu-links h1::before,
+.autor__menu-links ul li:before {
+    background-image: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/red-slash.png);
+}
+
+.autor__menu-links h1::before {
+    position: absolute;
+    top: 25px;
+    left: 23px;
+    display: inline-block;
+    width: 19px;
+    height: 36px;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.autor__menu-links ul {
+    position: relative;
+    display: block;
+    margin: 5px 0;
+    padding: 0 35px;
+    border-left: 5px solid #d01117;
+    background-color: white;
+    line-height: 75px;
+}
+
+.autor__menu-links ul li {
+    position: relative;
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.autor__menu-links ul li:before {
+    position: absolute;
+    top: 64%;
+    left: -12px;
+    display: inline-block;
+    width: 19px;
+    height: 36px;
+    background-size: auto 15px;
+    background-repeat: no-repeat;
+    content: "";
+    transform: translateY(-50%);
+}
+
+.autor__menu-links ul li button,
+.autor__menu-links ul li input[type="button"] {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.autor__menu-links ul li a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.autor__menu-links ul li a:hover,
+.autor__menu-links ul li button:hover,
+.autor__menu-links ul li input[type="button"]:hover {
+    font-weight: bold;
+}
+
+.autorzy__content-area .fb_iframe_widget {
+    display: none !important;
+}
+
+.autorzy__content-area figure {
+    text-align: center;
+}
+
+.autorzy__content-area figure a {
+    color: black;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.autorzy__content-area figure a > span {
+    position: relative;
+    vertical-align: middle;
+}
+
+.autorzy__content-area .biogram {
+    padding: 30px 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.autorzy__content-area .biogram em {
+    font-style: italic;
+}
+
+.autor_menu-links {
+    padding: 30px;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.autor_menu-links ul,
+.autor_menu-links ul li {
+    display: inline-block;
+}
+
+.autor_menu-links ul li {
+    margin-right: 27px;
+}
+
+.autor_menu-links ul li a {
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    font-size: 1.125rem;
+}
+
+.autor_menu-links ul li.active a {
+    font-weight: bold;
+}
+
+.autor_menu-links ul li a:hover {
+    font-weight: 600;
+}
+
+
+/* AUTORZY LISTA SINGLE / BIBLIOGRAFIA */
+
+.single-autorzy_lista .bibliografia {
+    margin: 30px auto 0;
+}
+
+.single-autorzy_lista .bibliografia > p {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.single-autorzy_lista .bibliografia > p > span {
+    position: relative;
+    color: #d01117;
+    vertical-align: baseline;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.single-autorzy_lista .bibliografia li {
+    margin: 0 20px 10px;
+    list-style-type: disc;
+    font-size: 21px;
+}
+
+.single-autorzy_lista .bibliografia li > p {
+    font-style: italic;
+}
+
+.single-autorzy_lista .bibliografia li .red-triangle {
+    display: inline-block;
+    margin-left: 5px;
+    width: 0;
+    height: 0;
+    border-width: 8px 0 8px 13.9px;
+    border-style: solid;
+    border-color: transparent transparent transparent #d01117;
+    vertical-align: middle;
+    line-height: 0px;
+
+    _border-color: #000000 #000000 #000000 #d01117;
+    _filter: progid: DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+
+/* AUTORZY LISTA SINGLE / WIADOMOŚCI */
+
+@media (min-width: 103em) {
+    .autor__menu-kategoria ul {
+        display: flex !important;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .autor__menu-kategoria-wiadomosci ul li {
+        width: 12.269%;
+    }
+    .autor__menu-kategoria ul li:first-child {
+        text-align: left;
+    }
+    .autor__menu-kategoria ul li:last-child {
+        text-align: right;
+    }
+}
+
+.autor__menu-kategoria {
+    padding: 30px 0 10px;
+}
+
+.autor__menu-kategoria ul {
+    width: 100%;
+}
+
+.autor__menu-kategoria ul,
+.autor__menu-kategoria ul li {
+    display: block;
+    color: #959595;
+    text-transform: uppercase;
+    font-size: 14.3px;
+}
+
+.autor__menu-kategoria ul li {
+    text-align: center;
+}
+
+.autor__menu-kategoria ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.autor__menu-kategoria ul li a.active,
+.autor__menu-kategoria ul li a:hover {
+    font-weight: bold;
+}
+
+
+/* AUTORZY LISTA SINGLE / WYDARZENIA */
+
+@media (min-width: 103em) {
+    .module__autorzy-wydarzenia article {
+        min-height: 635px;
+        max-height: 635px;
+    }
+    .module__autorzy-wydarzenia article h3 {
+        margin: 100px 0 10px !important;
+    }
+    .module__autorzy-wydarzenia article > div > span:first-of-type {
+        position: absolute !important;
+        margin: 0 !important;
+        width: 100%;
+    }
+    .module__autorzy-wydarzenia article > div > div {
+        margin: 100px 0 0 !important;
+    }
+    .module__autorzy-wydarzenia article > div > span:first-of-type {
+        margin: 20px 0 !important;
+    }
+}
+
+.module__autorzy-wydarzenia article {
+    position: relative;
+    overflow: hidden;
+    margin: 30px auto 0;
+    padding: 0;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.module__autorzy-wydarzenia article figure {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.module__autorzy-wydarzenia article figure img {
+    display: block;
+    width: auto;
+    height: 100%;
+    transition: all 1s ease-in-out;
+
+    object-fit: cover;
+    object-position: 88%;
+}
+
+.module__autorzy-wydarzenia article figure a:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.module__autorzy-wydarzenia article h3 {
+    margin: 40px 0 10px;
+    color: #d01117;
+    text-align: center;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-family: "Playfair Display", serif !important;
+}
+
+.module__autorzy-wydarzenia article h4 {
+    text-align: center;
+    text-transform: none;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 34px;
+}
+
+.module__autorzy-wydarzenia article h4 > a {
+    text-decoration: none;
+}
+
+.module__autorzy-wydarzenia article > div > div {
+    display: inline-table;
+    margin: 40px 0 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.module__autorzy-wydarzenia article > div > div > span:first-child {
+    display: inline-flex;
+    padding: 7px;
+    background-color: #000;
+}
+
+.module__autorzy-wydarzenia article > div > div > span:nth-child(2) {
+    display: inline-flex;
+    margin-left: 2px;
+    padding: 7px;
+    background-color: #d01117;
+}
+
+.module__autorzy-wydarzenia article > div > div > span:nth-child(2) a {
+    color: white;
+}
+
+.module__autorzy-wydarzenia article > div > span:first-of-type {
+    position: static;
+    bottom: 40px;
+    display: flex;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.module__autorzy-wydarzenia article > div > span:first-of-type a {
+    margin: 0 auto;
+    padding: 4px 12px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.module__autorzy-wydarzenia article > div > span:first-of-type a:hover {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+.module__autorzy-wydarzenia .excerpt a {
+    position: absolute;
+    z-index: 99999;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    color: #ffffff !important;
+    text-align: justify;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 18px !important;
+    font-family: "Playfair Display", serif !important;
+    line-height: 26px !important;
+    opacity: 0;
+}
+
+.module__autorzy-wydarzenia article:hover .excerpt a {
+    opacity: 1;
+}
+
+
+/* SEKCJA HOME */
+
+section.ksiazki {
+    position: relative;
+}
+
+section.ksiazki:before {
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    background-color: #d5d5d5;
+    content: "";
+    transform: translateX(-50%);
+}
+
+.biuletyn__module-subtitle {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin-bottom: 0;
+    border-bottom: 1px solid #000;
+    color: #000;
+    text-align: left;
+    font-weight: 400;
+    font-size: 30px;
+    font-size: 1.875rem;
+    font-family: "Lato", "Arial", sans-serif;
+}
+
+.biuletyn__module-subtitle span {
+    position: relative;
+    top: 10px;
+    padding: 0 10px 0 0;
+    background: #fff;
+}
+
+
+/* AUTORZY LISTA SINGLE / KONTAKT */
+
+.autorzy_kontakt {
+    margin: 88px 0 0;
+}
+
+.autorzy_kontakt p {
+    margin-bottom: 50px;
+    color: #868686;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.autorzy_kontakt .text-area {
+    margin-bottom: 25px;
+}
+
+.autorzy_kontakt input,
+.autorzy_kontakt textarea {
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 0px;
+    color: #868686;
+}
+
+.autorzy_kontakt .send {
+    text-align: right;
+}
+
+.autorzy_kontakt .send span {
+    position: relative;
+    display: inline-block;
+    width: 103%;
+}
+
+.autorzy_kontakt input[type="submit"] {
+    position: relative;
+    overflow: visible;
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #898989;
+    border-radius: 0px;
+    background: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/arrow-right-dbs.png) center center;
+    background-repeat: no-repeat;
+    box-shadow: none !important;
+    text-indent: 19999px;
+    cursor: pointer;
+}
+
+.autorzy_kontakt .wpcf7-validation-errors {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    background-color: #d01117;
+    color: white;
+    font-size: 16px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.autorzy_kontakt .wpcf7-mail-sent-ok {
+    padding: 10px 20px;
+    border: 0;
+    background-color: #398f14;
+    color: white;
+    font-size: 16px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+
+/* AUTORZY LEKSYKON SINGLE */
+
+.autorzy__leksykon {
+    margin-top: 177px !important;
+}
+
+.autorzy__leksykon .right-side {
+    padding-left: 45px;
+}
+
+.autorzy__leksykon .autor__title {
+    margin: 0;
+    font-size: 36px;
+}
+
+.autorzy__leksykon .autor__title > span {
+    position: relative;
+    vertical-align: middle;
+}
+
+.autorzy__leksykon .biogram {
+    display: block;
+    margin: 112px 0 0;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.autorzy__leksykon .biogram em {
+    font-style: italic;
+}
+
+.autorzy__leksykon .bibliografia-list {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.autorzy__leksykon .bibliografia-list > a:first-child {
+    display: block;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    border-top: 1px solid;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.autorzy__leksykon .bibliografia-list > a:first-child:before {
+    position: relative;
+    top: 1.1em;
+    left: -1em;
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0.35em 0 0.35em 0.45em;
+    border-style: solid;
+    border-color: transparent #111;
+    content: "";
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    transform: rotate(90deg);
+}
+
+.autorzy__leksykon .bibliografia-list .collapsed:before {
+    transform: rotate(0deg) !important;
+}
+
+
+/*=============================== KSIĄŻKI-LISTA ===============================*/
+
+@media (min-width: 992px) {
+    .ksiazki-litsa__gatunki {
+        margin: 0 !important;
+    }
+}
+
+.post-type-archive-ksiazki_lista-view_serie .pagination_links,
+.post-type-archive-ksiazki_lista-view_gatunki .pagination_links {
+    margin-top: 40px;
+}
+
+.ksiazki-litsa__gatunki {
+    margin: 0 15px;
+}
+
+.ksiazki-litsa__gatunki li {
+    margin-bottom: 50px;
+    padding-left: 30px;
+}
+
+.ksiazki-litsa__gatunki li:before {
+    position: absolute;
+    top: 66%;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    background-image: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/red-slash.png);
+    background-repeat: no-repeat;
+    content: "";
+    font-size: 42px;
+    transform: translateY(-50%);
+}
+
+.ksiazki-litsa__gatunki a {
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-transform: capitalize;
+    font-size: 21px;
+    font-size: 21px;
+}
+
+.ksiazki-litsa__gatunki .active a,
+.ksiazki-litsa__gatunki a:hover {
+    font-weight: bold;
+}
+
+.ksiazki-litsa__gatunki div {
+    text-transform: initial;
+    font-size: 14px;
+}
+
+.ksiazki-lista__serie {
+    margin: 0;
+}
+
+.ksiazki-lista__serie li {
+    margin-bottom: 50px;
+    padding-left: 30px;
+}
+
+.ksiazki-lista__serie li:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    background-image: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/red-slash.png);
+    background-repeat: no-repeat;
+    content: "";
+    font-size: 42px;
+    transform: translateY(-50%);
+}
+
+#ksiazki-lista__serie-archive li:before {
+    background-image: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/grey-slash.png) !important;
+}
+
+.ksiazki-lista__serie a {
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 21px;
+}
+
+.ksiazki-lista__serie .active a,
+.ksiazki-lista__serie a:hover {
+    font-weight: bold;
+}
+
+.ksiazki-lista__serie div {
+    text-transform: initial;
+    font-size: 14px;
+}
+
+.tax-ksiazki_serie .toggle-seria-archive,
+.post-type-archive-ksiazki_lista .toggle-seria-archive {
+    display: block;
+    padding: 10px 0 30px 23px;
+    width: 100%;
+    border-top: 2px solid;
+    color: #b3b3b3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tax-ksiazki_serie .toggle-seria-archive:before,
+.post-type-archive-ksiazki_lista .toggle-seria-archive:before {
+    position: relative;
+    top: 1.1em;
+    left: -1em;
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0.35em 0 0.35em 0.45em;
+    border-style: solid;
+    border-color: transparent #b3b3b3;
+    content: "";
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+    transform: rotate(90deg);
+}
+
+.tax-ksiazki_serie .collapsed:before,
+.post-type-archive-ksiazki_lista .collapsed:before {
+    transform: rotate(0deg);
+}
+
+
+/*=============================== MODUŁ DYSTRYBUTORZY ===============================*/
+
+@media (min-width: 103em) {
+    .ksiazki_lista-dystrybucja {
+        margin: 0 !important;
+    }
+}
+
+.ksiazki_lista-dystrybucja {
+    margin: 0 15px;
+}
+
+.ksiazki_lista-dystrybucja > div:first-of-type {
+    margin: 55px 0 46px 0;
+    padding: 40px;
+    -webkit-box-shadow: 2px 0px 17px 3px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 2px 0px 17px 3px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 0px 17px 3px rgba(0, 0, 0, 0.21);
+}
+
+.ksiazki_lista-dystrybucja > div:first-of-type > div:first-child h3 {
+    display: block;
+    padding: 20px 10px;
+    border: 1px solid #898989;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+}
+
+.ksiazki_lista-dystrybucja > div > div:first-of-type a:first-of-type img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 1s ease-in-out;
+}
+
+.ksiazki_lista-dystrybucja > div > div:first-of-type a:first-of-type:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.ksiazki_lista-dystrybucja > div:first-of-type > div:first-child a {
+    display: block;
+    margin: 20px auto 0;
+    width: 173px;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17.75px;
+}
+
+.ksiazki_lista-dystrybucja > div:first-of-type > div:first-child a:hover {
+    color: #d01117;
+}
+
+.ksiazki_lista-dystrybucja > div:first-of-type > div:last-child h4 {
+    display: block;
+    margin: 20px 0 47px;
+    text-transform: none;
+    font-size: 18px;
+}
+
+.ksiazki_lista-dystrybucja > div:first-of-type > div:last-child h4 span {
+    padding: 0 15px;
+    background-color: white;
+}
+
+.ksiazki_lista-dystrybucja > div:first-of-type > div:last-child h4:after {
+    display: inherit;
+    margin-top: -8px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    content: "";
+}
+
+.ksiazki_lista-dystrybucja .dystrybutor {
+    margin-bottom: 30px;
+    text-transform: none;
+    font-size: 17.75px;
+}
+
+.ksiazki_lista-dystrybucja .dystrybutor a,
+.ksiazki_lista-dystrybucja .magazyn a {
+    color: black;
+    text-decoration: none;
+}
+
+.ksiazki_lista-dystrybucja .dystrybutor a:hover,
+.ksiazki_lista-dystrybucja .magazyn a:hover {
+    color: #d01117;
+}
+
+.ksiazki_lista-dystrybucja .dystrybutor-bottom {
+    padding-top: 25px;
+    border-top: 2px solid;
+}
+
+.ksiazki_lista-dystrybucja .magazyn {
+    margin-top: -15px;
+    text-transform: none;
+    font-size: 18px;
+}
+
+.ksiazki_lista-dystrybucja .magazyn p {
+    text-transform: none;
+    font-size: 16.46px;
+}
+
+.ksiazki_lista-dystrybucja .magazyn h5 {
+    margin-bottom: 25px;
+}
+
+.ksiazki_lista-dystrybucja .magazyn h5 span {
+    padding-right: 10px;
+    background-color: white;
+}
+
+.ksiazki_lista-dystrybucja .magazyn h5:after {
+    display: inherit;
+    margin-top: -8px;
+    width: 100%;
+    border-bottom: 2px solid black;
+    content: "";
+}
+
+
+/*=============================== MODUŁ KSIĄŻKI LISTA POPULARNE ===============================*/
+
+@media (min-width: 992px) {
+    .ksiazki_lista-popularne .top-9 .border-top {
+        border-top: 2px solid black;
+    }
+}
+
+@media (min-width: 103em) {
+    .ksiazki_lista-popularne {
+        margin: 0 !important;
+    }
+    .ksiazki_lista-popularne .top-9 {
+        margin-top: 66px;
+    }
+}
+
+.ksiazki_lista-popularne {
+    margin: 0 15px;
+}
+
+.ksiazki_lista-popularne > div:first-of-type {
+    margin: 55px 0 46px 0;
+    padding: 40px;
+    -webkit-box-shadow: 2px 0px 17px 3px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 2px 0px 17px 3px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 0px 17px 3px rgba(0, 0, 0, 0.21);
+}
+
+.ksiazki_lista-popularne .top-1 > h3 {
+    display: block;
+    padding: 20px 10px;
+    border: 1px solid #898989;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+}
+
+.ksiazki_lista-popularne .top-1 a:first-of-type {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ksiazki_lista-popularne .top-1 a:first-of-type > img {
+    display: block;
+    margin: 20px auto 0;
+    width: 173px;
+    color: black;
+    text-align: left;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17.75px;
+    transition: all 1s ease-in-out;
+}
+
+.ksiazki_lista-popularne .top-1 a:first-of-type:hover > img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.ksiazki_lista-popularne .top-1 a:nth-of-type(2) {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    margin-left: 21%;
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 17.75px;
+    transition: all 1s ease-in-out;
+}
+
+.ksiazki_lista-popularne .top-1 a:nth-of-type(2):before {
+    position: absolute;
+    top: 50%;
+    left: -18%;
+    display: block;
+    content: "1";
+    font-size: 48.8px;
+    font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+    transform: translateY(-50%);
+}
+
+.ksiazki_lista-popularne .top-1 a:nth-of-type(2) div:nth-of-type(2) {
+    font-style: italic;
+    font-size: 22.19px;
+}
+
+.ksiazki_lista-popularne > div:first-of-type > div:first-child a:hover {
+    color: #d01117;
+}
+
+.ksiazki_lista-popularne .top-9 > div > a:first-of-type:before {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    font-size: 30px;
+    font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+    line-height: 1;
+}
+
+.ksiazki_lista-popularne .top-9 > div > a:first-of-type {
+    position: relative;
+    display: block;
+    padding: 20px 0 20px 25px;
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 17.75px;
+}
+
+.ksiazki_lista-popularne .top-9 > div > a:first-of-type:hover {
+    color: #d01117;
+}
+
+.ksiazki_lista-popularne .top-9 > div > a:first-of-type > div:nth-of-type(2) {
+    font-style: italic;
+    font-size: 22.19px;
+}
+
+
+/*=============================== MODUŁ MATERIAŁY O AUTORZE ===============================*/
+
+#module__materialy-o-autorze {
+    position: relative;
+    margin: 75px 0 0 0;
+}
+
+#module__materialy-o-autorze .biuletyn_subtitle {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #898989;
+}
+
+#module__materialy-o-autorze .kategorie {
+    width: 100%;
+    text-align: center;
+}
+
+#module__materialy-o-autorze .kategorie,
+#module__materialy-o-autorze .kategorie li {
+    display: inline-block;
+}
+
+#module__materialy-o-autorze .kategorie li {
+    padding-right: 85px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#module__materialy-o-autorze .kategorie .ui-state-active a {
+    color: black;
+}
+
+#module__materialy-o-autorze .kategorie li:last-child {
+    padding-right: 0;
+}
+
+#module__materialy-o-autorze .kategorie li,
+#module__materialy-o-autorze .kategorie li a {
+    color: #949494;
+}
+
+#module__materialy-o-autorze .post-o-autorze li > a:first-child img {
+    transition: all 1s ease-in-out;
+}
+
+#module__materialy-o-autorze .post-o-autorze li > a:first-child:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+#module__materialy-o-autorze .kategorie li a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+#module__materialy-o-autorze .post-o-autorze {
+    margin-top: 35px;
+}
+
+#module__materialy-o-autorze .post-o-autorze li {
+    text-align: center;
+}
+
+#module__materialy-o-autorze .post-o-autorze li img,
+#module__materialy-o-autorze .post-o-autorze li .excerpt {
+    margin: 0 auto;
+}
+
+#module__materialy-o-autorze .post-o-autorze li .excerpt {
+    margin-top: 10px;
+    max-width: 89%;
+    /*height: 96px;*/
+    font-size: 16.58px;
+    line-height: 1.2;
+}
+
+#module__materialy-o-autorze .post-o-autorze li .excerpt em {
+    font-style: italic;
+}
+
+#module__materialy-o-autorze .post-o-autorze li img,
+#module__materialy-o-autorze .post-o-autorze li a,
+#module__materialy-o-autorze .post-o-autorze li span {
+    display: block;
+}
+
+#module__materialy-o-autorze .post-o-autorze li .title {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+#module__materialy-o-autorze .post-o-autorze li .title:hover,
+#module__materialy-o-autorze .post-o-autorze li .kategoria a:hover {
+    color: #d01117;
+}
+
+#module__materialy-o-autorze .post-o-autorze li .kategoria,
+#module__materialy-o-autorze .post-o-autorze li .kategoria a {
+    padding: 10px 0 3px;
+    color: #aaaaaa;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14.3px;
+}
+
+#module__materialy-o-autorze .post-o-autorze li .wiecej-button {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#module__materialy-o-autorze .post-o-autorze li .wiecej-button a {
+    display: inline-block;
+    padding: 5px 13px;
+    border: 1px solid #626262;
+    color: #626262;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+
+#module__materialy-o-autorze .post-o-autorze li .wiecej-button a:hover {
+    background-color: #626262;
+    color: white;
+}
+
+
+/*=============================== MODUŁ KSIĄZKI-LISTA ===============================*/
+
+#projekty__ksiazki-lista,
+#biuletyn__ksiazki-lista {
+    position: relative;
+}
+
+#biuletyn__ksiazki-lista:before,
+#biuletyn__autorzy:before,
+#projekty__ksiazki-lista::before {
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    background-color: #d5d5d5;
+    content: "";
+    transform: translateX(-50%);
+}
+
+#biuletyn__ksiazki-lista h2 span,
+#biuletyn__autorzy h2 span,
+#projekty__ksiazki-lista h2 span {
+    background: #d5d5d5 !important;
+}
+
+
+/*=============================== MODUŁ AUTORZY ===============================*/
+
+#biuletyn__autorzy ul li a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+#biuletyn__autorzy ul li a img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    transition: all 1s ease-in-out;
+}
+
+#biuletyn__autorzy ul li:hover a img,
+#biuletyn__autorzy ul li a img:hover {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+
+/*=============================== MODUŁ WYDARZENIA ===============================*/
+
+#biuletyn__wydarzenia ul li a img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    transition: all 1s ease-in-out;
+}
+
+#biuletyn__wydarzenia ul li a:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+#biuletyn__wydarzenia ul li a div {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-transform: none;
+    transform: translateY(-50%);
+}
+
+#biuletyn__wydarzenia ul li a div span {
+    padding: 30px 60px;
+    background-color: black;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+}
+
+#biuletyn__wydarzenia ul li a:hover div span {
+    opacity: 1;
+}
+
+
+/*=============================== MODUŁ SERIA POEZJEM ===============================*/
+
+#module__seria-poezjem {
+    margin: 70px 0 0;
+    padding: 30px;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(235, 235, 235, 0.7);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(235, 235, 235, 0.7);
+    box-shadow: 0px 0px 10px 3px rgba(235, 235, 235, 0.7);
+}
+
+#module__seria-poezjem .item-image-poezja {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 312px;
+}
+
+#module__seria-poezjem .item-image img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin: auto;
+    transition: all 1s ease-in-out;
+}
+
+#module__seria-poezjem .item-image a:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+#module__seria-poezjem .title,
+#module__seria-poezjem .title a {
+    display: block;
+    margin-top: 25px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 28px;
+}
+
+#module__seria-poezjem .fs-carousel-controls {
+    margin-top: 25px;
+}
+
+#module__seria-poezjem .fs-carousel-controls {
+    text-align: center;
+}
+
+#module__seria-poezjem .fs-carousel-control {
+    position: relative;
+    right: 0;
+    left: 0;
+    display: inline-block;
+    float: none;
+    margin: 0 3px;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #b3b3b3;
+    border-radius: inherit;
+    background-position: center center !important;
+    background-size: auto 20px !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/*=============================== MODUŁ KSIĄŻKI LISTA ===============================*/
+
+@media (min-width: 992px) {
+    .module__ksiazki_lista article {
+        min-height: 460px;
+        max-height: 460px;
+    }
+    .module__ksiazki_lista article h3 {
+        margin: 65px 0 10px !important;
+    }
+    .module__ksiazki_lista article > div > span:first-of-type {
+        position: absolute !important;
+        margin: 0 !important;
+        margin: 20px 0 !important;
+        width: 100%;
+    }
+    .module__ksiazki_lista article > div > div {
+        margin: 60px 0 0 !important;
+    }
+}
+
+#autor__kup-w-poezjem {
+    margin-top: 35px;
+}
+
+.single-ksiazki_lista #ksiazki__more-books {
+    margin: 65px auto 0;
+}
+
+.single-ksiazki_lista #ksiazki__more-books h2 span {
+    font-weight: bold;
+}
+
+.single-ksiazki_lista #ksiazki__more-books .biuletyn_subtitle {
+    border-bottom: 1px solid #000;
+    font-weight: 400;
+}
+
+.module__ksiazki_lista article {
+    overflow: hidden;
+    margin: 30px auto 0;
+    padding: 0;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.module__ksiazki_lista article figure {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.module__ksiazki_lista article figure img {
+    display: block;
+    height: 100%;
+    transition: all 1s ease-in-out;
+
+    object-fit: cover;
+}
+
+.module__ksiazki_lista article figure a:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.module__ksiazki_lista article h3 {
+    margin-top: 40px;
+    color: #000;
+    text-align: center;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-family: "Playfair Display", serif !important;
+}
+
+.module__ksiazki_lista article .color-red {
+    color: #d01117;
+}
+
+.module__ksiazki_lista article h4 {
+    text-align: center;
+    text-transform: none;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 26px;
+}
+
+.module__ksiazki_lista article h4 > a {
+    text-decoration: none;
+}
+
+.module__ksiazki_lista article > div > div {
+    display: inline-table;
+    margin: 40px 0 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.module__ksiazki_lista article > div > div > span:first-child {
+    display: inline-flex;
+    padding: 7px;
+    background-color: #000;
+}
+
+.module__ksiazki_lista article > div > div > span:nth-child(2) {
+    display: inline-flex;
+    margin-left: 2px;
+    padding: 7px;
+    background-color: #d01117;
+}
+
+.module__ksiazki_lista article > div > div > span:nth-child(2) a {
+    color: white;
+}
+
+.module__ksiazki_lista article > div > span:first-of-type {
+    position: static;
+    bottom: 40px;
+    display: flex;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.module__ksiazki_lista article > div > span:first-of-type a {
+    margin: 0 auto;
+    padding: 4px 12px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.module__ksiazki_lista article > div > span:first-of-type a:hover {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
+
+/*=============================== SEARCH KATEGORIE BIULETYN ===============================*/
+
+.dropdown-search,
+.dropdown-search .dropdown-menu>li>a {
+    color: #898989;
+}
+
+.dropdown-search input[type="button"],
+.dropdown-search button {
+    position: relative;
+    margin: 15px 0 0px;
+    padding: 2px 10px;
+    width: 100%;
+    border: 1px solid #898989;
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: none;
+    color: black;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: none;
+    font-size: 18px;
+}
+
+.dropdown-search input[type="button"]:hover,
+.dropdown-search button:hover {
+    border-color: #000000;
+    background-color: #000000;
+    color: #fff;
+}
+
+.dropdown-search-autorzy input[type="button"],
+.dropdown-search-autorzy button {
+    margin: 0 !important;
+}
+
+.dropdown-search .caret-dbs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-bottom: 1px solid #898989;
+    background: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/arrow-right-dbs.png) center center;
+    background-size: 6px auto;
+    background-repeat: no-repeat;
+    box-shadow: none !important;
+    text-align: right;
+    text-indent: 19999px;
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+.dropdown-search > ul {
+    width: 100%;
+}
+
+.dropdown-search > ul .sortuj-data {
+    position: relative;
+    display: inline-block;
+    padding: 2px 20px;
+    width: 100%;
+}
+
+.dropdown-search > ul .sortuj-data a {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    width: 23px;
+    height: 23px;
+    background: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/arrow-right-dbs.png) center center;
+    background-size: 6px auto;
+    background-repeat: no-repeat;
+}
+
+.dropdown-search > ul .sortuj-data .asc {
+    right: 50%;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.dropdown-search > ul .sortuj-data .desc {
+    right: 40%;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+
+/*=============================== MODUŁ RELACJE Z WYDARZEŃ ===============================*/
+
+#module__relacje-z-wydarzen .title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-family: 'TungstenMedium', Arial, Helvetica, sans-serif !important;
+}
+
+#module__relacje-z-wydarzen .row {
+    margin: 0;
+}
+
+#module__relacje-z-wydarzen .row:before {
+    top: 7px;
+}
+
+#module__relacje-z-wydarzen .row:before,
+#module__relacje-z-wydarzen .row:after {
+    position: relative;
+    display: inline-block;
+    clear: both;
+    width: 100%;
+    height: 35px;
+    background: #000 url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/klisza.png) no-repeat;
+    background-size: auto 31px;
+
+    background-repeat-x: repeat;
+}
+
+#module__relacje-z-wydarzen .row:after {
+    top: -7px;
+}
+
+#module__relacje-z-wydarzen ul {
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    background-color: black;
+}
+
+#module__relacje-z-wydarzen .item-image {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 160px;
+}
+
+#module__relacje-z-wydarzen .item-image img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin: auto;
+    transition: all 1s ease-in-out;
+}
+
+#module__relacje-z-wydarzen ul .item-image-rzw:hover img {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+#module__relacje-z-wydarzen .title-rzw {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-transform: initial;
+    transform: translateY(-50%);
+
+    -webkit-backface-visibility: hidden;
+}
+
+#module__relacje-z-wydarzen .title-rzw > span {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 195px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, .4);
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#module__relacje-z-wydarzen .title-rzw > span > span {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 19px;
+    transform: translateY(-50%);
+}
+
+
+/* NEW SEARCH FORM */
+
+
+/***********************
+ * Essential Structure *
+ ***********************/
+
+.flexsearch--wrapper {
+    position: static;
+    overflow: hidden;
+    margin: 0;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    background: transparent;
+}
+
+.flexsearch--form {
+    position: relative;
+    overflow: hidden;
+}
+
+.flexsearch--input-wrapper {
+    /* Right padding for submit button width */
+    overflow: hidden;
+    padding: 0 66px 0 0;
+}
+
+.flexsearch--input {
+    width: 100%;
+}
+
+
+/***********************
+ * Configurable Styles *
+ ***********************/
+
+.flexsearch {
+    margin: 0 auto 25px;
+    padding: 0;
+    width: 80%;
+    /* Padding for other horizontal elements */
+}
+
+@media (min-width: 103em) {
+    .flexsearch {
+        width: 557px;
+    }
+}
+
+.post-type-archive-autorzy_lista .flexsearch,
+.post-type-archive-ksiazki_lista .flexsearch,
+.tax-ksiazki_lista_kategorie .flexsearch,
+.tax-ksiazki_serie .flexsearch,
+.tax-ksiazki_litera .flexsearch {
+    margin: -15px auto 25px;
+}
+
+.flexsearch--input,
+.flexsearch input[type="search"] {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-top: 15px;
+    padding: 0 46px 0 10px;
+    height: 30px;
+    border-width: 1px;
+    /* (height/2) + border-width */
+    border-style: solid;
+    border-color: #888;
+    border-radius: 0px;
+    color: #333;
+    font-size: 21px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.flexsearch--submit,
+.flexsearch input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    margin-top: 16px;
+    /* margin-top + border-width */
+    margin-right: 9px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-left: 1px solid;
+    border-radius: 0px;
+    /* border-width */
+    background: transparent;
+    background: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/arrow-right-dbs.png) center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    color: #888;
+    text-indent: 19999px;
+    text-shadow: none;
+    font-weight: 900;
+    font-size: 23px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.flexsearch--input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.flexsearch--input:focus.flexsearch--submit {
+    color: #333;
+}
+
+.flexsearch--submit:hover {
+    color: #333;
+    cursor: pointer;
+}
+
+.flexsearch input[type="search"]::-webkit-input-placeholder {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.flexsearch input[type="search"]::-moz-placeholder {
+    text-align: center;
+}
+
+.flexsearch input[type="search"]:-ms-input-placeholder {
+    text-align: center;
+}
+
+.flexsearch input[type="search"]:-moz-placeholder {
+    text-align: center;
+}
+
+
+/*
+ * BIBLIOTEKA HOMEPAGE 
+ */
+
+@media (min-width: 103em) {
+    .page-template-biblioteka .menu-menu-links-right-container {
+        float: right;
+    }
+    .page-template-biblioteka .first-separator:after {
+        position: absolute;
+        top: 23px;
+        left: 20px;
+        height: 100%;
+        border-right: 1px solid black;
+        content: "";
+    }
+    .page-template-biblioteka .second-separator:after {
+        position: absolute;
+        top: 24px;
+        left: 20px;
+        height: 93.9%;
+        border-right: 1px solid black;
+        content: "";
+    }
+}
+
+.page-template-biblioteka .white,
+.page-template-biblioteka .white a {
+    color: white !important;
+}
+
+.page-template-biblioteka h3 {
+    font-size: 13px;
+}
+
+.page-template-biblioteka .custom-type-1 {
+    cursor: pointer;
+}
+
+.page-template-biblioteka .custom-type-1 img {
+    margin-bottom: 18px;
+}
+
+.page-template-biblioteka .custom-type-1 .category {
+    display: block;
+    color: #ffc807;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: "Lato", "Arial", sans-serif;
+}
+
+.page-template-biblioteka .custom-type-1 .category a {
+    color: #ffc807;
+}
+
+.page-template-biblioteka .custom-type-1 h4 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-size: 1.563rem;
+    font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+    line-height: 30px;
+}
+
+.page-template-biblioteka .custom-type-1 p {
+    display: inline-block;
+    margin: 10px 0;
+    color: #404040;
+    text-align: center;
+    text-transform: initial;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    font-family: "georgia";
+    font-family: 'Playfair Display', serif;
+    line-height: 24px;
+}
+
+.page-template-biblioteka .custom-type-1 .imie {
+    display: block;
+    color: #000;
+    text-align: center;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 21px;
+    font-size: 1.3125rem;
+    font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+}
+
+.page-template-biblioteka .custom-type-1 .imie .nazwisko {
+    text-transform: uppercase;
+}
+
+.page-template-biblioteka .custom-type-1 .wiecej {
+    display: block;
+    clear: both;
+    margin-bottom: 55px;
+    border-bottom: 1px solid #898989;
+    text-align: center;
+}
+
+.page-template-biblioteka .custom-type-1 .wiecej a {
+    position: relative;
+    top: 12px;
+    padding: 5px 15px 6px 15px;
+    border: 1px solid #898989;
+    background: white;
+    color: #898989;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Lato", "Arial", sans-serif;
+}
+
+.page-template-biblioteka .custom-type-1 .wiecej a:hover {
+    background: #000 !important;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.page-template-biblioteka .kategoria_debaty a,
+.page-template-biblioteka .kategoria_debaty a:hover,
+.page-template-biblioteka .kategoria_debaty a:active,
+.page-template-biblioteka .kategoria_debaty a:focus,
+.page-template-biblioteka .kategoria_debaty a:visited {
+    /*color: #898989;*/
+    color: rgba(137, 137, 137, 0.75);
+    text-transform: uppercase
+}
+
+.page-template-biblioteka .utwory,
+.page-template-biblioteka .recytacje {
+    margin-top: 51px !important;
+}
+
+.page-template-biblioteka .debaty .wiecej {
+    margin-bottom: 40px;
+}
+
+.page-template-biblioteka .rozmowy .row {
+    margin: 0;
+}
+
+.page-template-biblioteka .rozmowy .carousel {
+    padding: 0;
+}
+
+.page-template-biblioteka .rozmowy img {
+    margin: 0;
+}
+
+.page-template-biblioteka .rozmowy .biblioteka-carousel-indicators {
+    right: 6%;
+    bottom: 15%;
+}
+
+.page-template-biblioteka .rozmowy .carousel-control {
+    margin-bottom: 7px;
+}
+
+.page-template-biblioteka .carousel-control {
+    color: white;
+}
+
+.page-template-biblioteka .rozmowy article {
+    margin: 0;
+}
+
+.page-template-biblioteka .rozmowy article > a {
+    display: block;
+    overflow: hidden;
+}
+
+.page-template-biblioteka .rozmowy .type-wywiady {
+    position: relative;
+}
+
+.page-template-biblioteka .recenzje h2,
+.page-template-biblioteka .blogi h2 {
+    float: right;
+    width: 91%;
+}
+
+.page-template-biblioteka .recenzje h2 span,
+.page-template-biblioteka .blogi h2 span {
+    padding-right: 0;
+    padding-left: 10px
+}
+
+.page-template-biblioteka .recenzje h2,
+.page-template-biblioteka .recenzje h3,
+.page-template-biblioteka .blogi h2,
+.page-template-biblioteka .blogi h3 {
+    text-align: right;
+}
+
+.page-template-biblioteka .recenzje p {
+    margin: 10px 0;
+    color: #404040;
+    text-align: center;
+    text-transform: initial;
+    font-size: 17px;
+    font-size: 1.0625rem;
+    font-family: "georgia";
+    font-family: 'Playfair Display', serif;
+    line-height: 24px;
+}
+
+
+/*
+.page-template-biblioteka .recenzje article:nth-of-type(2) {
+    margin-top: 50px;
+}
+*/
+
+.page-template-biblioteka .recenzje .wiecej {
+    margin-bottom: 92px;
+}
+
+.page-template-biblioteka .recenzje article:last-of-type .wiecej {
+    margin-bottom: 0;
+}
+
+.page-template-biblioteka .utwory .row {
+    margin: 0;
+    padding: 40px 50px 0 40px;
+    background: #000;
+}
+
+.page-template-biblioteka .utwory article {
+    padding-bottom: 40px;
+}
+
+.page-template-biblioteka .utwory p {
+    margin: 10px 0;
+    color: #fff;
+    text-align: center;
+    text-transform: initial;
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+}
+
+.page-template-biblioteka .utwory .custom-type-1 .wiecej a {
+    background: #000 !important;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.page-template-biblioteka .ksiazki .wiecej a:hover,
+.page-template-biblioteka .utwory .custom-type-1 .wiecej a:hover {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+.page-template-biblioteka .ksiazki p {
+    text-align: left;
+}
+
+.page-template-biblioteka .ksiazki h3 {
+    position: relative;
+}
+
+.page-template-biblioteka .ksiazki .ksiazki_right a {
+    display: inline-block;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.page-template-biblioteka .ksiazki .ksiazki_right a img {
+    margin-bottom: 0;
+}
+
+.page-template-biblioteka .blogi .category,
+.page-template-biblioteka .blogi h4,
+.page-template-biblioteka .blogi .imie {
+    text-align: left;
+}
+
+.page-template-biblioteka .blogi article {
+    padding-left: 41px;
+}
+
+.page-template-biblioteka .blogi h4 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.biblioteka-carousel-indicators {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    left: inherit;
+    z-index: 15;
+    margin-left: -30%;
+    padding-left: 0;
+    width: 60%;
+    list-style: none;
+    text-align: right;
+}
+
+.carousel-indicators-numbers li {
+    display: inline-block;
+    margin: 0;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border: 2px solid white;
+    border-radius: 0;
+    background-color: #999;
+    background-color: transparent;
+    color: black;
+    color: #fff;
+    text-align: center;
+    text-indent: 0;
+    font-size: 100%;
+    font-size: 35px;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    line-height: 38px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.carousel-indicators-numbers .active,
+.carousel-indicators-numbers li:hover {
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    color: white;
+}
+
+.page-template-biblioteka .recytacje .carousel-control,
+.page-template-biblioteka .debaty .carousel-control {
+    width: 9%;
+    background: none;
+}
+
+.carousel-biblioteka .carousel-control img {
+    position: relative;
+    top: 50%;
+    display: inline-block;
+    transform: translateY(-50%);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.carousel-biblioteka .carousel-control img:hover {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.carousel-biblioteka .right img {
+    right: 35%;
+}
+
+.page-template-biblioteka .nagrania .carousel-control {
+    margin: 0 15px 11px 15px;
+    color: white;
+}
+
+.page-template-biblioteka .nagrania .custom-type-1 img {
+    margin-bottom: 0;
+}
+
+.page-template-biblioteka .zdjecia .carousel-control {
+    margin: 8px 0 13px;
+    width: 6%;
+}
+
+.page-template-biblioteka .zdjecia article {
+    background: black;
+}
+
+.page-template-biblioteka .zdjecia article:hover {
+    cursor: pointer;
+}
+
+.page-template-biblioteka .zdjecia article a:first-of-type {
+    display: block;
+    overflow: hidden;
+}
+
+.page-template-biblioteka .zdjecia article img {
+    margin-bottom: 0;
+}
+
+.page-template-biblioteka .zdjecia .row {
+    margin: 0;
+}
+
+.page-template-biblioteka .zdjecia .row:before {
+    top: 8px;
+}
+
+.page-template-biblioteka .zdjecia .row:before,
+.page-template-biblioteka .zdjecia .row:after {
+    position: relative;
+    display: inline-block;
+    clear: both;
+    width: 100%;
+    height: 35px;
+    background: #000 url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/klisza.png) no-repeat;
+    background-size: auto 31px;
+    content: "";
+
+    background-repeat-x: repeat;
+}
+
+.page-template-biblioteka .zdjecia .row:after {
+    top: -7px;
+}
+
+.page-template-biblioteka #top_links {
+    position: relative !important;
+    background: black !important;
+}
+
+.biblioteka-top {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1645px;
+    height: 600px;
+}
+
+.biblioteka-top .row {
+    margin: 0;
+}
+
+.biblioteka-top #carousel-top {
+    padding: 0;
+}
+
+.biblioteka-top article {
+    position: relative;
+    max-height: 600px;
+    height: 600px;
+}
+
+.biblioteka-top article img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+
+    object-fit: cover;
+}
+
+.biblioteka-top article .info {
+    position: absolute;
+    bottom: 20%;
+    left: 16%;
+}
+
+.biblioteka-top article .info .cat {
+    padding: 0;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.75) 1px 1px 1px;
+    font-size: 13px;
+    font-family: "Lato", "Arial", sans-serif;
+}
+
+.biblioteka-top article .info .cat span {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.biblioteka-top article .info .title {
+    display: block;
+    padding: 15px 0 10px;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.75) 1px 1px 1px;
+    letter-spacing: 0.02em;
+    font-size: 35px;
+    font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+    line-height: 35px;
+}
+
+.biblioteka-top article .info .imie {
+    display: block;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.75) 1px 1px 1px;
+    letter-spacing: 0.013em;
+    font-size: 21px;
+    font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+}
+.center{
+	text-align:center!important;
+}

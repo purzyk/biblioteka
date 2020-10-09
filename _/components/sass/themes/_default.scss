@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+$susy:(
+	columns: 12,
+	gutters: 1/4
+	);
+
+$off-canvas-width: span(3 wide);
+.transformer {
+
+	transition: transform 0.3s ease;
+	&.is-open {
+		transform: translate3d($off-canvas-width, 0, 0);
+	}
+}
+
+
+.off-canvas {
+	position: absolute;
+	width: 260px;
+	left: -260px;
+	top: 0;
+	bottom: 0;
+}
+.site-content, .inner{
+	@include container();
+	padding:0 35px;
+	@include breakpoint($large){
+		padding:0;
+	}
+	@include breakpoint($medium){
+		@include container(); 
+		padding:0 35px;
+	}
+	@include breakpoint($xl-large){
+		@include container(1425px); 
+	}
+}
+.site-content{
+	background:#fff;
+	margin-top:160px;
+	@include breakpoint($medium){
+		margin-top:240px;
+	}
+	@include breakpoint($xl-large){
+		margin-top:440px;
+	}
+}
+#content{
+	@include breakpoint($medium){
+		/*
+padding:26px 40px 0;
+*/
+padding:26px 10px 0;
+}
+@include breakpoint($xl-large){
+	/*
+	padding:26px 114px 0;
+	*/
+	padding:26px 0 0;
+}
+}
+#page{
+	overflow: hidden;
+}
+.home .site-content, .single .site-content{
+	@include breakpoint($xl-large){	
+		@include container(1645px); 
+		padding-left:110px!important;
+		padding-right:110px!important;
+	}
+}
+
+
+article.typ_1{
+	position: relative;
+	a.cat_lin{
+		float: initial;
+	}
+}

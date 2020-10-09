@@ -1,0 +1,786 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.szkice {
+    article {
+        @include span(full);
+        @include breakpoint($medium){
+        @include gallery(4 of 12);
+    }
+    }
+}
+/*
+.debaty {
+    article {
+        @include span(4 of 12);
+    }
+}
+*/
+.debaty {
+    article {
+        margin-right:20px;
+    }
+}
+.rozmowy {
+    .reveal {
+
+        padding-top: 5px;
+        @include breakpoint($xl-large){ 
+        padding-top: 20px;
+    }
+        margin: 30px 22px;
+        border: 3px solid white;
+        color: #fff !important;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        text-align: center;
+
+        h4 {
+            font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+            @include font-size(42px);
+            line-height: 23px;
+            @include breakpoint($xl-large){ 
+line-height:inherit;
+            }
+
+            text-transform: uppercase;
+        }
+
+        span.category {
+            display: block;
+            text-align: center;
+            font-family: $lato;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        span.imie {
+            display: initial;
+            text-align: center;
+            font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+            @include font-size(24px);
+
+            text-transform: capitalize;
+            border-bottom: 3px solid white;
+
+            .nazwisko {
+                text-transform: uppercase;
+            }
+
+            padding-bottom: 10px;
+        }
+
+        h5 {
+            font-family: $text;
+
+            @include font-size(14px);
+
+            line-height: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-top: 15px;
+            font-family: $text;
+
+            @include font-size(14px);
+
+            line-height: 20px;
+            text-align: center;
+            font-weight: bold;
+            padding: 0 80px 0;
+            @include breakpoint($xl-large){ 
+            padding: 15px 80px 0;
+        }
+            display: block;
+        }
+    }
+
+    a:hover {
+        .reveal {
+            color: #fff !important;
+        }
+    }
+
+    .typ_large {
+        @include span(full);
+        @include breakpoint($medium){
+            @include span(8 of 12);
+        }
+
+        a {
+            float: left;
+            position: relative;
+        }
+
+        .reveal {
+            display: none;
+        }
+
+        a:hover {
+            .reveal {
+                display: block;
+            }
+        }
+    }
+
+    .typ_small {
+        article {
+            position: relative;
+        }
+        @include span(full);
+        @include breakpoint($medium){
+        @include span(4 of 12 last);
+    }
+
+        .reveal {
+            padding: 0;
+            margin: 0;
+            text-align: right;
+            right: 10px;
+            bottom:4px;
+            @include breakpoint($xl-large){ 
+            bottom: 10px;
+            padding-left: 35px;
+            p{
+                text-align: right;
+                padding-right: 0!important;
+            }
+        }
+            top: auto;
+            left: auto;
+            border: none !important;
+            position: absolute;
+
+            h4 {
+                @include font-size(29px);
+
+                text-align: right;
+            }
+
+            span.category {
+                text-align: right;
+            }
+        }
+    }
+}
+
+article {
+    &.typ_1 {
+        margin-bottom: 44px;
+
+        .under_photo {
+            min-height: 137px;
+        }
+
+        img {
+            margin-bottom: 18px;
+        }
+
+        h4 {
+            font-family: 'TungstenSemibold', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+            @include font-size(29px);
+
+            text-transform: uppercase;
+            line-height: 30px;
+
+        }
+
+        span.category {
+            display: block;
+            text-align: center;
+            font-family: $lato;
+            font-size: 13px;
+
+            a {
+                color: $yellow;
+            }
+
+            color: $yellow;
+            text-transform: uppercase;
+        }
+
+        span.imie {
+            display: block;
+            text-align: center;
+            font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+            text-align: center;
+
+            @include font-size(21px);
+
+            color: #000;
+            text-transform: capitalize;
+
+            .nazwisko {
+                text-transform: uppercase;
+            }
+        }
+
+        p {
+            font-family: $text;
+
+            @include font-size(18px);
+
+            color: #404040;
+            line-height: 24px;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        span.wiecej {
+            display: block;
+            border-bottom: 1px solid $dark-grey;
+            text-align: center;
+
+            a {
+                background: white;
+                border: 1px solid $dark-grey;
+                font-family: $lato;
+                font-size: 14px;
+                color: $dark-grey;
+                text-transform: uppercase;
+                padding: 5px 15px 6px 15px;
+                top: 12px;
+                position: relative;
+            }
+        }
+    }
+}
+
+.site-main article {}
+
+.site-main article img {
+    /*	 @include transition(all 0.1s ease-in-out);*/
+}
+
+.site-main article:hover img {
+    /*@include transform(scale(1));*/
+}
+
+.utwory .utwory_left {
+    @include span(full);
+@include breakpoint($medium){
+    @include span(8 of 12);
+}
+
+    p {
+        margin: 10px 0;
+    }
+}
+
+.utwory .utwory_left article {
+    @include span(full);
+@include breakpoint($medium){
+    @include gallery(4 of 8);
+}
+}
+
+.utwory .utwory_right {
+    @include span(full);
+@include breakpoint($medium){
+    @include span(4 of 12 last);
+}
+
+    background-color: #000;
+
+    article {
+        border-bottom: 1px solid #fff;
+        padding: 10px 10px 10px 10px;
+        @include breakpoint($xl-large){
+        padding: 20px 80px 20px 80px;
+    }
+        margin-bottom: 0px;
+
+        &:last-child {
+            border: none !important;
+        }
+
+        h4 {
+            color: #fff;
+
+            @include font-size(21px);
+        }
+
+        span.category {
+            @include font-size(10px);
+        }
+
+        span.imie {
+            color: #fff;
+
+            @include font-size(15px);
+        }
+    }
+}
+
+.recytacje_content {
+     background-color: #000;
+padding: 20px 20px 0 20px;
+    @include span(full);
+    article {
+        margin-right: 20px;
+
+        a {
+            float: left;
+            position: relative;
+        }
+
+        margin-bottom: 20px;
+
+        img {
+            margin: 0px;
+        }
+    }
+}
+
+.nagrania .utwory_left {
+    @include span(full);
+@include breakpoint($medium){
+    @include span(8 of 12);
+}
+
+    article {
+        a {
+            float: left;
+            position: relative;
+        }
+@include span(full);
+@include breakpoint($medium){
+        @include gallery(4 of 8);
+    }
+    }
+}
+
+.nagrania .utwory_right {
+    @include span(full);
+@include breakpoint($medium){
+    @include span(4 of 12 last);
+}
+
+    img {
+        border: 6px solid black;
+
+        @include span(2 of 4);
+    }
+
+    .rest {
+        @include span(2 of 4 last);
+
+        h4 {
+            @include font-size(21px);
+            a{
+                color:#000!important;
+            }
+
+            text-align: left;
+        }
+
+        span.category {
+            @include font-size(9px);
+
+            text-align: left;
+        }
+
+        span.imie {
+            @include font-size(15px);
+
+            text-align: left;
+        }
+    }
+}
+
+.after_ksiazki {
+    padding: 0px;
+    margin-top: 0px !important;
+
+    .content-area {
+        	/*
+        padding: 0 114px;
+        */
+    }
+}
+
+section.ksiazki {
+    background-color: #d5d5d5;
+    article.typ_1{
+        margin-bottom: 2px;
+    }
+
+    h2 {
+        border-bottom: 0px;
+
+        span {
+            background-color: #d5d5d5;
+        }
+    }
+
+    .ksiazki_left {
+        @include span(full);
+@include breakpoint($medium){
+        @include span(5 of 12);
+    }
+
+
+        .premiera_ksiazki {
+            background-color: #000;
+            color: #fff;
+@include span(4 of 10);
+@include breakpoint($medium){
+            @include span(4 of 10);
+        }
+        @include breakpoint($xl-large){
+            @include span(2 of 10);
+        }
+
+            text-align: center;
+            padding: 22px 0;
+            margin-bottom: 25px;
+
+            .premiera {
+                font-family: $lato;
+                text-transform: uppercase;
+
+                @include font-size(17px);
+
+                margin-bottom: 16px;
+                font-weight: 900;
+                display: block;
+            }
+
+            .ksiazki_data {
+                font-family: $lato;
+
+                @include font-size(17px);
+            }
+        }
+
+        .title_ksiazki {
+            @include span(6 of 10 last);
+@include breakpoint($xl-large){
+            @include span(8 of 10 last);
+        }
+
+            h4 {
+                text-align: left;
+
+                @include font-size(39px);
+
+                margin-bottom: 20px;
+            }
+
+            span.category {
+                text-align: left;
+
+                @include font-size(13px);
+
+                margin-bottom: 5px;
+            }
+
+            span.imie {
+                text-align: left;
+
+                @include font-size(28px);
+            }
+        }
+    }
+
+    .ksiazki_right {
+        margin-bottom: 30px;
+@include span(full);
+@include breakpoint($medium){
+        @include span(7 of 12 last);
+    }
+
+        img {
+            border: 4px solid black;
+            float:right;
+        }
+    }
+
+    p {
+        @include span(full);
+
+        text-align: left;
+        padding-right: 50px;
+    }
+}
+
+.ksiazki .inner {
+    /* padding: 0 114px; */
+}
+
+.rec_nagr {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+
+    .inner_black {
+        display: table;
+
+        /* margin: 0 auto; */
+        width: 100%;
+        height: 100%;
+
+        .black_tran {
+            .aaa {
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 20px 0;
+                overflow: auto;
+
+                a {
+                    color: #ffc807;
+                    text-transform: uppercase;
+
+                    @include font-size(11px);
+
+                    text-align: center;
+                    width: 100%;
+                }
+
+                width: 70%;
+
+                /* display: inline; */
+                /* float: left; */
+                /* text-align: center; */
+                margin: 0 auto;
+            }
+
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        display: table;
+        margin: 0 auto;
+    }
+
+    span.category {
+        font-size: 11px !important;
+        color: #bdbdbd;
+    }
+
+    h4 {
+        font-size: 22px !important;
+        color: white;
+    }
+
+    span.imie {
+        font-size: 17px !important;
+        color: white !important;
+    }
+}
+
+.site-main article img {
+    width: 100%;
+}
+
+#main {
+    section {
+        @include span(full);
+
+        &.rozmowy {
+            margin-top: 37px;
+            margin-bottom: 10px;
+
+            .typ_small {
+                article:first-child {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        &.szkice {
+            margin-bottom: 24px;
+        }
+
+        &.ksiazki {
+            margin-bottom: 50px;
+        }
+
+        &.utwory {
+            margin-top: 10px;
+            margin-bottom:40px;
+        }
+
+        &.recytacje {
+            margin-bottom: 15px;
+            margin-top:10px;
+        }
+
+        &.nagrania {
+            margin-top:30px;
+            article.typ_1{
+                margin-bottom:33px;
+            }
+        }
+
+        &.debaty {
+            margin-top: -40px;
+        }
+
+        &.blogi {
+            margin-top:30px;
+            h3 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.blogi {
+    .blogi_carousel{
+
+article.typ_1{
+    margin-bottom: 0px;
+    padding-top:18px;
+}
+    }
+    article {
+        /*@include span (3 of 12);*/
+        .blog {
+            @include span(full);
+        }
+    }
+
+    .blog_left {
+        @include span(5 of 12);
+    }
+
+    .blog_right {
+        @include span(7 of 12 last);
+
+        text-align: left;
+        padding-left: 12px;
+        padding-right: 20px;
+
+        h4 {
+            text-align: left;
+            font-size: 22px !important;
+            line-height: 22px;
+            color:#000;
+        }
+
+        span.category {
+            text-align: left;
+            font-size: 11px !important;
+            color: $yellow;
+            margin: 5px 0;
+        }
+
+        span.imie {
+            text-align: left;
+            color:#000;
+            font-size: 17px !important;
+        }
+    }
+}
+
+.do_gory {
+    display: block;
+    border-bottom: 1px solid #898989;
+    text-align: center;
+    margin-bottom: 80px;
+    clear: both;
+
+    a {
+        background: #fff url(../img/up.png) 85px;
+        background-repeat: no-repeat;
+        border: 1px solid #898989;
+        font-family: "Lato", "Arial", sans-serif;
+        font-size: 14px;
+        color: #898989;
+        text-transform: uppercase;
+        padding: 5px 30px 5px 15px;
+        top: 12px;
+        position: relative;
+    }
+}
+
+.reveal_outer {
+    display: table;
+    height: 100%;
+}
+
+.reveal_inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+a.cat_lin{
+font-family: "Lato", "Arial", sans-serif;
+        font-size: 11px;
+}
+
+
+.rec_nagr h4 a {
+    font-size: 22px !important;
+    color: #fff!important;
+}
+
+.zdjecia h4 a {
+    font-size: 29px !important;
+    color: #fff!important;
+}
+
+.archive_category .big a{
+    color:#ffc807;
+}
+
+
+.top_articles {
+    padding-top: 14px;
+}
+.top_articles{
+    h6{
+font-family: "Lato", "Arial", sans-serif;
+ text-transform: uppercase;
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    color: #898989;
+    border-bottom: 1px solid #000;
+    margin-bottom: 13px;
+     span{
+        position: relative;
+    top: 5px;
+    background-color: #f0f2f2;
+    padding-right: 10px;
+    }
+}
+}
+
+
+
+span.name_gora{
+
+font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 14px;
+    margin-bottom: 8px;
+    color: #fff;   
+}
+h2 span a{
+    color:#000;
+    &:visited{
+        color:#000;
+    }
+}
+
+
+p{
+    em{
+        font-style: italic;
+    }
+}

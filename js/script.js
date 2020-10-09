@@ -1,0 +1,1 @@
+jQuery(document).ready(function(a){var b=a(".transformer"),c=a(".menu-toggle-btn");c.on("click",function(a){a.preventDefault(),b.toggleClass("is-open")})});

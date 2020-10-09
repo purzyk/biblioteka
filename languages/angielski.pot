@@ -1,0 +1,113 @@
+# Copyright (C) 2015 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2015-09-16 19:02:07+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: DUBAS.PRO <contact@dubas.pro>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: template-parts/wydarzenia-home.php
+msgid "wydarzenie na fb"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "dni"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "godziny"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "minuty"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "sekundy"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "zapowiedź"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "wiadomości"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "WIĘCEJ"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "więcej"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "program"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "uczestnicy"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "prowadzący"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "niezbędnik"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "miejsca wydarzeń"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "baza noclegowa"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "bilety na koncerty"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "info"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "realizatorzy"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "multimedia"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "akredytacje"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "wolontariat"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "organizatorzy"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "mecenasi"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "partnerzy"
+msgstr ""
+
+#: template-parts/wydarzenia-home.php
+msgid "patroni medialni"
+msgstr ""

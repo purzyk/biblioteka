@@ -1,0 +1,437 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the single page.
+// -----------------------------------------------------------------------------
+.single #content{
+	padding: 30px 0 0;
+	position: relative;
+}
+.single{
+	.logo{
+		@include span(full);
+@include breakpoint($medium){
+		@include span(2 of 12 wider no-gutters);
+	}
+		margin-left:6.91%;
+	}
+	.main-links{
+		@include span(full);
+@include breakpoint($medium){
+		@include span(8 of 12 no-gutters last);
+	}
+		text-align: right;
+		margin-top: 18px;
+		
+		
+		
+	}
+	.content-area{
+		margin-top:80px;
+	}
+	ul#menu-menu-links{
+		text-align: right;
+				li{
+					background: url(../img/top_menu_yellow.png) left 10px;
+    background-repeat: no-repeat;
+    padding-left: 9px;
+        margin: 0 11px;
+				    a{
+				    	@include font-size(13px);
+				    }
+				    &:first-child{
+				    	margin-left:0px!important;
+				    }
+				    &:last-child{
+				    	margin-right:0px!important;
+				    }
+				}
+			}
+	
+}
+#main section{
+	&.single_left{
+		@include span(full);
+@include breakpoint($medium){
+		@include span(2 of 12 wider no-gutters);
+	}
+		margin-left:6.91%;
+		text-align: right;
+		    .category{
+		    	@include font-size(14px);
+		    	color:#898989;
+		    	text-transform: uppercase;
+		    	font-family: $lato;
+		    	b{
+		    		color:#ffc807;
+		    	}
+		    }
+		    .title_h1{
+		    	margin:22px 0;
+		    	font-family: 'TungstenSemibold';
+		    	@include font-size(60px);
+		    	line-height:60px;
+		    	text-transform: uppercase;
+		    }
+		    .title_autor{
+		    	font-family: 'TungstenMedium';
+		    	@include font-size(30px);
+		    	color:#000;
+		    }
+		    p.excerpt{
+		    	margin-top:84px;
+		    	 @extend %georgiab;
+		    	@include font-size(19px);
+		    	line-height:28px;
+		    	    background: url('../img/ksztat.png') no-repeat right bottom;
+    padding-bottom: 38px;
+		    }
+		}
+	&.single_right{
+		@include span(full);
+@include breakpoint($medium){
+		@include span(8 of 12 no-gutters last);
+	}
+		text-align:left;
+		margin-top:53px;
+		p{
+			 @extend %georgia;
+			@include font-size(20px);
+			line-height:33px;
+			margin-bottom:42px;
+		}
+		}
+			
+}
+
+
+.przystan_o_autorze {
+	clear:both;
+	@include span(full);
+    float: left;
+    position: relative;
+    display: block;
+    margin-top:30px;
+    
+}
+.przystan_o_autorze h5 {
+	font-family: 'TungstenMedium';
+	@include font-size(30px);
+	margin-bottom:35px;
+}
+.o_autorze_left {
+    @include span (3 of 8 no-gutters);
+}
+.o_autorze_right {
+    @include span (5 of 8 wide last);
+}
+.o_autorze_left img {
+    max-width: 100%;
+    height: auto;
+}
+.o_autorze_right h6 {
+    color: #000;
+    font-weight: normal;
+       font-family: $lato;
+       text-transform: capitalize;
+			@include font-size(22px);
+			font-weight:bold;
+			line-height:26px;
+			span.ur{
+				 @extend %georgia;
+				@include font-size(17px);
+				text-transform: lowercase;
+				margin-left:4px;
+			}
+			margin-bottom:20px;
+}
+.o_autorze_right h6 span {
+    text-transform: uppercase;
+}
+
+.o_autorze_right .o_autorze_bio {
+     @extend %georgia;
+    color: #000;
+    font-size: 16px!important;
+    line-height:24px!important;
+    text-align: justify;
+    text-transform: none;
+}
+.listCat {
+    bottom: 38px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    @include font-size(10px);
+    color:#9f9f9f;
+    a{
+    	color:#000;
+    }
+    position: absolute;
+    bottom: 1px;
+}
+
+.powiazania{
+margin-top:80px;
+}
+
+
+.powiazania{
+	/*border-bottom:2px solid black;*/
+	margin-bottom:130px;
+	padding-bottom:30px;
+	article{
+		margin-right: 20px;
+	}
+	nav{
+		margin-bottom: 37px;
+		a{
+			font-family: $lato;
+			font-weight: 500;
+			@include font-size(15px);
+			text-transform: uppercase;
+			text-decoration: underline;
+			padding-bottom:2px;
+			color:#b1b1b1;
+			margin-right: 48px;
+			&.fs-tabs-active, &:hover{
+				color:#000;
+				font-weight: 900;
+				padding-bottom:1px;
+			}
+		}
+	}
+}
+
+.single{
+	h2{
+		border-bottom: 2px solid #000;
+		span{
+			padding-right:10px;
+		}
+	}
+}
+
+.single .single_right{
+	ul{
+		list-style: initial;
+		list-style-position: inside;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	ol{
+		list-style: initial;
+		list-style-type: decimal;
+		list-style-position: inside;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+
+	}
+	h1{
+		@include font-size(48px);
+		font-family:$lato;
+		color:#000;
+		line-height:48px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	h2{
+		@include font-size(18px);
+		font-family:$lato;
+		font-weight: normal;
+		color:#000;
+		line-height:40px;
+		border-bottom:0px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	h3{
+		@include font-size(34px);
+		font-family:$lato;
+		color:#000;
+		line-height:34px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	h4{
+		@include font-size(28px);
+		font-family:$lato;
+		color:#000;
+		line-height:28px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	h5{
+		@include font-size(24px);
+		font-family:$lato;
+		color:#000;
+		line-height:24px;
+		margin-bottom:42px;
+		margin-top:0px;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	blockquote{
+		background: url(../img/blackquote.jpg) left top;
+    background-repeat: no-repeat;
+    @include prefix(1 of 7);
+	}
+	blockquote,blockquote p {
+		
+		font-family: 'TungstenSemibold'!important;
+
+		font-size:48px!important;
+		line-height:52px!important;
+
+	}
+
+}
+
+.przystan_o_autorze h2{
+	font-family:$lato;
+	font-size:18px!important;
+	color:$black;
+	text-align: left;
+	display: block;
+	border-bottom: 1px solid $black!important;
+	position: relative;
+	margin-bottom:80px!important;
+	span{
+		background-color:#fff;
+		text-transform: uppercase;
+		position: relative;
+		top:41px;
+		border-top:2px solid black;
+		padding-right: 0px;
+		padding-top: 8px;
+	}
+}
+
+.powiazania h2{
+	margin-bottom:26px;
+}
+
+ul.galeria {
+	list-style: none;
+	li{
+		list-style: none;
+		@include gallery (3 of 12);
+	}
+}
+
+
+.auth_bottom{
+	clear:both;
+	
+}
+.single_ksiazka{
+		margin-top:123px;
+		img{
+			max-height: 370px;
+			    border: 1px solid #E2E2E2;
+		}
+		.ksiazka_autor{
+			.auth_nazwisko{
+				text-transform: uppercase;
+			}
+			margin-top:10px;
+			display:block;
+			text-align: right;
+			@include font-size(14px);
+			 @extend %georgiab;
+		}
+		.tytul_wydawca{
+			display:block;
+			text-align: right;
+			@include font-size(14px);
+			 @extend %georgia;
+			.bold_italic{
+				 @extend %georgiaz;
+			}
+		}
+		.kup_ksiazke{
+			margin-top:25px;
+			display:block;
+			text-align: right;
+			@include font-size(27px);
+			font-family: 'TungstenMedium';
+			text-transform: uppercase;
+			a{
+				color:#000;
+				background: url('../img/kup_arrow.png') no-repeat right center;
+				padding-right:20px;
+			}
+		}
+	}
+
+.strona_debaty{
+	margin-top:100px;
+	display:block;
+	    background: url("../img/ksztat.png") no-repeat right bottom;
+    padding-bottom: 20px;
+	p{
+		color:#ffc90d;
+		font-family: $lato;
+			font-weight: 500;
+			@include font-size(14px);
+	}
+	a{
+		font-family: 'TungstenSemibold';
+		    	@include font-size(30px);
+		    	color:#000;
+		    	text-transform: uppercase;
+	}
+}
+
+.related-items{
+	list-style: none!important;
+	li{
+		text-align: center;
+		a{
+			font-family: 'TungstenSemibold';
+		    	@include font-size(25px);
+		    	color:#000;
+		    	text-transform: uppercase;
+		    	h4{
+		    		font-size: 17px!important;
+		    		text-transform: capitalize;
+		    		font-family: 'TungstenMedium';
+		    		span{
+		    			text-transform: uppercase;
+		    		}
+		    	}
+		}
+	}
+}
+
+
+
+.debata {
+	.strona_debaty{
+		display: none;
+	}
+	.o_autorze{
+		display: none;
+	}
+}
+
+
+.single_right{
+	/*
+	p{
+		padding-left:0!important;
+	}
+	h2{
+		padding-left:0!important;
+	}
+	*/
+}

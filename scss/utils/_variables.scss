@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$lato:'Lato','Arial', sans-serif !default;
+$Tungsten-Semibold:'MyFontFamily', Arial, Helvetica, sans-serif;
+$Tungsten-Medium:TungstenMedium, TungstenMediumIe, Arial, Helvetica, sans-serif;
+$Tungsten-Bold:'Tungsten-Bold','Arial', sans-serif;
+
+$text: "georgia";
+
+
+/// Copy text color
+/// @type Color
+$light-grey:#616161;
+$black:#000;
+$dark-grey:#898989;
+
+$yellow:#ffc807;
+$text-color: #000 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #E50050 !default;
+
+/// Light grey
+/// @type Color
+
+
+
+
+
+/// Container's maximum width
+/// Below that is 100%
+/// @type Length
+$max-width: 1200px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @see {mixin} respond-to
+$breakpoints: (
+  'small': (min-width: 320px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 1024px),
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+$medium:48em;
+$large:60em;
+$large85:85em;
+$xl-large:103em;

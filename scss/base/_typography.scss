@@ -1,0 +1,45 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text;
+}
+h2{
+	font-family:$lato;
+	@include font-size(30px);
+	@include breakpoint ($large){
+	@include font-size(24px);	
+	}
+	@include breakpoint ($xl-large){
+	@include font-size(30px);	
+	}
+	color:$black;
+	text-align: left;
+	display: block;
+	border-bottom: 1px solid $black;
+	position: relative;
+	margin-bottom:9px;
+	span{
+		background-color:#fff;
+		text-transform: uppercase;
+		position: relative;
+		top:11px;
+		padding-right:10px;
+	}
+}
+h3{
+	color:$dark-grey;
+	font-family:$lato;
+	@include font-size(14px);
+	@include breakpoint ($large){
+	@include font-size(12px);	
+	}
+	@include breakpoint ($xl-large){
+	@include font-size(14px);	
+	}
+	text-transform: uppercase;
+	margin-bottom:23px;
+	letter-spacing:1px;
+
+}

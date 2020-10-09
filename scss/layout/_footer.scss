@@ -1,0 +1,253 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+footer{
+	background:#fff;
+	color:#ff000f;
+	text-transform: none;
+	padding-top:100px;
+	.footer_menu{
+		@include span(full);
+		border-top:3px solid #000;
+		li{
+			display:block;
+			text-align: center;
+			@include breakpoint($medium){
+			display:inline-block;
+			text-align: left;
+			margin:0px;
+		}
+		@include breakpoint($large){
+margin:0 19px;
+		}
+		@include breakpoint($xl-large){
+margin:0 57px;
+		}
+			
+			a{
+				color:#000;
+				padding:10px 15px;
+				/*background: url(../img/arrow_right.png) right center;
+				background-repeat: no-repeat;
+				padding:12px 20px;*/
+				font-family: 'Lato', Arial, Helvetica, sans-serif;
+				@include font-size(14px);
+				text-transform: uppercase;
+				font-weight: bold;
+
+			}
+			&:first-child{
+				@include breakpoint($medium){
+				margin-left:0px;
+			}
+				a{
+					@include breakpoint($medium){
+					padding-left:0;
+				}
+				}
+			}
+			&:last-child{
+				@include breakpoint($medium){
+				margin-right:0px;
+			}
+				text-align: center;
+			@include breakpoint($xl-large){
+				float:right;
+			}
+			@include breakpoint($medium){
+				margin-left: 0px;
+			}
+				/*background-color:#fff;
+				padding-right:10px;*/
+				a{
+					color:#000;
+					/*background: url(../img/arrow_right_black.png) right center;
+				background-repeat: no-repeat;*/
+				@include breakpoint($medium){
+				padding-right:0;
+			}
+
+				}
+			}
+			&:hover{
+				background: #000;
+				
+				a{
+					color:#fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.newsletter{
+		font-family: 'Playfair Display', serif;
+		color:#000;
+		margin-top:45px;
+		padding-bottom:58px;
+		border-bottom:2px solid #000;
+		@include span(full);
+		@include font-size(14px);
+		line-height: 18px;
+		.logo_foteer{
+			img{
+				position: relative;
+				top:-7px;
+			}
+			@include span(full);
+@include breakpoint($medium){
+@include span(2 of 12);
+}
+margin-right:0px;
+text-align: left;
+position: relative;
+	
+		}
+		.dane_kontaktowe{
+			@include span(full);
+@include breakpoint($medium){
+			@include span(3 of 12);
+		}
+			border-right: 1px solid #969696;
+			span{
+				font-family: 'Playfair Display', serif;
+				font-weight: 700;
+			}
+		}
+		div.wpcf7{
+			@include span(full);
+@include breakpoint($medium){
+		@include span(7 of 12 last);
+	}
+		.newsletter_title{
+			font-family: 'Lato', Arial, Helvetica, sans-serif;
+				@include font-size(14px);
+				font-weight: bold;
+			@include span(full);
+@include breakpoint($xl-large){
+			@include span(1 of 7);
+		}
+			text-align: left;
+			text-transform: uppercase;
+			font-family: 'Playfair Display', serif;
+				font-weight: 700;
+		}
+		.newsletter_left{
+			@include span(full);
+@include breakpoint($medium){
+			@include span(3 of 7);
+		}
+		}
+		.newsletter_right{
+			font-family: 'Playfair Display', serif;
+				font-weight: 400;
+			@include span(full);
+@include breakpoint($medium){
+			@include span(3 of 7 last);
+		}
+			span.wpcf7-list-item.first{
+				margin-top:10px;
+			}
+			span.wpcf7-list-item{
+				width:100%;
+				margin-left:0;
+				display: block;
+				margin-bottom:8px;
+
+			}
+			span.emaile{
+				color:#8c8a8a;
+				@include font-size(13px);
+				font-family: 'Playfair Display', serif;
+				font-weight: 400;
+				line-height: 15px;
+				    display: block;
+				    @include breakpoint($medium){
+    margin-top: 58px;
+}
+
+			}
+		}
+	}
+
+	}
+	span.your-email{
+		float:left;
+		    width: 75%;
+		   border-radius:0;
+		    
+		    input{
+		    	padding:5px 0 5px 14px;
+		    	 @include font-size(14px);
+		    border-radius:0;
+		    width: 100%;
+		    }
+	}
+	.wpcf7-submit{
+		float:right;
+		    position: absolute;
+		    font-family: 'Lato', Arial, Helvetica, sans-serif;
+				@include font-size(14px);
+				color:#fff;
+				background-color: #5e5e5e;
+				text-transform: uppercase;
+				padding:8px 7px 9px 7px;
+				border:0;
+				border-radius:0;
+				box-shadow:none;
+				text-shadow:none;
+				&:hover{
+					box-shadow:none;
+				}
+
+	}
+	.news_left_p{
+		margin-bottom: 41px;
+		@include font-size(14px);
+		line-height: 18px;
+	}
+	.copyright{
+		@include span(full);
+		padding:28px 0 82px 0;
+		font-family: 'Playfair Display', serif;
+				font-weight: 400;
+				@include font-size(12px);
+				text-transform: none;
+				text-align: center;
+				color:#000;
+				a{
+					&:link, &:visited , &:hover{
+						color:#000!important;
+					}
+				}
+	}
+}
+
+.dane_kontaktowe{
+	p{
+		font-family: 'Playfair Display', serif;
+				font-weight: 400;
+		@include font-size(14px);
+		line-height: 20px;
+		margin-bottom: 25px;
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+}
+
+
+.comment-form-fm-sign{
+padding-top:6px;
+}
+
+
+div.wpcf7-response-output {
+
+padding:0;
+margin:0;
+
+}
+div.wpcf7-mail-sent-ok {
+    /* border: 2px solid #398f14; */
+    border:0;
+}

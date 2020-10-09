@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+@import "compass";
+@import "compass/reset";
+@import "susy";
+@import "breakpoint";
+@import "compass/css3";
+@include border-box-sizing;
+// 1. Configuration and helpers
+@import
+  'utils/variables',
+  'utils/functions',
+  'utils/mixins';
+
+// 2. Vendors
+@import
+  'vendor/normalize';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/buttons';
+
+// 6. Page-specific styles
+@import
+  'pages/home',
+  'pages/single',
+  'pages/archive';
+
+// 7. Themes
+@import
+  'themes/default';
+

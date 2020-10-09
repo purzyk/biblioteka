@@ -1,0 +1,112 @@
+
+<?php
+// set up our archive arguments
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$ksiazki_args = array(
+	'post_type' => 'ksiazki_lista',
+	'orderby' => 'meta_value',
+	'meta_key' => 'data',
+	'paged' => $paged,
+	'posts_per_page'=> 12
+);
+
+// new instance of WP_Quert
+$ksiazki_query = new WP_Query( $ksiazki_args );
+$count=0;
+$classes = array(
+	//'col-md-6',
+	'row',
+	'row-eq-height',
+);
+?>
+
+<?php
+if ( is_user_logged_in () ) {
+?>
+<div class="ksiazki_lista-dbs row">
+	<?php 
+	while ( $ksiazki_query->have_posts() ) : $ksiazki_query->the_post();
+	$count++;
+	$id = $post->ID;
+	$term_list = wp_get_post_terms($id, 'ksiazki_serie', array("fields" => "all"));
+	$image_id = get_post_thumbnail_id();  
+	$image_url = wp_get_attachment_image_src($image_id,'bl_biuletyn_ksiazka2');  
+	$image_url = $image_url[0];
+	
+	$originalDate = get_field('data');
+	$newDate = date("d/m/Y", strtotime($originalDate));
+	
+	if ( !has_post_thumbnail() )
+	{
+		$image_url = "https://placeholdit.imgix.net/~text?txtsize=27&txt=284×400&w=284&h=400";
+	}
+	
+	$autor = '<br>';
+	if ( get_field('imie', $id) )
+	{
+		$autor = get_field('imie', $id);
+		$autor .= ' ';
+		$autor .= mb_strtoupper(get_field('nazwisko', $id), 'UTF-8');
+	}
+	?>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+		<article id="article_<?php echo $count;?>-dbs" <?php post_class( $classes ); // output a post article ?>>
+			<span class="excerpt"><a href="<?php echo the_permalink(); ?>" class="transition-300-ease"><?php echo strip_tags( apply_filters('the_excerpt', get_post_field('post_excerpt', $id)) ); ?></a></span>
+			<figure class="col-xs-6 col-sm-6 col-md-6" style="background-image: url(<?php echo $image_url; ?>)"></figure>
+			
+			<div class="col-xs-6 col-sm-6 col-md-6">
+				<h3 class="playfair-display"><?php echo $autor; ?></h3>
+				<h4 class="playfair-display"><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h4>
+				
+				<div class="lato-font">
+					<span class="data_data-dbs"><?php echo $newDate; ?></span>
+					<span class="data_cat-dbs"><a href="<?php echo get_term_link($term_list[0]->term_id); ?>"><?php echo $term_list[0]->name; ?></a></span>
+				</div>
+				
+				<span class="lato-font">
+					<a href="<?php echo the_permalink(); ?>">WIĘCEJ</a>
+				</span>
+			</div>
+		</article>
+	</div>
+	<?php endwhile; // end the custom loop ?>
+</div>
+<?php
+}
+?>
+
+<?php /**
+<div class="biuletyn ksiazki_lista">
+<?php while ( $archive_query->have_posts() ) : $archive_query->the_post(); ?>
+<article <?php post_class(); // output a post article ?> >
+	<a href="<?php the_permalink();?>">
+		<div class="ksiazki_desc">
+			<?php the_excerpt();?>
+		</div>
+	</a>
+	<?php $term_list = wp_get_post_terms($post->ID, 'ksiazki_lista_kategorie', array("fields" => "all")); ?>
+	<figure>
+		<?php if ( has_post_thumbnail() ) {
+		the_post_thumbnail('bl_biuletyn_ksiazka');
+		} else { ?>
+		<img src="http://www.pl/bl/wp/wp-content/uploads/2016/05/zaslepka-1541x725-615x412.jpg" alt="<?php the_title(); ?>" />
+		<?php } ?>
+	</figure>
+	<div class="biuletyn__article">
+		<h3><span class="autorzy_lista_imie"><?php the_field('autor_imie');?></span>  <span class="autorzy_lista_nazwisko"><?php the_field('autor_nazwisko');?></span></h3>
+		<h4><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h4>
+		<div class="biuletyn__data">
+			<span class="data_data"><?php the_time('d/m/Y');?></span><span class="data_cat"><?php echo $term_list[0]->name ?></span>
+		</div>
+		<span class="biuletyn_excerpt"></span>
+		<a class="biuletyn_wiecej" href="<?php the_permalink(); ?>">WIĘCEJ</a>
+	</div>
+</article>
+<?php endwhile; // end the custom loop ?>
+</div>
+**/ ?>
+
+<?php $cur_page = intval(get_query_var('paged')); if ($cur_page == 0) {$cur_page=1;} ;  ?>
+<div class="pagination_links"><div class="pagination"><span><?php previous_posts_link('<img src="https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/pagination_left_grey.png" />'); ?>
+<span><?php echo $cur_page; ?>/<span><?php echo $wp_query->max_num_pages;?>
+<?php next_posts_link('<img src="https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/pagination_lright_grey.png" />'); ?></div></div>

@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+/*
+@font-face {
+	font-family: 'georgia';
+	src: url('georgia.woff') format('woff'), 
+	     url('georgia.ttf')  format('truetype');
+	}
+@font-face {
+	font-family: 'georgiaz';
+	src: url('georgiaz.woff') format('woff'), 
+	     url('georgiaz.ttf')  format('truetype');
+	}
+	@font-face {
+	font-family: 'georgiab';
+	src: url('georgiab.woff') format('woff'), 
+	     url('georgiab.ttf')  format('truetype');
+	}
+	@font-face {
+	font-family: 'georgiai';
+	src: url('georgiai.woff') format('woff'), 
+	     url('georgiai.ttf')  format('truetype');
+	}
+	*/
+@font-face {
+	font-family: 'Tungsten-Bold';
+	src: url('Tungsten-Bold.woff') format('woff'), 
+	     url('Tungsten-Bold.ttf')  format('truetype');
+	}
+
+@font-face {
+	font-family: 'TungstenSemibold';
+	src: url('Tungsten-Semibold.woff') format('woff'), 
+	     url('Tungsten-Semibold.ttf')  format('truetype');
+	}
+
+
+@font-face {
+	font-family: 'TungstenMedium';
+	src: url('Tungsten-Medium.woff') format('woff'), 
+	     url('Tungsten-Medium.ttf')  format('truetype');
+	}
