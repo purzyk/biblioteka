@@ -127,6 +127,7 @@ function biblioteka_scripts() {
         wp_enqueue_style( 'biblioteka-style-css-tabs', get_template_directory_uri().'/css/tabs.css' );
         wp_enqueue_style( 'biblioteka-style-css-main', get_template_directory_uri().'/css/main.css' );
         wp_enqueue_style( 'biblioteka-primary', get_template_directory_uri().'/css/primary.css' );
+        wp_enqueue_style( 'biblioteka-new-css', get_template_directory_uri().'/static/css/styles.css' );
         //wp_enqueue_style( 'biblioteka-style-css-main-dubas', get_template_directory_uri().'/css/main-dubas.css' );
 
         wp_enqueue_script( 'biblioteka-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
