@@ -25,7 +25,7 @@ get_header('main');
 				<h3 class="biuletyn__title"><?php echo get_taxonomy( get_queried_object()->taxonomy )->description; ?></h3>
 			</div>
 			
-			<div>
+			<div> 
 				<?php wp_nav_menu( array('menu' => 'ksiazki_lista', 'before' => '<span class="red">/</span>', )); ?>
 			</div>
 			

@@ -34,6 +34,7 @@ if ($the_query->have_posts())
 
 			</div>
 			<div class="title_ksiazki">
+			<div>
 			<?php /* $term_list = wp_get_post_terms($post->ID, 'ksiazki-kategorie', array("fields" => "all"));
 		echo '<span class="category"><a href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>'; */ ?>
 <?php
@@ -49,7 +50,8 @@ if ($the_query->have_posts())
 			}
 		}
 
-?>		
+?>	
+</div>	
 <h4><a class="post-url" href="<?php
 		the_permalink(); ?>"> <?php
 		the_title(); ?></a></h4> 

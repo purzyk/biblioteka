@@ -127,6 +127,8 @@ function biblioteka_scripts() {
         wp_enqueue_style( 'biblioteka-style-css-tabs', get_template_directory_uri().'/css/tabs.css' );
         wp_enqueue_style( 'biblioteka-style-css-main', get_template_directory_uri().'/css/main.css' );
         wp_enqueue_style( 'biblioteka-primary', get_template_directory_uri().'/css/primary.css' );
+        wp_enqueue_style( 'biblioteka-slick', get_template_directory_uri().'/css/slick.css' );
+        wp_enqueue_style( 'biblioteka-slick-theme', get_template_directory_uri().'/css/slick-theme.css' );
         wp_enqueue_style( 'biblioteka-new-css', get_template_directory_uri().'/static/css/styles.css' );
         //wp_enqueue_style( 'biblioteka-style-css-main-dubas', get_template_directory_uri().'/css/main-dubas.css' );
 
@@ -150,6 +152,7 @@ function biblioteka_scripts() {
         wp_enqueue_script( 'biblioteka-list', get_template_directory_uri() . '/js/list.min.js' );
         wp_enqueue_script( 'biblioteka-js', get_template_directory_uri() . '/js/script.js' );
         wp_enqueue_script( 'biblioteka-uj', '//code.jquery.com/ui/1.11.4/jquery-ui.js' );
+        wp_enqueue_script( 'biblioteka-slickmin-js', get_template_directory_uri() . '/js/slick.min.js'  );
         wp_enqueue_script( 'biblioteka-main-js', get_template_directory_uri() . '/js/main.js'  );
             
         //wp_enqueue_script( 'biblioteka-smoothscroll', get_template_directory_uri() . '/js/smoothscroll.js' );
@@ -211,6 +214,7 @@ add_image_size( 'bl_autor', 300, 300, true );
 add_image_size( 'bl_ksiazka', 708, 321, true );
 add_image_size( 'bl_ksiazka_okladka', 265, 500);
 add_image_size( 'bl_biuletyn', 615, 415, true);
+add_image_size( 'bl_biuletyn2', 712, 415, true);
 add_image_size( 'bl_biuletyn_ksiazka', 226, 295);
 add_image_size( 'bl_biuletyn_autor', 390, 216, true);
 add_image_size( 'bl_biuletyn_wydarzenia', 1230, 340, true);
@@ -917,4 +921,15 @@ function bl_custom_title_separator( $sep ) {
 add_filter( 'gform_validation_message', 'change_message', 10, 2 );
 function change_message( $message, $form ) {
     return "<div class='validation_error'>Uzupełnij brakujące pola</div>";
+}
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Opcje serwisu',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
 }

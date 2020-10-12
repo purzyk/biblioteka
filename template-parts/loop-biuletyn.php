@@ -1,29 +1,23 @@
 <?php
-// set up our archive arguments
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$count = 0;
+    $paged = get_query_var('page') ? get_query_var('page') : 1;
+	$count = 0;
 
-$classes = array(
-    'row',
-    'row-eq-height',
-);
-
-$archive_args = array(
-	'post_type' => 'biuletyn',
-	'paged' => $paged,
-	'posts_per_page'=> 12
-);
-
-// new instance of WP_Query
-$archive_query = new WP_Query( $archive_args );
-?>
-
-<div class="biuletyn-dbs">
-
-	<?php while ( $archive_query->have_posts() ) : $archive_query->the_post(); // run the custom loop ?>
-	<?php $count++; ?>
+	$classes = array(
+		'row',
+		'row-eq-height',
+	);
+	$args = array('posts_per_page' => 12,
+	'paged'=> $paged,
+	'post_type' => 'biuletyn');
 	
-	<article id="article_<?php echo $count;?>-dbs" <?php post_class( $classes ); // output a post article ?>>
+	$wp_query = new WP_Query($args);
+	?>
+<div class="biuletyn-dbs">
+	<?php
+	while ($wp_query->have_posts()) : $wp_query->the_post();
+	$count++;
+	?>
+<article id="article_<?php echo $count;?>-dbs" <?php post_class( $classes ); // output a post article ?>>
 		<?php
 		$term_list = wp_get_post_terms($post->ID, 'biuletyn_kategorie', array("fields" => "all"));
 
@@ -91,7 +85,59 @@ $archive_query = new WP_Query( $archive_args );
 
 	<?php // PROJEKTY
         ($count == 12) ? get_template_part( 'template-parts/partials/biuletyn/module', 'projekty' ) : NULL; ?>
+	<?php
+	
+	endwhile;
+	?>
+	</div>
 
-	<?php endwhile; // end the custom loop ?>
+	<?php
+	global $wp_query;
+	
+	$big = 999999999;
+	?>
 
+        <!-- pagination -->
+        <?php
+        $previous_link_img = '<img src="https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/pagination_left_grey.png" />';
+        $next_link_img = '<img src="https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/pagination_lright_grey.png" />';
+
+        $cur_page = intval(get_query_var('paged'));
+        if ($cur_page == 0)
+        {
+            $cur_page=1;
+        }
+        $previous_link = add_query_arg( 'paged', ($cur_page - 1) );
+        $next_link = $cur_page + 1;
+        if ( $cur_page == $wp_query->max_num_pages )
+        {
+            $next_link = "";
+        }
+        if ( $cur_page == 2 )
+        {
+            $previous_link = remove_query_arg( 'paged' );
+        }
+        ?>
+        <div class="pagination_links">
+            <div class="pagination">
+            <span>
+            
+                <?php if ( !empty($_GET['paged']) ) : ?>
+                <a href="<?php echo $previous_link; ?>">
+                    <?php echo $previous_link_img; ?>
+                </a>
+                <?php endif; //$cur_page != 1 || $cur_page != 0 ?>
+            
+            <span><?php echo $cur_page; ?>/<?php echo $wp_query->max_num_pages; ?></span>
+               
+                <?php if ( $cur_page != $wp_query->max_num_pages ) : ?>
+                <a href="<?php echo add_query_arg( 'paged', $next_link ); ?>" title="następna strona">
+                    <?php echo $next_link_img; ?>
+                </a>
+                <?php endif; //$cur_page == $wp_query->max_num_pages ?>
+                
+            </span>
+            </div>
+        </div>
+	<?php       wp_reset_postdata(); ?>
 </div>

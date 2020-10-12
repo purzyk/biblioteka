@@ -89,7 +89,7 @@ if ( have_posts() ) : ?>
 	?>
 	<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-md-10 col-lg-6 col-lg-offset-0">
 		<article id="article_<?php echo $count;?>-dbs" <?php post_class( $classes ); // output a post article ?>>
-			<span class="excerpt"><a href="<?php echo the_permalink(); ?>" class="transition-300-ease"><?php echo $book_excerpt; ?></a></span>
+			<span class="excerpt"><a href="<?php echo the_permalink(); ?>" class="transition-300-ease"><?php the_excerpt();?></a></span>
 			<figure class="col-xs-12 col-sm-6 col-md-6">
                 <a href="<?php echo get_field('link_do_poezjem'); ?>" target="_blank" title="więcej">
                     <img src="<?php echo $image_url; ?>" alt="<?php the_title(); ?>">

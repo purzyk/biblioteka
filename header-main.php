@@ -97,6 +97,14 @@ if ( is_user_logged_in () ) {
     <header id="masthead" class="site-header small" role="banner">
     <?php get_template_part( 'inc/header', 'small' ); ?>
     </header><!-- #masthead -->
+    <?php } elseif ( $post->post_parent == '160436' ) { ?>
+    <header id="masthead" class="site-header large" role="banner">
+      <?php get_template_part( 'inc/header', 'large-new' ); ?>
+    </header><!-- #masthead -->
+
+    <header id="masthead" class="site-header small" role="banner">
+    <?php get_template_part( 'inc/header', 'small' ); ?>
+    </header><!-- #masthead -->
   <?php } ?>
 
   <?php if(is_tax('cykle-nazwy')) { ?>

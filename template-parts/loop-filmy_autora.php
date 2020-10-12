@@ -1,3 +1,4 @@
+
 <?php
 
 // The Query
@@ -29,10 +30,12 @@ if ($related_items->have_posts()) {
 	while ( $related_items->have_posts() ) {
 		echo '<article class="typ_1">';
 		$related_items->the_post();
+		$term_list = wp_get_post_terms($post->ID, 'nagrania-kategorie', array("fields" => "all"));
 		$categories = get_terms('nagrania-kategorie');?>
 		<a href="<?php the_permalink();?>"><?php get_template_part( 'template-parts/img', 'small' ); ?> </a><?php
-		echo '<h4>' . get_the_title() . '</h4>';
-		echo '<span class="category"><b>'.esc_html( $categories[0]->name ).'</b></span>';
+		echo '<h4>' . get_the_title() . '</h4>';?>
+		<span class="category lato-font"><a href="<?php echo get_term_link($term_list[0]->term_id); ?>"><?php echo $term_list[0]->name; ?></a></span>
+		<?php
 		$terms = get_the_terms( $post->ID , 'autor' );
 	if($terms) {
 		foreach( $terms as $term ) {?>

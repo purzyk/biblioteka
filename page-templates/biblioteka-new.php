@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Biblioteka
+* Template Name: Biblioteka nowa
 *
 * @link https://codex.wordpress.org/Template_Hierarchy
 *
@@ -9,19 +9,29 @@
 get_header('main'); ?>
 
 <div id="primary" class="content-area bibliotekaTheme">
-	<main id="main" class="site-main" role="main">
+	<main id="main" class="site-main bibliotekaNowa" role="main">
 
         <?php
         $template_dir = 'template-parts/partials/biblioteka/loop';
-        $template_dir_new = 'template-parts/partials/biblioteka_new/loop';
+        $template_dir_new = 'template-parts/partials/biblioteka_new2/loop';
         ?>
+        <div class="row" style="margin-top:12px">
+            <div class="col-xs-12">
+                <section class="nagrania">
+                    <h2><span><a href="<?php echo get_post_type_archive_link('wywiady'); ?>">Wywiady</a></span></h2>
+                    <h3>WYWIADY O KSIĄŻKACH, WIERSZACH I PISANIU</h3>
+                    <?php get_template_part( $template_dir_new, 'wywiady2' ); ?>
+                </section>
+            </div>
+        </div>
+
         <div class="row" style="margin-top:70px">
             <div class="col-md-8">
 
                 <section class="rozmowy">
-                    <h2><span><a href="<?php echo get_post_type_archive_link('wywiady'); ?>">wywiady</a></span></h2>
-                    <h3>Wywiady o książkach, wierszach i pisaniu</h3>
-                    <?php get_template_part( $template_dir_new, 'wywiady' ); ?>
+                    <h2><span><a href="<?php echo get_post_type_archive_link('wywiady'); ?>">Kartoteka 25</a></span></h2>
+                    <h3>MATERIAŁY SPECJALNE I ARCHIWALIA</h3>
+                    <?php get_template_part( $template_dir_new, 'kartoteka2' ); ?>
                 </section>
 
                 <section class="utwory">
@@ -39,11 +49,7 @@ get_header('main'); ?>
 
             </div>
             <div class="col-md-4 first-separator">
-            <section class="recenzje">
-                    <h2><span>KARTOTEKA 25</span></h2>
-                    <h3>MATERIAŁY SPECJALNE I ARCHIWALIA</h3>
-                    <?php get_template_part( $template_dir_new, 'kartoteka' ); ?>
-                </section>  
+ 
                 <section class="recenzje">
                     <h2><span><a href="<?php echo get_post_type_archive_link('recenzje'); ?>">recenzje</a></span></h2>
                     <h3>TEKSTY KRYTYCZNE, KOMENTARZE I OPINIE</h3>

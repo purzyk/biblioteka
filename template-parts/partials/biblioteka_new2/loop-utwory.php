@@ -1,11 +1,14 @@
 <?php
-$the_query = new WP_Query( array( 'post_type' => 'utwory', 'posts_per_page' => '6' ) );
+$featured_posts = get_field('utwory');
 $i = 0;
-if ( $the_query->have_posts() ) : ?>
+if( $featured_posts ): ?>
 <div class="row">
-    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ++$i; ?>
+<?php ++$i; foreach( $featured_posts as $post ): 
+    setup_postdata($post); 
+    ?>
+
     <article class="col-md-6 custom-type-1">
-       
+    
         <?php 
         $term_list = wp_get_post_terms($post->ID, 'utwory-kategorie', array("fields" => "all"));
         $categories = get_terms('utwory-kategorie');?>
@@ -34,7 +37,8 @@ if ( $the_query->have_posts() ) : ?>
     <?php if ( $i == 2 ) : ?>
     <div class="clearfix"></div>
     <?php endif; ?>
-    <?php endwhile; ?>
+    <?php endforeach; ?>
+
     <?php wp_reset_postdata(); ?>
 </div>
 <?php endif; ?>

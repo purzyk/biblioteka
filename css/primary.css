@@ -2074,10 +2074,10 @@ section.ksiazki:before {
  */
 
 @media (min-width: 103em) {
-    .page-template-biblioteka .menu-menu-links-right-container {
+    .bibliotekaTheme .menu-menu-links-right-container {
         float: right;
     }
-    .page-template-biblioteka .first-separator:after {
+    .bibliotekaTheme .first-separator:after {
         position: absolute;
         top: 23px;
         left: 20px;
@@ -2085,7 +2085,7 @@ section.ksiazki:before {
         border-right: 1px solid black;
         content: "";
     }
-    .page-template-biblioteka .second-separator:after {
+    .bibliotekaTheme .second-separator:after {
         position: absolute;
         top: 24px;
         left: 20px;
@@ -2095,24 +2095,24 @@ section.ksiazki:before {
     }
 }
 
-.page-template-biblioteka .white,
-.page-template-biblioteka .white a {
+.bibliotekaTheme .white,
+.bibliotekaTheme .white a {
     color: white !important;
 }
 
-.page-template-biblioteka h3 {
+.bibliotekaTheme h3 {
     font-size: 13px;
 }
 
-.page-template-biblioteka .custom-type-1 {
+.bibliotekaTheme .custom-type-1 {
     cursor: pointer;
 }
 
-.page-template-biblioteka .custom-type-1 img {
+.bibliotekaTheme .custom-type-1 img {
     margin-bottom: 18px;
 }
 
-.page-template-biblioteka .custom-type-1 .category {
+.bibliotekaTheme .custom-type-1 .category {
     display: block;
     color: #ffc807;
     text-align: center;
@@ -2121,11 +2121,11 @@ section.ksiazki:before {
     font-family: "Lato", "Arial", sans-serif;
 }
 
-.page-template-biblioteka .custom-type-1 .category a {
+.bibliotekaTheme .custom-type-1 .category a {
     color: #ffc807;
 }
 
-.page-template-biblioteka .custom-type-1 h4 {
+.bibliotekaTheme .custom-type-1 h4 {
     text-align: center;
     text-transform: uppercase;
     font-size: 25px;
@@ -2134,7 +2134,7 @@ section.ksiazki:before {
     line-height: 30px;
 }
 
-.page-template-biblioteka .custom-type-1 p {
+.bibliotekaTheme .custom-type-1 p {
     display: inline-block;
     margin: 10px 0;
     color: #404040;
@@ -2147,7 +2147,7 @@ section.ksiazki:before {
     line-height: 24px;
 }
 
-.page-template-biblioteka .custom-type-1 .imie {
+.bibliotekaTheme .custom-type-1 .imie {
     display: block;
     color: #000;
     text-align: center;
@@ -2158,11 +2158,11 @@ section.ksiazki:before {
     font-family: 'TungstenMedium', Arial, Helvetica, sans-serif;
 }
 
-.page-template-biblioteka .custom-type-1 .imie .nazwisko {
+.bibliotekaTheme .custom-type-1 .imie .nazwisko {
     text-transform: uppercase;
 }
 
-.page-template-biblioteka .custom-type-1 .wiecej {
+.bibliotekaTheme .custom-type-1 .wiecej {
     display: block;
     clear: both;
     margin-bottom: 55px;
@@ -2170,7 +2170,7 @@ section.ksiazki:before {
     text-align: center;
 }
 
-.page-template-biblioteka .custom-type-1 .wiecej a {
+.bibliotekaTheme .custom-type-1 .wiecej a {
     position: relative;
     top: 12px;
     padding: 5px 15px 6px 15px;
@@ -2182,89 +2182,89 @@ section.ksiazki:before {
     font-family: "Lato", "Arial", sans-serif;
 }
 
-.page-template-biblioteka .custom-type-1 .wiecej a:hover {
+.bibliotekaTheme .custom-type-1 .wiecej a:hover {
     background: #000 !important;
     color: #fff !important;
     text-decoration: none;
 }
 
-.page-template-biblioteka .kategoria_debaty a,
-.page-template-biblioteka .kategoria_debaty a:hover,
-.page-template-biblioteka .kategoria_debaty a:active,
-.page-template-biblioteka .kategoria_debaty a:focus,
-.page-template-biblioteka .kategoria_debaty a:visited {
+.bibliotekaTheme .kategoria_debaty a,
+.bibliotekaTheme .kategoria_debaty a:hover,
+.bibliotekaTheme .kategoria_debaty a:active,
+.bibliotekaTheme .kategoria_debaty a:focus,
+.bibliotekaTheme .kategoria_debaty a:visited {
     /*color: #898989;*/
     color: rgba(137, 137, 137, 0.75);
     text-transform: uppercase
 }
 
-.page-template-biblioteka .utwory,
-.page-template-biblioteka .recytacje {
+.bibliotekaTheme .utwory,
+.bibliotekaTheme .recytacje {
     margin-top: 51px !important;
 }
 
-.page-template-biblioteka .debaty .wiecej {
+.bibliotekaTheme .debaty .wiecej {
     margin-bottom: 40px;
 }
 
-.page-template-biblioteka .rozmowy .row {
+.bibliotekaTheme .rozmowy .row {
     margin: 0;
 }
 
-.page-template-biblioteka .rozmowy .carousel {
+.bibliotekaTheme .rozmowy .carousel {
     padding: 0;
 }
 
-.page-template-biblioteka .rozmowy img {
+.bibliotekaTheme .rozmowy img {
     margin: 0;
 }
 
-.page-template-biblioteka .rozmowy .biblioteka-carousel-indicators {
+.bibliotekaTheme .rozmowy .biblioteka-carousel-indicators {
     right: 6%;
     bottom: 15%;
 }
 
-.page-template-biblioteka .rozmowy .carousel-control {
+.bibliotekaTheme .rozmowy .carousel-control {
     margin-bottom: 7px;
 }
 
-.page-template-biblioteka .carousel-control {
+.bibliotekaTheme .carousel-control {
     color: white;
 }
 
-.page-template-biblioteka .rozmowy article {
+.bibliotekaTheme .rozmowy article {
     margin: 0;
 }
 
-.page-template-biblioteka .rozmowy article > a {
+.bibliotekaTheme .rozmowy article > a {
     display: block;
     overflow: hidden;
 }
 
-.page-template-biblioteka .rozmowy .type-wywiady {
+.bibliotekaTheme .rozmowy .type-wywiady {
     position: relative;
 }
 
-.page-template-biblioteka .recenzje h2,
-.page-template-biblioteka .blogi h2 {
+.bibliotekaTheme .recenzje h2,
+.bibliotekaTheme .blogi h2 {
     float: right;
     width: 91%;
 }
 
-.page-template-biblioteka .recenzje h2 span,
-.page-template-biblioteka .blogi h2 span {
+.bibliotekaTheme .recenzje h2 span,
+.bibliotekaTheme .blogi h2 span {
     padding-right: 0;
     padding-left: 10px
 }
 
-.page-template-biblioteka .recenzje h2,
-.page-template-biblioteka .recenzje h3,
-.page-template-biblioteka .blogi h2,
-.page-template-biblioteka .blogi h3 {
+.bibliotekaTheme .recenzje h2,
+.bibliotekaTheme .recenzje h3,
+.bibliotekaTheme .blogi h2,
+.bibliotekaTheme .blogi h3 {
     text-align: right;
 }
 
-.page-template-biblioteka .recenzje p {
+.bibliotekaTheme .recenzje p {
     margin: 10px 0;
     color: #404040;
     text-align: center;
@@ -2278,30 +2278,30 @@ section.ksiazki:before {
 
 
 /*
-.page-template-biblioteka .recenzje article:nth-of-type(2) {
+.bibliotekaTheme .recenzje article:nth-of-type(2) {
     margin-top: 50px;
 }
 */
 
-.page-template-biblioteka .recenzje .wiecej {
+.bibliotekaTheme .recenzje .wiecej {
     margin-bottom: 92px;
 }
 
-.page-template-biblioteka .recenzje article:last-of-type .wiecej {
+.bibliotekaTheme .recenzje article:last-of-type .wiecej {
     margin-bottom: 0;
 }
 
-.page-template-biblioteka .utwory .row {
+.bibliotekaTheme .utwory .row {
     margin: 0;
     padding: 40px 50px 0 40px;
     background: #000;
 }
 
-.page-template-biblioteka .utwory article {
+.bibliotekaTheme .utwory article {
     padding-bottom: 40px;
 }
 
-.page-template-biblioteka .utwory p {
+.bibliotekaTheme .utwory p {
     margin: 10px 0;
     color: #fff;
     text-align: center;
@@ -2310,47 +2310,47 @@ section.ksiazki:before {
     font-family: 'Playfair Display', serif;
 }
 
-.page-template-biblioteka .utwory .custom-type-1 .wiecej a {
+.bibliotekaTheme .utwory .custom-type-1 .wiecej a {
     background: #000 !important;
     color: #fff !important;
     text-decoration: none;
 }
 
-.page-template-biblioteka .ksiazki .wiecej a:hover,
-.page-template-biblioteka .utwory .custom-type-1 .wiecej a:hover {
+.bibliotekaTheme .ksiazki .wiecej a:hover,
+.bibliotekaTheme .utwory .custom-type-1 .wiecej a:hover {
     background: #fff !important;
     color: #000 !important;
 }
 
-.page-template-biblioteka .ksiazki p {
+.bibliotekaTheme .ksiazki p {
     text-align: left;
 }
 
-.page-template-biblioteka .ksiazki h3 {
+.bibliotekaTheme .ksiazki h3 {
     position: relative;
 }
 
-.page-template-biblioteka .ksiazki .ksiazki_right a {
+.bibliotekaTheme .ksiazki .ksiazki_right a {
     display: inline-block;
     overflow: hidden;
     border: 2px solid black;
 }
 
-.page-template-biblioteka .ksiazki .ksiazki_right a img {
+.bibliotekaTheme .ksiazki .ksiazki_right a img {
     margin-bottom: 0;
 }
 
-.page-template-biblioteka .blogi .category,
-.page-template-biblioteka .blogi h4,
-.page-template-biblioteka .blogi .imie {
+.bibliotekaTheme .blogi .category,
+.bibliotekaTheme .blogi h4,
+.bibliotekaTheme .blogi .imie {
     text-align: left;
 }
 
-.page-template-biblioteka .blogi article {
+.bibliotekaTheme .blogi article {
     padding-left: 41px;
 }
 
-.page-template-biblioteka .blogi h4 {
+.bibliotekaTheme .blogi h4 {
     font-weight: bold;
     font-size: 25px;
 }
@@ -2398,8 +2398,8 @@ section.ksiazki:before {
     color: white;
 }
 
-.page-template-biblioteka .recytacje .carousel-control,
-.page-template-biblioteka .debaty .carousel-control {
+.bibliotekaTheme .recytacje .carousel-control,
+.bibliotekaTheme .debaty .carousel-control {
     width: 9%;
     background: none;
 }
@@ -2423,47 +2423,47 @@ section.ksiazki:before {
     right: 35%;
 }
 
-.page-template-biblioteka .nagrania .carousel-control {
+.bibliotekaTheme .nagrania .carousel-control {
     margin: 0 15px 11px 15px;
     color: white;
 }
 
-.page-template-biblioteka .nagrania .custom-type-1 img {
+.bibliotekaTheme .nagrania .custom-type-1 img {
     margin-bottom: 0;
 }
 
-.page-template-biblioteka .zdjecia .carousel-control {
+.bibliotekaTheme .zdjecia .carousel-control {
     margin: 8px 0 13px;
     width: 6%;
 }
 
-.page-template-biblioteka .zdjecia article {
+.bibliotekaTheme .zdjecia article {
     background: black;
 }
 
-.page-template-biblioteka .zdjecia article:hover {
+.bibliotekaTheme .zdjecia article:hover {
     cursor: pointer;
 }
 
-.page-template-biblioteka .zdjecia article a:first-of-type {
+.bibliotekaTheme .zdjecia article a:first-of-type {
     display: block;
     overflow: hidden;
 }
 
-.page-template-biblioteka .zdjecia article img {
+.bibliotekaTheme .zdjecia article img {
     margin-bottom: 0;
 }
 
-.page-template-biblioteka .zdjecia .row {
+.bibliotekaTheme .zdjecia .row {
     margin: 0;
 }
 
-.page-template-biblioteka .zdjecia .row:before {
+.bibliotekaTheme .zdjecia .row:before {
     top: 8px;
 }
 
-.page-template-biblioteka .zdjecia .row:before,
-.page-template-biblioteka .zdjecia .row:after {
+.bibliotekaTheme .zdjecia .row:before,
+.bibliotekaTheme .zdjecia .row:after {
     position: relative;
     display: inline-block;
     clear: both;
@@ -2476,11 +2476,11 @@ section.ksiazki:before {
     background-repeat-x: repeat;
 }
 
-.page-template-biblioteka .zdjecia .row:after {
+.bibliotekaTheme .zdjecia .row:after {
     top: -7px;
 }
 
-.page-template-biblioteka #top_links {
+.bibliotekaTheme #top_links {
     position: relative !important;
     background: black !important;
 }

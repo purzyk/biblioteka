@@ -228,7 +228,7 @@ wp_reset_postdata();
 		<?php
 } else {
     // This is not the blog posts index
-     e?>
+     ?>
      		<section class="master_slider">
 			<div class="slide">
 				<?php if ( is_single() ) { ?>

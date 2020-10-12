@@ -1,0 +1,243 @@
+.bibliotekaTheme .custom-type-1{ .imie{
+    display:inline-block;
+    &:after{
+        content:', '
+    }
+    &:last-child{
+        &:after{
+            content:none;
+        }   
+    }
+}
+}
+
+.carousel-biblioteka{
+    padding:0;
+}
+.bibliotekaTheme .blogi article{
+    padding:0;
+}
+
+.pagination_links{
+    border:0;
+}
+.pagination_links .pagination { 
+    top: -5px;
+}
+
+.fs-carousel-enabled .fs-carousel-control_next {
+    right: -20px;
+}
+.fs-carousel-enabled .fs-carousel-control_previous {
+    left: -20px;
+}
+
+    .kategoria_debaty{
+        a:visited,a:link{
+            color: #898989;
+        }
+    }
+
+.archiwum__bl{
+    text-align: center;
+    label{
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        font-size: 0.8125rem;
+        font-family: "Lato", "Arial", sans-serif;
+    }
+    select,option{
+        color: #616161;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    }
+}
+.pagination{
+
+
+    .page-numbers.dots{
+        display:none;
+    }
+    .page-numbers.current{
+        &:after{
+            content:'/';
+        }
+
+    }
+    .page-numbers{
+        display: none;
+    }
+    .prev.page-numbers,.next.page-numbers,.current.page-numbers,.current.page-numbers{
+        display: inline-block;
+    }
+}
+.posRel{
+    position: relative;
+    &.row{
+        margin-right: 0;
+        margin-left: 0
+    }
+}
+
+.slick-next {
+    content: '';
+    background:transparent url('https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/next_2.png') center center no-repeat;
+    width:31px;
+    height: 53px;
+    display:inline-block;
+    right:50px;
+    box-shadow:none;
+    text-shadow:none;
+    z-index: 10;
+    opacity:0.6;
+    &:hover, &:focus{
+        box-shadow:none;
+        background:transparent url('https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/next_2.png') center center no-repeat;
+        text-shadow:none;
+        opacity:1;
+    }
+&:before{
+display:none;
+}
+}
+.slick-prev {
+    content: '';
+    background:transparent url('https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/prev_2.png') center center no-repeat;
+    width:31px;
+    height: 53px;
+    display:inline-block;
+    left:50px;
+    box-shadow:none;
+    text-shadow:none;
+    z-index: 10;
+    opacity:0.6;
+    &:hover, &:focus{
+        opacity:1;
+        box-shadow:none;
+        text-shadow:none;
+        background:transparent url('https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/prev_2.png') center center no-repeat;
+    }
+&:before{
+display:none;
+}
+}
+
+.js-nagrania{
+    .slick-next {
+        content: '';
+        background:transparent url('https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/next_2.png') center center no-repeat;
+        width:31px;
+        height: 53px;
+        display:inline-block;
+        right:50px;
+        box-shadow:none;
+        text-shadow:none;
+        z-index: 10;
+&:before{
+    display:none;
+}
+    }
+    .slick-prev {
+        content: '';
+        background:transparent url('https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/prev_2.png') center center no-repeat;
+        width:31px;
+        height: 53px;
+        display:inline-block;
+        left:50px;
+        box-shadow:none;
+        text-shadow:none;
+        z-index: 10;
+&:before{
+    display:none;
+}
+    }
+}
+
+.js-kartoteka, .js-dzwieki{
+    .slick-prev {
+        top:100px;
+        left:0;
+    }
+    .slick-next {
+        top:100px;
+        right:0;
+    }
+}
+
+.js-zdjecia, .js-cykle, .js-ksiazki{
+    .slick-prev {
+        
+        left:0;
+    }
+    .slick-next {
+        
+        right:0;
+    }
+}
+.js-debaty{
+    .slick-prev {
+        top:100px;
+        left:0;
+    }
+    .slick-next {
+        top:100px;
+        right:0;
+    }
+}
+.bibliotekaNowa{
+    .zdjecia{
+        margin-top:50px;
+    }
+.rozmowy, .utwory,{
+    background:#000;
+    h2{
+        border-bottom:1px solid white;
+        span{
+            background-color: #000;
+            a{
+                color:#fff;
+            }
+            
+        }
+    }
+    h3{
+        color:#fff;
+    }
+}
+
+}
+
+
+.header__new__top{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .w-sieci-od{
+        margin:0;
+    }
+}
+.header__new__bottom{
+    padding-top:50px;
+    display:flex;
+    justify-content: space-between;
+    padding-bottom:50px;
+    li{
+        list-style: none;
+        padding-left: 9px;
+        background: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/top_menu_yellow.png) left 10px;
+        background-repeat: no-repeat;
+        a{
+            color: #000;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 16px;
+            font-size: 0.8125rem;
+            font-family: "Lato", "Arial", sans-serif;
+        }
+        
+    }
+}

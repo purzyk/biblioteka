@@ -10,10 +10,11 @@ if ( $the_query->have_posts() ) {
 	while ( $the_query->have_posts() ) {
 		echo '<article class="typ_1">';
 		$the_query->the_post();
+		$term_list = wp_get_post_terms($post->ID, 'zdjecia-kategorie', array("fields" => "all"));
 		$categories = get_terms('zdjecia-kategorie');?>
-		<a href="<?php the_permalink();?>"><?php get_template_part( 'template-parts/img', 'small' ); ?> </a><?php
-		echo '<span class="category"><b>'.esc_html( $categories[0]->name ).'</b></span>';
-		echo '<h4>' . get_the_title() . '</h4>';
+		<a href="<?php the_permalink();?>"><?php get_template_part( 'template-parts/img', 'small' ); ?> </a>
+		<span class="category lato-font"><a href="<?php echo get_term_link($term_list[0]->term_id); ?>"><?php echo $term_list[0]->name; ?></a></span>
+		<?php echo '<h4>' . get_the_title() . '</h4>';
 		$terms = get_the_terms( $post->ID , 'autor' );
 	if($terms) {
 		foreach( $terms as $term ) {?>
