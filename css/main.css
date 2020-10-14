@@ -3805,7 +3805,7 @@ section.ksiazki .ksiazki_left {
     width: 100%;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 1100px) {
     /* line 503, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_home.scss */
     section.ksiazki .ksiazki_left {
         float: left;
@@ -3828,7 +3828,7 @@ section.ksiazki .ksiazki_left .premiera_ksiazki {
     text-align: center;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 1100px) {
     /* line 510, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_home.scss */
     section.ksiazki .ksiazki_left .premiera_ksiazki {
         float: left;
@@ -3837,7 +3837,7 @@ section.ksiazki .ksiazki_left .premiera_ksiazki {
     }
 }
 
-@media (min-width: 103em) {
+@media (min-width: 1100px) {
     /* line 510, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_home.scss */
     section.ksiazki .ksiazki_left .premiera_ksiazki {
         float: left;
@@ -3877,7 +3877,7 @@ section.ksiazki .ksiazki_left .title_ksiazki {
     width: 59.1836734694%;
 }
 
-@media (min-width: 103em) {
+@media (min-width: 1100px) {
     /* line 543, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_home.scss */
     section.ksiazki .ksiazki_left .title_ksiazki {
         float: right;
@@ -3930,7 +3930,7 @@ section.ksiazki .ksiazki_right {
     width: 100%;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 1100px) {
     /* line 579, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_home.scss */
     section.ksiazki .ksiazki_right {
         float: right;
@@ -4895,6 +4895,7 @@ h4 a:focus {
 
 .ksiazki article {
     position: relative;
+    margin:0 1px;
 }
 
 
@@ -4909,7 +4910,7 @@ h4 a:focus {
     width: 100%;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 1100px) {
     /* line 1144, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_home.scss */
     .ksiazki article .wiecej {
         float: left;

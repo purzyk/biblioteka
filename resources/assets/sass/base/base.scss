@@ -41,12 +41,26 @@
 .archiwum__bl{
     text-align: center;
     label{
+        margin-right: 12px;
         color: #000;
         text-transform: uppercase;
-        font-weight: 700;
-        font-size: 16px;
-        font-size: 0.8125rem;
+        
+        
+        font-weight: 500;
+        
         font-family: "Lato", "Arial", sans-serif;
+        font-size: 1rem;
+        display: inline-block;
+        &:before{
+            position: relative;
+            margin-right: 5px;
+            color: #ffc807;;
+            font-weight: bold;
+            font-size: 16px;
+            font-size: 1rem;
+            line-height: 24px;
+            content:'/';
+        }
     }
     select,option{
         color: #616161;
@@ -187,28 +201,7 @@ display:none;
         right:0;
     }
 }
-.bibliotekaNowa{
-    .zdjecia{
-        margin-top:50px;
-    }
-.rozmowy, .utwory,{
-    background:#000;
-    h2{
-        border-bottom:1px solid white;
-        span{
-            background-color: #000;
-            a{
-                color:#fff;
-            }
-            
-        }
-    }
-    h3{
-        color:#fff;
-    }
-}
 
-}
 
 
 .header__new__top{
@@ -221,23 +214,163 @@ display:none;
     }
 }
 .header__new__bottom{
-    padding-top:50px;
+    padding-top:25px;
     display:flex;
     justify-content: space-between;
-    padding-bottom:50px;
+    padding-bottom:25px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-top:40px;
+    margin-bottom:40px;
     li{
         list-style: none;
-        padding-left: 9px;
-        background: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/top_menu_yellow.png) left 10px;
-        background-repeat: no-repeat;
+        display: inline-block;
+&:before{
+    position: relative;
+    margin-right: 5px;
+    color: #ffc807;;
+    font-weight: bold;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 24px;
+    content:'/';
+}
         a{
             color: #000;
             text-transform: uppercase;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 16px;
-            font-size: 0.8125rem;
             font-family: "Lato", "Arial", sans-serif;
+            font-size: 1rem;
+            &:hover{
+                text-decoration: none;
+                font-size: 700;
+            }
         }
         
     }
+}
+
+.dotacja{
+    
+    width:100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+    margin-top:50px;
+    img{
+        max-width: 400px;
+    }
+}
+
+.header__new__middle{
+    *:focus{
+        outline: none;
+        text-decoration: none;
+    }
+    p{
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    display:flex;
+    justify-content: space-between;
+    a{
+        color:#000;
+        font-size: 1rem;
+        line-height: 1rem;
+        font-family: "Lato", "Arial", sans-serif;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .ui-tabs-nav{
+        display:flex;
+        justify-content: flex-start;
+        a{
+            margin-right: 10px;
+        }
+        .ui-tabs-active{
+            a{
+                font-weight: 700;
+            }
+        }
+    }
+    .ui-tabs-panel{
+        display:flex;
+        justify-content: flex-start;
+        a{
+            margin-right: 10px;
+        }
+    }
+    &.--mobile{
+        width:100%;
+        flex-direction: column;
+        padding-top:20px;
+        justify-content: center;
+    }
+}
+
+.header__new__middle__search{
+    text-align: right;
+    #searchform_sidebar{
+        margin-bottom:0!important;
+    }
+}
+
+
+
+.ksiazki article .wiecej{
+margin-bottom:0!important;
+bottom:20px;
+}
+.ksiazki article{
+    padding-bottom:40px;
+}
+.bibliotekaTheme .ksiazki .ksiazki_right a img{
+    width:100%;
+}
+.bibliotekaTheme .ksiazki .ksiazki_right a {
+    width: 100%;
+}
+@media (min-width: 1100px) {
+    
+
+section.ksiazki .ksiazki_left .premiera_ksiazki .premiera {
+    font-size:12px;
+}
+    .ksiazki article .wiecej{
+        
+        bottom:30px;
+        }
+        .ksiazki article{
+            
+        }
+}
+@media (min-width: 1300px) {
+    .ksiazki article{
+        padding-bottom:0;
+    }
+    .ksiazki article .wiecej{
+        
+        bottom:50px;
+        }
+    section.ksiazki .ksiazki_left .premiera_ksiazki .premiera {
+        font-size: 1.0625rem;
+    }
+}
+
+.large2{
+display:none;
+}
+.small2{
+    display:block;
+}
+@media (min-width: 1100px) {
+    .large2{
+        display:block;
+        }
+        .small2{
+            display:none;
+        }
 }

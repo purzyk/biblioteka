@@ -1,20 +1,18 @@
-<div class="header__new">
-	<div class="header__new__top">
 		<div class="logo">
-			<a href="https://www.biuroliterackie.pl/biblioteka"><img
-					src="<?php echo  get_template_directory_uri().'/img/logo_biblioteka_4.png'?>"></a>
+			<a href="https://www.biuroliterackie.pl/biblioteka"><img src="<?php echo  get_template_directory_uri().'/img/logo_biblioteka_2.png'?>"></a>
 		</div>
-		<div class="w-sieci-od">
-			<div class="line"><span class="data"><span class="nr">nr</span><span
-						class="numer"><?php the_field('numer'); ?></span><span
-						class="rok"><?php the_field('rok'); ?></span></div>
+		<div class="szukaj right">
+		<span class="data"><strong><?php the_field('numer', 145767); ?></strong>/<?php the_field('rok', 145767); ?></span><!--<span class="od">W sieci od 1998 r.</span>-->
+		<?php /*	<form method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+			<div><input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" placeholder="Archiwum" />
+			<input type="submit" id="searchsubmit" value="Search" class="btn" />
+			</div>
+			</form> */ ?>
 		</div>
-
-	</div>
-	<div class="header__new__middle">
+		<div class="header__new__middle --mobile">
 		<div class="header__new__middle__archiwum">
 			<p>Archiwum numerów</p>
-			<div id="archiwum">
+			<div id="archiwum2">
 				<?php
 
 // Check rows exists.
@@ -101,20 +99,16 @@ endif;
 			</form>
 		</div>
 	</div>
-	<div class="header__new__bottom">
-
-
-		<?php wp_nav_menu( array('menu' => 'menu-links-left', 'container'=>'','items_wrap' => '%3$s' )); ?>
-		<?php wp_nav_menu( array('menu' => 'menu-links-right', 'container'=>'','items_wrap' => '%3$s' )); ?>
-		<li id="menu-item-144956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144956"><a
-				href="#">leksykon</a></li>
-	</div>
-
-
-
-</div>
-<script>
+		<div class="main-links">
+			
+	<?php wp_nav_menu( array('menu' => 'menu-links-left', 'container'=>'','items_wrap' => '%3$s' )); ?>
+	<?php wp_nav_menu( array('menu' => 'menu-links-right', 'container'=>'','items_wrap' => '%3$s' )); ?>
+	<li id="menu-item-144956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144956"><a
+			href="#">leksykon</a></li>
+		</div>
+		
+		<script>
 	$(function () {
-		$("#archiwum").tabs();
+		$("#archiwum2").tabs();
 	});
 </script>

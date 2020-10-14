@@ -6,7 +6,7 @@
 *
 * @package biblioteka
 */
-get_header('main'); ?>
+get_header('main-2020'); ?>
 
 <div id="primary" class="content-area bibliotekaTheme">
 	<main id="main" class="site-main bibliotekaNowa" role="main">
@@ -98,6 +98,7 @@ get_header('main'); ?>
                     <h3>ZAPISY CZYTAŃ, DYSKUSJI, KONCERTÓW I AUDYCJI</h3>
                     <?php get_template_part( $template_dir_new, 'dzwieki' ); ?>
                 </section>
+
             </div>
         </div>
 
@@ -110,8 +111,15 @@ get_header('main'); ?>
                 </section>
             </div>
         </div>
+        
+        <div class="row" style="margin-top:12px">
+            <div class="col-xs-12">
+        <section class="dotacja">
+                <img src="https://www.biuroliterackie.pl/biblioteka/wp-content/uploads/2020/10/Belka.jpg">
+                </section>
 
-
+                </div>
+                </div>
         <span class="do_gory"><a class="top_bu" href="">DO GÓRY</a></span>
 
         <script type="text/javascript">
