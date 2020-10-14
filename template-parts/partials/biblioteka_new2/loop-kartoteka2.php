@@ -1,5 +1,5 @@
 <?php
-$featured_posts = get_field('wywiady');
+$featured_posts = get_field('kartoteka_25');
 
 if( $featured_posts ): ?>
 <div class="row">
@@ -8,8 +8,31 @@ if( $featured_posts ): ?>
            
         <?php foreach( $featured_posts as $post ): 
  setup_postdata($post); 
-            $categories = get_terms('wywiady-kategorie');
-            $term_list = wp_get_post_terms($post->ID, 'wywiady-kategorie', array( "fields" => "all" ));
+            if ($post->post_type == "wywiady") {
+                $term_list = wp_get_post_terms($post->ID, 'wywiady-kategorie', array("fields" => "all"));
+            }
+            if ($post->post_type == "recenzje") {
+                $term_list = wp_get_post_terms($post->ID, 'recenzje-kategorie', array("fields" => "all"));
+            }
+            if ($post->post_type == "debaty") {
+                $term_list = wp_get_post_terms($post->ID, 'debaty-kategorie', array("fields" => "all"));
+            }
+            if ($post->post_type == "felietony") {
+                $term_list = wp_get_post_terms($post->ID, 'felietony-kategorie', array("fields" => "all"));
+            }
+            if ($post->post_type == "dzwieki") {
+                $term_list = wp_get_post_terms($post->ID, 'dzwieki-kategorie', array("fields" => "all"));
+            }
+            if ($post->post_type == "nagrania") {
+                $term_list = wp_get_post_terms($post->ID, 'nagrania-kategorie', array("fields" => "all"));
+            } 
+            if ($post->post_type == "zdjecia") {
+                $term_list = wp_get_post_terms($post->ID, 'zdjecia-kategorie', array("fields" => "all"));
+            }
+            if ($post->post_type == "utwory") {
+                $term_list = wp_get_post_terms($post->ID, 'utwory-kategorie', array("fields" => "all"));
+            }
+            
             ?>
             <div class="item <?php echo $active; ?>">
                 <article <?php post_class(); ?>>

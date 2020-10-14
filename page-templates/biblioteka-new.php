@@ -27,14 +27,17 @@ get_header('main-2020'); ?>
 
         <div class="row" style="margin-top:70px">
             <div class="col-md-8">
+            <?php
+$featured_posts = get_field('kartoteka_25');
 
+if( $featured_posts ): ?>
                 <section class="rozmowy">
-                    <h2><span><a href="<?php echo get_post_type_archive_link('wywiady'); ?>">Kartoteka 25</a></span></h2>
+                    <h2><span>Kartoteka 25</span></h2>
                     <h3>MATERIAŁY SPECJALNE I ARCHIWALIA</h3>
                     <?php get_template_part( $template_dir_new, 'kartoteka2' ); ?>
                 </section>
-
-                <section class="utwory">
+                <?php endif; ?>
+                <section class="utwory <?php if ($featured_posts)   echo "kartotekaOn"; else echo "off"; ?>">
                     <h2><span><a href="<?php echo get_post_type_archive_link('utwory'); ?>">utwory</a></span></h2>
                     <h3>Premierowe dzieła, tłumaczenia i zapowiedzi książek</h3>
                     <?php get_template_part( $template_dir_new, 'utwory' ); ?>
