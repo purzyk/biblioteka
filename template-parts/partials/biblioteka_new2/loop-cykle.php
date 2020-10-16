@@ -21,9 +21,28 @@ if( $featured_posts ): ?>
                 </div>
 
                 <div class="col-md-5">   
+                <span class="kategoria_debaty">
+                        <a href="<?php echo get_term_link($tags[0]->term_id); ?>"><?php echo $tags[0]->name; ?></a>
+                    </span>
                     <h4>
                         <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>
                     </h4>
+                    <span class="debaty_span">
+
+<span class="category lato-font"><a href="<?php echo get_term_link($term_list[0]->term_id); ?>"><?php echo $term_list[0]->name; ?></a></span>
+
+<?php      
+if ($terms)
+{
+    foreach($terms as $term)
+    {
+    ?>
+        <span class="imie"><?php echo the_field('imie', $term); ?> <span class="nazwisko"><?php echo the_field('nazwisko', $term); ?></span></span>
+    <?php
+    }
+} 
+?>
+</span>
                     <a href="<?php the_permalink(); ?>"> <?php the_excerpt(); ?> </a>
                     <span class="wiecej"><a href="<?php the_permalink(); ?>">WIĘCEJ</a></span>
                 </div>    

@@ -1,4 +1,4 @@
-.bibliotekaTheme .custom-type-1{ .imie{
+.bibliotekaTheme .custom-type-1 .ksiazki_left{ .imie{
     display:inline-block;
     &:after{
         content:', '
@@ -264,6 +264,7 @@ display:none;
 }
 
 .header__new__middle{
+    padding-top:40px;
     *:focus{
         outline: none;
         text-decoration: none;
@@ -272,6 +273,7 @@ display:none;
         font-size: 1rem;
         text-transform: uppercase;
         font-weight: 500;
+        font-family: "Lato", "Arial", sans-serif;
     }
     display:flex;
     justify-content: space-between;
@@ -280,6 +282,9 @@ display:none;
         font-size: 1rem;
         line-height: 1rem;
         font-family: "Lato", "Arial", sans-serif;
+        &.active{
+            font-weight: 700;
+        }
         &:hover{
             text-decoration: none;
         }

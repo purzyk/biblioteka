@@ -13,6 +13,7 @@
 	</div>
 	<div class="header__new__middle">
 		<div class="header__new__middle__archiwum">
+		
 			<p>Archiwum numerów</p>
 			<div id="archiwum">
 				<?php
@@ -51,6 +52,7 @@ if( have_rows('archiwum', 'option') ):
     // Loop through rows.
 	while( have_rows('archiwum', 'option') ) : the_row();
 	$i++;
+	$current_object_id = get_queried_object_id();
 ?>
 				<div id="tabs-<?php echo $i; ?>">
 					<?php
@@ -60,8 +62,10 @@ if( have_rows('numery', 'option') ):
 
     // Loop through rows.
 	while( have_rows('numery', 'option') ) : the_row();
+	$post_link = get_sub_field('link', 'option');
+	$permalink = get_permalink( $post_link );
 	?>
-					<a href="<?php the_sub_field('link', 'option'); ?>"><?php the_sub_field('numer', 'option'); ?></a>
+					<a class="<?php if ($current_object_id == $post_link) echo "active";?>" href="<?php echo  $permalink; ?>"><?php the_sub_field('numer', 'option'); ?></a>
 					<?php
 
     // End loop.
