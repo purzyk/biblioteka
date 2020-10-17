@@ -76,7 +76,7 @@ get_header('main'); ?>
                 </section>
                 <div class="clearfix"></div>
                 <section class="zdjecia">
-                    <h2><span><a href="<?php echo get_post_type_archive_link('nagrania'); ?>">zdjęcia</a></span></h2>
+                    <h2><span><a href="<?php echo get_post_type_archive_link('zdjecia'); ?>">zdjęcia</a></span></h2>
                     <h3>RELACJE, PREZENTACJE KSIĄŻEK I PORTRETY AUTORÓW</h3>
                     <?php get_template_part( $template_dir, 'zdjecia' ); ?>
                 </section>

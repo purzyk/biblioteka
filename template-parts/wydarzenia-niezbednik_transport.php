@@ -36,18 +36,11 @@ if( have_rows('transport') ) : ?>
 				<?php endif; ?>
 			</div>
 			
-			<?php if ($location || $url) : ?>
 			<div class="col-xs-4 col-md-6">
-				<?php if ($location) : ?>
-				<i class="fa fa-map-marker" aria-hidden="true"></i>
-				<a class="lato-font see-map-dbs" title="<?php echo $location['address']; ?>" target="_blank" href="https://www.google.com/maps?q=<?php echo urlencode($location['address']);?>&ll=<?php echo $location['lat']; ?>,<?php echo $location['lng']; ?>&z=18&t=m&hl=pl_PL&gl=PL&mapclient=apiv3"><?php _e( 'sprawdź na mapie', 'biuro-literackie' ); ?></a>
-				<?php endif; ?>
-				
-				<?php if ( $url ) : ?>
-				<a class="lato-font go-to-adress" title="<?php _e( 'Idź do adresu', 'biuro-literackie' ); ?>" target="_blank" href="<?php echo $url; ?>"><?php echo str_replace('http://', '' , $url); ?></a>
+			<?php if( get_sub_field('zdjecie') ): ?>
+				<img src="<?php echo the_sub_field('zdjecie');?>">
 				<?php endif; ?>
 			</div>
-			<?php endif; ?>
 		</div>	
 		<?php endwhile;?>	
 </div>

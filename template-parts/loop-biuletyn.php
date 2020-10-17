@@ -6,7 +6,7 @@
 		'row',
 		'row-eq-height',
 	);
-	$args = array('posts_per_page' => 12,
+	$args = array('posts_per_page' => 15,
 	'paged'=> $paged,
 	'post_type' => 'biuletyn');
 	

@@ -194,7 +194,7 @@ get_header('biuletyn_single'); ?>
 
 				<?php
 				// KSIĄŻKI
-					get_template_part( 'template-parts/partials/module', 'ksiazki_lista' );
+				get_template_part( 'template-parts/partials/biuletyn/module', 'wiadomosci_z_kategorii' ); ?>
 				// end KSIĄŻKI ?>
 
 				<?php

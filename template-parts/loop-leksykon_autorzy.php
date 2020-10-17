@@ -30,7 +30,7 @@
                         $image_url = get_template_directory_uri().'/img/placeholders/autor-placeholder-300x300.jpg';
                     }
                     ?>
-                    
+                    <div class="row">
                     <div class="col-md-3 left-side">
                         <img src="<?= $image_url ?>" alt="<?php the_title(); ?>" />
                     </div>
@@ -41,7 +41,15 @@
                             <span><img src="https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/red-slash.png" alt=""></span>
                             <?php echo $imie; ?> <?php echo $nazwisko; ?>
                         </figure>
+                                                
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-3 left-side">
                         
+                    </div>
+                    
+                    <div class="col-md-9 right-side">                       
                         <div class="playfair-display biogram">
                           <?php echo strip_tags( get_the_content(), '<em>' ); ?>
                         </div>
@@ -50,6 +58,7 @@
                           <?php get_template_part( 'template-parts/partials/autorzy_lista/leksykon', 'page_bibliografia' ); ?>
                         </div>
                         
+                    </div>
                     </div>
                     
                     <div class="row">

@@ -1,5 +1,5 @@
 			<section class="top_articles">
-			<?php get_template_part( 'template-parts/loop', 'archwiumtop_cykle' ); ?>
+			<?php get_template_part( 'template-parts/loop', 'archwiumtop_indeks' ); ?>
 			<script type="text/javascript">
 					$(".archwiumtop_carousell").carousel({
     show: {

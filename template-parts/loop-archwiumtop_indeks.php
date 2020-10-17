@@ -6,7 +6,7 @@ $the_query = new WP_Query( array(
     'post_type' => array( 'utwory','debaty','nagrania','wywiady','recenzje','felietony','dzwieki'),
     'orderby '=> 'date',
     'order' => 'DESC',
-    'posts_per_page' => 10
+    'posts_per_page' => 21
 ));
 
 // The Loop

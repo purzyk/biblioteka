@@ -63,7 +63,11 @@ if( $about_book_query->have_posts() )
     wp_reset_postdata();
 ?>
 <section id="biueletyn__materialy-o-ksiazce">
-    <h2 class="biuletyn_subtitle"><span class="lato-font"><?php _e( 'teksty i materiały o książce w bibliotece', 'biblioteka' ); ?></span></h2>
+<div class="similar-posts">
+    <div class="tytulMaterialy"><span class="lato-font"><?php _e( 'teksty i materiały o książce w bibliotece', 'biblioteka' ); ?></span></div>
+    </div>
+    
+
     <div id="materialy-o-ksiazce">
         <ul class="lato-font kategorie">
         <?php foreach ( $typ_postu as $typ => $t) : ?>

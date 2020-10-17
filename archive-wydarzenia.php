@@ -28,17 +28,14 @@ if ( $show == 'archiwum' || $show == 'upcoming' )
 
             <figure class="logo__biuletyn">
                 <a href="<?php echo get_post_type_archive_link('wydarzenia'); ?>">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/wydarzenia_logo.png" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/festiwal_logo_2.png" />
                 </a>
             </figure>
 
             <div>
-                <h3 class="biuletyn__title">Najbliższe imprezy oraz kronika zdarzeń.</h3>
+                <h3 class="biuletyn__title">Archiwum Stacji Literatura</h3>
             </div>
 
-            <div>
-                <?php wp_nav_menu( array('menu' => 'wydarzenia', 'before' => '<span class="red">/</span>', )); ?>
-            </div>
             
             <?php
             if ( $show != 'upcoming' )

@@ -19,7 +19,7 @@
 		</section>
 		<section class="newsletter">
 		<div class="logo_foteer">
-<a href="http://biuroliterackie.pl/"><img src="<?php echo  get_template_directory_uri().'/img/logo_stopka.png'?>"></a>
+<a href="http://biuroliterackie.pl/"><img src="<?php echo  get_template_directory_uri().'/img/logo.png'?>"></a>
 		</div>
 		<div class="dane_kontaktowe">
 <p>

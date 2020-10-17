@@ -28,16 +28,12 @@ if ( $show == 'archiwum' || $show == 'upcoming' )
 
             <figure class="logo__biuletyn">
                 <a href="<?php echo get_post_type_archive_link('projekty'); ?>">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/projekty_logo.png" />
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/projekty_logo_2.png" />
                 </a>
             </figure>
 
             <div>
-                <h3 class="biuletyn__title">Konkursy, działania edukacyjne i programach literackie</h3>
-            </div>
-
-            <div>
-                <?php wp_nav_menu( array('menu' => 'projekty', 'before' => '<span class="red">/</span>', )); ?>
+                <h3 class="biuletyn__title">Oferty wydawnicze dla autorów przed i po debiucie</h3>
             </div>
             
             <?php echo bl_my_search_form('projekty'); ?>

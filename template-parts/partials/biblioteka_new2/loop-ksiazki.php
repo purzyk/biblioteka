@@ -6,15 +6,7 @@ if( $featured_posts ): ?>
     <?php foreach( $featured_posts as $post ):
 setup_postdata($post); 
         ?>
-		<article class="custom-type-1"><div class="ksiazki_left">			<div class="premiera_ksiazki">
-				<span class="premiera">
-					Premiera
-				</span>
-				<span class="ksiazki_data">
-				<?php the_field('data_premiery'); ?>
-									</span>
-
-			</div>
+		<article class="custom-type-1"><div class="ksiazki_left">			
 			<div class="title_ksiazki">
 			<div>
 			<?php

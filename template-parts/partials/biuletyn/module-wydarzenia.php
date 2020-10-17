@@ -10,18 +10,7 @@
 $post_type = get_query_var( 'post_type' );
 $wydarzenia_args = array(
   'post_type' => 'wydarzenia',
-  'posts_per_page'=> 9,
-  'meta_key' => 'data',
-	'orderby' => 'meta_value',
-	'order' => 'ASC',
-	'meta_query' => array(
-		array(
-			'key' => 'data',
-			'value' => current_time('Y-m-d'),
-			'compare' => '>=',
-			'type' => 'DATE',
-		),
-	),
+  'posts_per_page'=> 1
 );
 
 $wydarzenia_query = new WP_Query( $wydarzenia_args );
@@ -31,7 +20,7 @@ if ( $wydarzenia_query->have_posts() )
 ?>
 <section id="<?php echo $post_type; ?>__wydarzenia" class="<?php echo $post_type; ?>_wydarzenia">
 
-  <h2 class="<?php echo $post_type; ?>__module-subtitle"><span>wydarzenia</span></h2>
+  <h2 class="<?php echo $post_type; ?>__module-subtitle"><span>FESTIWAL</span></h2>
 
   <ul>
   <?php

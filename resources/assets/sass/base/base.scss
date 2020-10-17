@@ -361,7 +361,7 @@ section.ksiazki .ksiazki_left .premiera_ksiazki .premiera {
         bottom:50px;
         }
     section.ksiazki .ksiazki_left .premiera_ksiazki .premiera {
-        font-size: 1.0625rem;
+        font-size: 12px;
     }
 }
 
@@ -382,4 +382,155 @@ display:none;
 
 .bibliotekaTheme .utwory.off {
     margin-top: 0!important;
+}
+
+
+.przypis{
+    em{
+        font-style: italic;
+    }
+}
+
+h3.niezbednik__title {
+    color: #d01117!important;
+}
+.go-to-adress, .go-to-adress:visited,.go-to-adress:link {
+    
+    color: #d01117!important;
+}
+
+.autorzy__leksykon .biogram {
+    font-weight: 400;
+}
+#biuletyn__projekty, #biuletyn__wydarzenia{
+    position:relative;
+    padding-bottom:30px;
+    span{
+        background-color: #d5d5d5;
+    }
+}
+#biuletyn__projekty:before, #biuletyn__wydarzenia:before {
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    height: 100%;
+    background-color: #d5d5d5;
+    content: "";
+    transform: translateX(-50%);
+}
+#biueletyn__materialy-o-ksiazce{
+    .similar-posts{
+        margin-top:10px;
+    }
+    .similar-posts > div:first-of-type {
+        top: -45px;
+    }
+}
+.site-footer{
+    padding-top:40px;
+    margin-top:40px;
+    background:#000;
+    .footer_menu li a {
+        
+        color: #fff;
+    }.footer_menu li:hover a{
+        background:#fff;
+        color:#000;
+    }
+    p{
+        color:#fff;
+    }
+    .newsletter{
+        border-bottom:1px solid #fff;
+    }
+    .newsletter_title{
+        color:#fff;
+    }
+    .newsletter_right{
+        color:#fff;
+
+    }
+    .copyright{
+        color:#fff;
+        a:link, a:visited{
+            color:#fff!important;
+        }
+    }
+    @media (min-width: 48em){
+.footer_menu li:first-child {
+    margin-left: 0px;
+    a{
+        padding-left:15px;
+    }
+}
+}
+.logo_foteer{
+    img{
+        max-width: 150px;
+    }
+}
+}
+
+@media (min-width: 48em){
+footer .newsletter div.wpcf7 .newsletter_left {
+    
+    width: 57%;
+}
+}
+span.emaile {
+    display: block;
+    color: #8c8a8a;
+    font-weight: 400;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 15px;
+}
+span.emailInput {
+    display: block;
+    width:100%;
+    max-width: 340px;
+}
+footer .news_left_p {
+    margin-bottom: 10px;
+}
+footer .newsletter div.wpcf7 .newsletter_title{
+    margin-bottom:20px;
+    
+    margin-right: 2.9411764706%;
+}
+.module__ksiazki_lista ul li > a > div:first-child > img {
+
+    transform: translate3d(0px, 100px, 0px);
+}
+.post-type-archive-wydarzenia, .post-type-archive-projekty {
+    .flexsearch--wrapper {
+        top: 18px;
+        position: relative;
+    }
+}
+
+.bibliotekaNowa{
+section.ksiazki .ksiazki_left .title_ksiazki {
+    float: left!important;
+    width: 100%!important;
+}
+@media (min-width: 1100px) {
+.ksiazki{
+    .slick-prev {
+        left: -50px;
+    }
+}
+}
+}
+
+.autorzy__leksykon .biogram{
+    padding-top: 45px;
+    margin:0;
+}
+
+.tytulMaterialy{
+    position: relative!important;
+    top:0!important;
+    margin-bottom: 20px;
 }
