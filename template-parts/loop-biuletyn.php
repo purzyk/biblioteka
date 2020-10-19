@@ -41,6 +41,7 @@
 		$image_id = get_post_thumbnail_id();
 		$image_url = wp_get_attachment_image_src($image_id,'large');
 		$image_url = !empty($image_url) ? $image_url[0] : get_template_directory_uri().'/img/placeholder.png';
+		$imageAlt = get_field('alternatywne_zdjecie_do_listy_wpisow', $post->ID);
 
 		$excerpt = apply_filters('the_excerpt', get_the_excerpt());
 		if (  mb_strlen($excerpt, 'UTF-8') > 336 )
@@ -52,7 +53,13 @@
 		?>
 		<figure class="<?php echo $push_class; ?>col-xs-12 col-sm-12 col-md-6">
 			<a href="<?php echo the_permalink(); ?>">
-				<img src="<?php echo $image_url; ?>" height="415" />
+				
+				<?php if($imageAlt) : ?>
+					<img src="<?php echo $imageAlt; ?>" height="415" />
+
+<?php  else: ?>
+	<img src="<?php echo $image_url; ?>" height="415" />
+<?php endif?>
 			</a>
 		</figure>
 		<div class="<?php echo $pull_class; ?>biuletyn__article-dbs col-xs-12 col-sm-12 col-md-6">
