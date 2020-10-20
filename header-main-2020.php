@@ -70,7 +70,7 @@ if ( is_user_logged_in () ) {
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'biblioteka' ); ?></a>
 
 
-<?php get_template_part( 'template-parts/top', 'slider_nowy_2020' ); ?>
+<?php get_template_part( 'template-parts/top', 'slider_nowy' ); ?>
 <div class="clearfix"></div>
 
 <div id="content-dbs" class="site-content-dbs" style="margin-top: 0 !important;">

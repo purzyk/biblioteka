@@ -4,7 +4,7 @@ $featured_posts = get_field('wywiady');
 if( $featured_posts ): ?>
 <div class="row">
     <!-- Wrapper for slides -->
-        <div class="js-wywiady">
+        <div class="js-wywiadyOld">
            
         <?php foreach( $featured_posts as $post ): 
  setup_postdata($post); 
@@ -33,7 +33,7 @@ if( $featured_posts ): ?>
 </div>
 <?php endif; ?>
 <script>
-$('.js-wywiady').slick({
+$('.js-wywiadyOld').slick({
     infinite: true,
     dots: false,
 });

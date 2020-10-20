@@ -7,7 +7,7 @@
  * @package biblioteka
  */
 
-get_header(); ?>
+get_header('main'); ?>
 <div class="right_bck">
 
 </div>

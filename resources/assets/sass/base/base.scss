@@ -278,7 +278,7 @@ display:none;
     display:flex;
     justify-content: space-between;
     a{
-        color:#000;
+        color: #898989;
         font-size: 1rem;
         line-height: 1rem;
         font-family: "Lato", "Arial", sans-serif;
@@ -533,4 +533,15 @@ section.ksiazki .ksiazki_left .title_ksiazki {
     position: relative!important;
     top:0!important;
     margin-bottom: 20px;
+}
+.kartoteka25{
+    article > a{
+        position: relative;
+    }
+}
+
+
+.archive #main .archive_right{
+    margin-bottom: -20px;
+    padding-bottom: 20px;
 }
