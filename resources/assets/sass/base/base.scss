@@ -545,3 +545,94 @@ section.ksiazki .ksiazki_left .title_ksiazki {
     margin-bottom: -20px;
     padding-bottom: 20px;
 }
+.yearTop{
+    li a{
+        color: #ffc807;
+    }
+}
+
+.wywiadyNew{
+    a h4{
+        color:#fff;
+    }
+    a:hover{
+        text-decoration: underline;
+        color:#fff;
+    }
+    .aaa{
+        margin: 0 auto;
+        padding: 20px 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100%;
+        @media (min-width: 60em){
+            width:70%;
+            min-height: 300px;
+
+        }
+
+    }
+}
+.rec_nagr h4 a {
+ 
+    font-size: 1.8125rem!important;
+    line-height: 60px;
+}
+.kartoteka25 article{
+    position: relative;
+}
+.kartoteka25 h4 a{
+    color:#fff;
+}
+.single {
+    .menu-menu-links{
+        @media (min-width: 60em){
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            margin-left:0!important;
+        }
+        }
+    }
+}
+@media (min-width: 60em){
+.single ul#menu-menu-links li, .tax-cykle-nazwy ul#menu-menu-links li {
+    margin-left:0;
+}
+}
+@media (min-width: 85em){
+.single ul#menu-menu-links, .tax-cykle-nazwy ul#menu-menu-links {
+    text-align: left;
+}
+}
+
+.zdjecia{
+    .rec_nagr h4 a {
+        font-size: 25px !important;
+        line-height: 32px;
+    }
+}
+@media (min-width: 60em){
+.single .main-links {
+    margin-top: -8px;
+}
+}
+
+#biueletyn__materialy-o-ksiazce .similar-posts {
+    border-top: 1px solid #000;
+    padding-top: 20px;
+}
+#materialy-o-ksiazce{
+    .kategorie {
+        border-bottom: 1px solid #000;
+        padding-bottom:18px;
+    }
+}
+
+
+.single-biuletyn .under_content{
+    margin-bottom:100px;
+}

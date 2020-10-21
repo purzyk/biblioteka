@@ -208,6 +208,7 @@ add_image_size( 'blog_small', 124, 124, true );
 add_image_size( 'bl_small', 470, 213, true );
 add_image_size( 'bl_medium', 730, 331, true );
 add_image_size( 'bl_large', 950, 430, true );
+add_image_size( 'bl_kartoteka', 940, 530, true );
 add_image_size( 'bl_xl_large', 1600, 725, true );
 add_image_size( 'bl_autor_xl_large', 1600, 1200, true );
 add_image_size( 'bl_blog', 200, 200, true );
@@ -223,6 +224,7 @@ add_image_size( 'bl_biuletyn_ikona', 368, 207, true);
 add_image_size( 'bl_biuletyn_ksiazka2', 285, 400, true);
 add_image_size( 'bl_wydarzenia', 1600, 578, true);
 add_image_size( 'bl_1645x600', 1645, 600, true);
+add_image_size( 'bl_440x250', 440, 250, true);
 
 
 if (function_exists('register_sidebar')) {

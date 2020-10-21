@@ -43,16 +43,7 @@ get_header('biuletyn_single'); ?>
 					<?php the_content();?>
 					
 				</div><!--.biuletyn___post-content-->
-                
-                <?php
-                if ( is_user_logged_in() ) :
-                    if ( has_term( 'wiesci-z-biura', 'biuletyn_kategorie' ) ) :
-                        get_template_part( 'template-parts/partials/biuletyn/kategorie/kat', 'wiesci_z_biura' );
-                    else:
-                        get_template_part( 'template-parts/partials/biuletyn/module', 'all' );
-                    endif;
-                else:
-                ?>
+
                 
                 
 				<div class="under_content">
@@ -64,14 +55,12 @@ get_header('biuletyn_single'); ?>
 				</div><!--.under_content-->
 
 				<?php // TEKSTY I MATERIAŁY O KSIĄŻCE W BIBLIOTECE
-					get_template_part( 'template-parts/partials/biuletyn/module', 'materialy'  ); ?>
-
-				<?php // KSIĄŻKI
-					get_template_part( 'template-parts/partials/module', 'ksiazki_lista' ); ?>
+				if (has_term(array('zapowiedzi', 'premiery'), 'biuletyn_kategorie')) {
+					get_template_part( 'template-parts/partials/biuletyn/module', 'materialy'  );
+				}
+					?>
                 
                 
-                
-                <?php endif; ?>
 				<?php endwhile; // End of the loop. ?>
 			</div>
 		</div>

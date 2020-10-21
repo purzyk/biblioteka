@@ -22,7 +22,7 @@
 if( have_rows('archiwum', 'option') ):
 	$i = 0;
 ?>
-				<ul>
+				<ul class="yearTop">
 					<?php
     // Loop through rows.
 	while( have_rows('archiwum', 'option') ) : the_row();

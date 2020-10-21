@@ -13,17 +13,19 @@ if( $featured_posts ): ?>
             ?>
             <div class="item <?php echo $active; ?>">
                 <article <?php post_class(); ?>>
-                    <a href="<?php the_permalink();?>"> <?php get_template_part( 'template-parts/img', 'large' ); ?>
+              <?php get_template_part( 'template-parts/img', 'large' ); ?>
                         <div class="reveal">
                             <div class="reveal_outer">
                                 <div class="reveal_inner">
-                                    <span class="category"><?php echo $term_list[0]->name; ?></span>
-                                    <h4><?php the_title(); ?></h4>
+                                <div class="aaa">     
+                                <a href="<?php echo get_term_link($term_list[0]->term_id); ?>"> <span class="category"><?php echo $term_list[0]->name; ?></span></a>
+                                    <a href="<?php the_permalink();?>"><h4>       <?php the_title(); ?></h4></a>
                                     <?php the_excerpt(); ?>
+                                </div>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    
                 </article>
             </div>
             <?php  endforeach; ?>

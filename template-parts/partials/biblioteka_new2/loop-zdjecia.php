@@ -11,7 +11,7 @@ if( $featured_posts ): ?>
                     <article class="col-md-6 custom-type-1">
 
                     <a href="<?php echo get_the_permalink(); ?>">
-                    <?php get_template_part( 'template-parts/img', 'small' ); ?>
+                    <?php the_post_thumbnail('bl_440x250'); ?>
                 </a>
                 <div class="reveal rec_nagr">
                     <div class="inner_black">

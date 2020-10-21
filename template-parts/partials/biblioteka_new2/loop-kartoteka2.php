@@ -15,17 +15,22 @@ if( $featured_posts ): ?>
             ?>
             <div class="item <?php echo $active; ?>">
                 <article <?php post_class(); ?>>
-                    <a href="<?php the_permalink();?>"> <?php get_template_part( 'template-parts/img', 'large' ); ?>
+                    
+                    <?php if ( has_post_thumbnail() ) {
+the_post_thumbnail('bl_kartoteka');
+} else { ?>
+<img src="https://www.biuroliterackie.pl/biblioteka/wp-content/uploads/2016/01/zaslepka-950x430.jpg" alt="<?php the_title(); ?>" />
+<?php } ?>
                         <div class="reveal">
                             <div class="reveal_outer">
                                 <div class="reveal_inner">
-                                    <span class="category"><?php echo $term_list[0]->name; ?></span>
-                                    <h4><?php the_title(); ?></h4>
+                                <a href="<?php echo get_term_link($term_list[0]->term_id); ?>"> <span class="category"><?php echo $term_list[0]->name; ?></span></a>
+                                    <h4><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h4>
                                     <?php the_excerpt(); ?>
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    
                 </article>
             </div>
             <?php  endforeach; ?>

@@ -16,7 +16,7 @@ if( $featured_posts ): ?>
         $terms = get_the_terms($post->ID, 'autor');
         $col_md_5 = ( count($featured_posts) == 1 ) ? 'col-md-6' : 'col-md-5';
         ?>
-        <div class="item <?php echo $active; ?>">
+        <div>
             <article class="row custom-type-1">
 
                 <div class="col-md-6">

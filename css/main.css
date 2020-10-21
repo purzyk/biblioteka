@@ -2523,22 +2523,6 @@ footer .footer_menu li:last-child {
 }
 
 
-/* line 62, D:/www/bl/wp/wp-content/themes/biblioteka/scss/layout/_footer.scss */
-
-footer .footer_menu li:last-child a {
-    color: #000;
-    /*background: url(../img/arrow_right_black.png) right center;
-				background-repeat: no-repeat;*/
-}
-
-@media (min-width: 48em) {
-    /* line 62, D:/www/bl/wp/wp-content/themes/biblioteka/scss/layout/_footer.scss */
-    footer .footer_menu li:last-child a {
-        padding-right: 0;
-    }
-}
-
-
 /* line 72, D:/www/bl/wp/wp-content/themes/biblioteka/scss/layout/_footer.scss */
 
 footer .footer_menu li:hover {

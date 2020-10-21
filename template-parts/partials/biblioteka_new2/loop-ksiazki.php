@@ -5,9 +5,11 @@ if( $featured_posts ): ?>
 
     <?php foreach( $featured_posts as $post ):
 setup_postdata($post); 
+$term_list = wp_get_post_terms($post->ID, 'ksiazki-kategorie', array("fields" => "all"));
         ?>
 		<article class="custom-type-1"><div class="ksiazki_left">			
 			<div class="title_ksiazki">
+			<span class="category"><a href="<?php echo get_term_link($term_list[0]->term_id); ?>"> <?php echo $term_list[0]->name; ?></a></span>
 			<div>
 			<?php
 		$terms = get_the_terms($post->ID, 'autor');
