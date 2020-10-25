@@ -5138,12 +5138,12 @@ button.alm-load-more-btn {
   position: relative; }
 
 /* line 584, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-.page-template-page-indeks {
+.indexTekstow {
   padding-top: 40px;
   display: block;
   clear: both; }
   /* line 586, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-  .page-template-page-indeks .zasob {
+  .indexTekstow .zasob {
     border-bottom: 1px solid black;
     padding-bottom: 30px;
     margin-bottom: 24px;
@@ -5151,7 +5151,7 @@ button.alm-load-more-btn {
     float: left;
     width: 100%; }
     /* line 593, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-    .page-template-page-indeks .zasob .data_zasoby {
+    .indexTekstow .zasob .data_zasoby {
       width: 10.2564102564%;
       float: left;
       margin-right: 2.5641025641%;
@@ -5159,7 +5159,7 @@ button.alm-load-more-btn {
       font-size: 14px !important;
       color: #898989; }
     /* line 599, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-    .page-template-page-indeks .zasob .content_zasoby {
+    .indexTekstow .zasob .content_zasoby {
       width: 87.1794871795%;
       float: right;
       margin-right: 0;
@@ -5167,41 +5167,41 @@ button.alm-load-more-btn {
       font-size: 14px !important;
       color: #898989; }
       /* line 600, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-      .page-template-page-indeks .zasob .content_zasoby .tax-title {
+      .indexTekstow .zasob .content_zasoby .tax-title {
         display: block;
         font-family: 'TungstenSemibold';
         font-size: 20px;
         color: #010000; }
         /* line 605, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-        .page-template-page-indeks .zasob .content_zasoby .tax-title a {
+        .indexTekstow .zasob .content_zasoby .tax-title a {
           color: #010000; }
       /* line 613, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-      .page-template-page-indeks .zasob .content_zasoby a.cat_lin {
+      .indexTekstow .zasob .content_zasoby a.cat_lin {
         color: #898989;
         font-family: "Lato", "Arial", sans-serif;
         font-size: 14px !important;
         display: block; }
         /* line 618, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-        .page-template-page-indeks .zasob .content_zasoby a.cat_lin b {
+        .indexTekstow .zasob .content_zasoby a.cat_lin b {
           color: #ffc807;
           font-weight: bold; }
   /* line 626, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-  .page-template-page-indeks .tytul_ksiazki_autor {
+  .indexTekstow .tytul_ksiazki_autor {
     display: block; }
     /* line 628, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-    .page-template-page-indeks .tytul_ksiazki_autor a {
+    .indexTekstow .tytul_ksiazki_autor a {
       font-family: 'Playfair Display', serif;
       font-weight: 400;
       font-style: italic;
       font-size: 18px !important;
       color: #000000; }
       /* line 634, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-      .page-template-page-indeks .tytul_ksiazki_autor a:hover {
+      .indexTekstow .tytul_ksiazki_autor a:hover {
         font-family: 'Playfair Display', serif;
         font-weight: 700;
         font-style: italic; }
   /* line 642, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-  .page-template-page-indeks a.strona_autora {
+  .indexTekstow a.strona_autora {
     width: 23.0769230769%;
     float: left;
     margin-right: 2.5641025641%;
@@ -5214,22 +5214,22 @@ button.alm-load-more-btn {
     padding: 3px 0 10px 38px;
     color: #000; }
   /* line 653, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-  .page-template-page-indeks .taby {
+  .indexTekstow .taby {
     width: 74.358974359%;
     float: right;
     margin-right: 0; }
     /* line 655, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-    .page-template-page-indeks .taby nav {
+    .indexTekstow .taby nav {
       margin-bottom: 20px; }
       /* line 657, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-      .page-template-page-indeks .taby nav a {
+      .indexTekstow .taby nav a {
         font-family: "Lato", "Arial", sans-serif;
         font-weight: 900;
         font-size: 14px;
         color: #000;
         margin-right: 80px; }
   /* line 666, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-  .page-template-page-indeks .tab_content {
+  .indexTekstow .tab_content {
     width: 100%;
     float: left;
     margin-left: 0;

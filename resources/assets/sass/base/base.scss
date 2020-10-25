@@ -636,3 +636,170 @@ section.ksiazki .ksiazki_left .title_ksiazki {
 .single-biuletyn .under_content{
     margin-bottom:100px;
 }
+
+
+.site-footer .logo_foteer img {
+    max-width: inherit;
+    max-height: 50px;
+}
+.newsletter{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    @media (min-width: 48em){
+    flex-direction: row;
+    text-align: left;
+    }
+}
+footer .newsletter .logo_foteer {
+text-align: center;
+@media (min-width: 48em){
+text-align: left;
+}
+}
+@media (min-width: 48em){
+    footer .newsletter .logo_foteer {
+        margin-right: 6.694915%;
+        &.poezjaLogo{
+            margin-right: 0;
+            margin-left: 6.694915%;
+            text-align: right;
+        }
+    }
+footer .newsletter .dane_kontaktowe {
+    margin-right: 0;
+    width: 490px;
+    border-right:0;
+}
+footer .newsletter div.wpcf7 {
+    margin-right: 0;
+    width: 500px;
+}
+}
+
+.tax-autor .listCat {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.content_zasoby{
+    .cat_lin{
+        font-weight: 700;
+    }
+ .cat_lin.taxon, .cat_lin.taxon b {
+        color: #898989!important;
+        font-weight: 400!important;
+    }
+}
+
+.indexTekstow .content_zasoby{
+    .cat_lin{
+        font-weight: 700;
+    }
+ .cat_lin.taxon, .cat_lin.taxon b {
+        color: #898989!important;
+        font-weight: 400!important;
+    }
+}
+.indexTekstow .zasob .content_zasoby a.cat_lin {
+    font-weight: 700;
+ 
+}
+.indexTekstow .zasob .content_zasoby a.cat_lin b {
+    color: #898989!important;
+    font-weight: 400!important;
+}
+.filter a{
+    color: #898989;
+}
+.indexTekstow .category{
+    display:flex;
+}
+
+.newSort {
+    float: right;
+    width: 25.641025641%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+ position: relative;
+ top:-20px;
+ background-color: #f0f2f2;
+ padding-left:10px;
+}
+.smallerPadding{
+    padding-bottom:10px;
+}
+
+.inputSearch{
+    position: relative;
+    display:inline-block;
+    height:44px;
+    input{
+        padding: 8px;
+        width: 100%;
+        border: 2px solid #c6c6c6;
+        border-radius: 0px;
+        height:44px;
+        line-height: 44px;
+    }
+    &:after{
+        position:absolute;
+        right:0;
+        top:0;
+        width:44px;
+        height: 44px;
+        display:block;
+        background: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/arrow_right_search_sidebar.png) center center no-repeat;
+    background-size: 11px 25px;
+    content:'';
+    }
+}
+
+
+.page-template-page-leksykon_autorzy .site-footer {
+margin-top:0;
+}
+.tax-autor .site-footer {
+    margin-top:20px;
+    }
+.page-template-page-leksykon_teksty .site-footer {
+    margin-top:0;
+    }
+
+    section.ksiazki:before {
+        background-color: #000000;
+    }
+
+    .ksiazki_left{
+        p{
+            color:#fff;
+        }
+        h4, h4 a{
+            color:#fff!important;
+        }
+        h3{
+            color:#fff!important;
+        }
+        h2 span{
+            color:#fff!important;
+            background:#000;
+        }
+    }
+    section.ksiazki h2 span {
+        color:#fff!important;
+        background:#000;
+        a{
+            color:#fff!important;
+        }
+    }
+
+    .single-biuletyn #biueletyn__materialy-o-ksiazce .kategorie{
+        display:flex;
+    }
+
+    .tax-autor .o_autorze_bio {
+        font-size: 15px !important;
+    }

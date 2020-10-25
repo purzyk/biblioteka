@@ -21,6 +21,7 @@
 		<div class="logo_foteer">
 <a href="http://biuroliterackie.pl/"><img src="<?php echo  get_template_directory_uri().'/img/logo.png'?>"></a>
 		</div>
+
 		<div class="dane_kontaktowe">
 <p>
 <strong>Adres:</strong> Solna 1, 78-100 Kołobrzeg
@@ -29,7 +30,9 @@
 <p><span>NIP:</span> 881-110-93-38 / <span>Regon</span> 390738090<br>
 <span>Konto bankowe:</span> ING Bank Śląski <br><br>
 71 1050 1575 1000 0022 7732 9062</p></div><?php echo do_shortcode('[contact-form-7 id="142406" title="newsletter"]'); ?>
-
+		<div class="logo_foteer poezjaLogo">
+<a href="http://www.poezjem.pl/"><img src="<?php echo  get_template_directory_uri().'/img/PWWW_2012_czern_i_biel.png'?>"></a>
+		</div>
 		</section>
 		<section class="copyright">
 			<a href="//www.biuroliterackie.pl/copyright/">Copyright © <?php echo date("Y"); ?> by Biuro Literackie</a>

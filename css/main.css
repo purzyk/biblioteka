@@ -8483,7 +8483,7 @@ button.alm-load-more-btn {
 
 /* line 584, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks {
+.indexTekstow {
     display: block;
     clear: both;
     padding-top: 40px;
@@ -8492,7 +8492,7 @@ button.alm-load-more-btn {
 
 /* line 586, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .zasob {
+.indexTekstow .zasob {
     display: block;
     float: left;
     margin-bottom: 24px;
@@ -8504,7 +8504,7 @@ button.alm-load-more-btn {
 
 /* line 593, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .zasob .data_zasoby {
+.indexTekstow .zasob .data_zasoby {
     float: left;
     margin-right: 2.5641025641%;
     width: 10.2564102564%;
@@ -8516,7 +8516,7 @@ button.alm-load-more-btn {
 
 /* line 599, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .zasob .content_zasoby {
+.indexTekstow .zasob .content_zasoby {
     float: right;
     margin-right: 0;
     width: 87.1794871795%;
@@ -8528,7 +8528,7 @@ button.alm-load-more-btn {
 
 /* line 600, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .zasob .content_zasoby .tax-title {
+.indexTekstow .zasob .content_zasoby .tax-title {
     display: block;
     color: #010000;
     font-size: 20px;
@@ -8538,14 +8538,14 @@ button.alm-load-more-btn {
 
 /* line 605, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .zasob .content_zasoby .tax-title a {
+.indexTekstow .zasob .content_zasoby .tax-title a {
     color: #010000;
 }
 
 
 /* line 613, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .zasob .content_zasoby a.cat_lin {
+.indexTekstow .zasob .content_zasoby a.cat_lin {
     display: block;
     color: #898989;
     font-size: 14px !important;
@@ -8555,7 +8555,7 @@ button.alm-load-more-btn {
 
 /* line 618, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .zasob .content_zasoby a.cat_lin b {
+.indexTekstow .zasob .content_zasoby a.cat_lin b {
     color: #ffc807;
     font-weight: bold;
 }
@@ -8563,14 +8563,14 @@ button.alm-load-more-btn {
 
 /* line 626, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .tytul_ksiazki_autor {
+.indexTekstow .tytul_ksiazki_autor {
     display: block;
 }
 
 
 /* line 628, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .tytul_ksiazki_autor a {
+.indexTekstow .tytul_ksiazki_autor a {
     color: #000000;
     font-weight: 400;
     font-style: italic;
@@ -8581,7 +8581,7 @@ button.alm-load-more-btn {
 
 /* line 634, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .tytul_ksiazki_autor a:hover {
+.indexTekstow .tytul_ksiazki_autor a:hover {
     font-weight: 700;
     font-style: italic;
     font-family: 'Playfair Display', serif;
@@ -8590,7 +8590,7 @@ button.alm-load-more-btn {
 
 /* line 642, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks a.strona_autora {
+.indexTekstow a.strona_autora {
     float: left;
     margin-right: 2.5641025641%;
     padding: 3px 0 10px 38px;
@@ -8607,7 +8607,7 @@ button.alm-load-more-btn {
 
 /* line 653, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .taby {
+.indexTekstow .taby {
     float: right;
     margin-right: 0;
     width: 74.358974359%;
@@ -8616,14 +8616,14 @@ button.alm-load-more-btn {
 
 /* line 655, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .taby nav {
+.indexTekstow .taby nav {
     margin-bottom: 20px;
 }
 
 
 /* line 657, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .taby nav a {
+.indexTekstow .taby nav a {
     margin-right: 80px;
     color: #000;
     font-weight: 900;
@@ -8634,7 +8634,7 @@ button.alm-load-more-btn {
 
 /* line 666, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.page-template-page-indeks .tab_content {
+.indexTekstow .tab_content {
     float: left;
     margin-right: 0;
     margin-left: 0;

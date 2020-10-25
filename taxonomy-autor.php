@@ -11,64 +11,57 @@ get_header(); ?>
 <div class="right_bck">
 
 </div>
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			<section class="archive_left">
-					<div class="sidebar">
-							<?php get_template_part( 'template-parts/sidebar', 'archive' ); ?>
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		<section class="archive_left">
+			<div class="sidebar">
+				<?php get_template_part( 'template-parts/sidebar', 'archive' ); ?>
 
-					</div>
-			</section>
+			</div>
+		</section>
 
-			<section class="archive_right">
+		<section class="archive_right">
 
 
 			<section class="top_articles">
-			<?php get_template_part( 'template-parts/loop', 'archwiumtop' ); ?>
-			<script type="text/javascript">
+				<?php get_template_part( 'template-parts/loop', 'archwiumtop' ); ?>
+				<script type="text/javascript">
 					$(".archwiumtop_carousell").carousel({
-    show: {
-        "740px" : 3,
-        "980px" : 3
-    },
-    pagination: false
-});
-			</script>
-		</section>
-<?php if ( have_posts() ) : ?>
+						show: {
+							"740px": 3,
+							"980px": 3
+						},
+						pagination: false
+					});
+				</script>
+			</section>
 
-	<div class="archive_breadcrumbs">
-	<div class="bread_outside">
-<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
-    <?php if(function_exists('bcn_display'))
-    {
-        bcn_display();
-    }?>
-    </div>
-</div>
-<?php /*
-<div class="archive_sort">
-Sortuj
-<select name="browsers" required>
 
-<option value="" disabled selected>wybierz</option>
-<option value="chrome">autor</option>
-<option value="safari">tytuł</option>
-<option value="opera">OPERA</option>
+			<div class="archive_breadcrumbs">
+				<div class="bread_outside">
+					<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+						<!-- Breadcrumb NavXT 6.5.0 -->
+						<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage"
+								title="Go to Biuro Literackie." href="https://www.biuroliterackie.pl" class="home"><span
+									property="name">Biuro Literackie</span></a>
+							<meta property="position" content="1"></span> / <span property="itemListElement"
+							typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Indeks Autorów."
+								href="https://www.biuroliterackie.pl/leksykon/indeks-autorow/"
+								class="post post-utwory-archive"><span property="name">Indeks Autorów</span></a>
+							<meta property="position" content="2"></span> / <span property="itemListElement"
+							typeof="ListItem"><span property="name">Bohdan Zadura</span>
+							<meta property="position" content="3"></span> </div>
+				</div>
+			</div>
 
-</select>
-</div>
-*/ ?>
-	</div>
 
-		
-<div class="przystan_o_autorze">
- <?php
+			<div class="przystan_o_autorze">
+				<?php
  $queried_object = get_queried_object();
  ?>
- <div class="o_autorze_big">
-		<div class="o_autorze_left">
-			<?php 
+				<div class="o_autorze_big">
+					<div class="o_autorze_left">
+						<?php 
 				$image = get_field('zdjecie', $queried_object);
 $size = 'bl_autor'; // (thumbnail, medium, large, full or custom size)
 
@@ -77,94 +70,55 @@ if( $image ) {
 	echo wp_get_attachment_image( $image, $size );
 
 }
-?>      
-<?php
+?>
+						<?php
 $term = get_queried_object();
  if( get_field('strona_autora', $term) ): ?>
-<a class="strona_autora" href="<?php echo the_field('strona_autora', $term);?>">Strona AUTORA</a>
-<?php endif; ?>
-</div>
-<div class="o_autorze_right">
+						<a class="strona_autora" href="<?php echo the_field('strona_autora', $term);?>">Strona
+							AUTORA</a>
+						<?php endif; ?>
+					</div>
+					<div class="o_autorze_right">
 
-	<?php 
+						<?php 
 	 $queried_object = get_queried_object();
 	$term = get_queried_object();
 ?>
-		<h6><?php echo the_field('imie', $queried_object);?>&nbsp;<span><?php echo the_field('nazwisko', $term);?></span></h6>
-		<p class="o_autorze_bio"><?php echo $term->description;?></p>
-		
-<div class="listCat">
-<?php get_template_part( 'template-parts/count', 'autor' ); ?>
-</div>
-</div>
-</div>
-</div>
-<div class="przystan_o_autorze">
-	<div class="o_autorze_big">
-		<div class="teksty_autora">
+						<h6><?php echo the_field('imie', $queried_object);?>&nbsp;<span><?php echo the_field('nazwisko', $term);?></span>
+						</h6>
+						<p class="o_autorze_bio"><?php echo $term->description;?></p>
 
-			    <?php 
-			$custom_taxterms = wp_get_object_terms( $post->ID, 'autor', array('fields' => 'ids') );
-			$term_list = wp_get_post_terms($post->ID, 'wywiady-kategorie', array("fields" => "all"));
-			$count_wywiady = 0;
-			// arguments
-			$args = array(
-			'post_type' => 'ksiazki',
-			'post_status' => 'publish',
-			'posts_per_page' => -1, // you may edit this number
-			'orderby' => 'date',
-			'tax_query' => array(
-			    array(
-			        'taxonomy' => 'autor',
-			        'field' => 'id',
-			        'terms' => $custom_taxterms
-			    )
-			),
-			'post__not_in' => array ($post->ID),
-			);
-			$related_items = new WP_Query( $args );
-			// loop over query
-			if ($related_items->have_posts()) : 
-$bibliografia=1;
-				?>
-			
+					</div>
+				</div>
+			</div>
+			<div class="przystan_o_autorze">
+				<div class="o_autorze_big">
 
 
-<?php 
-else: {
-	$bibliografia=0;
-	?>
+					<div class="listCat" id="filterOptions">
+						<?php get_template_part( 'template-parts/count', 'autor' ); ?>
+					</div>
 
-<?php }
-endif; ?>
-
-<div id="tabs">
-  <ul>
-    <?php if ($bibliografia>0) {  ?><li><a href="#bibliografia">BIBLIOGRAFIA</a></li>
-    <?php
-
-wp_reset_postdata();
-?>
-   <li><a href="#zasoby">ZASOBY W BIBLIOTECE</a></li><?php } ?>
-  </ul>
-  <?php if ($bibliografia>0) {  ?> <div id="bibliografia">
-   				<?php
-				while ( $related_items->have_posts() ) : $related_items->the_post();?>
-		
- <p class="tytul_ksiazki_autor"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></p> 
-<?php
-endwhile; ?>
-  </div> <?php } ?>
-  <div id="zasoby">
-    <?php 
+					<div class="teksty_autora">
+						<div id="ourHolder">
+							<?php 
 $term = get_queried_object();
 $termidd = $term ->term_id;
 // arguments
+$posts_order = 'DESC';
+if ( ! empty( $_GET['posts_order'] ) ) {
+  $posts_order_raw = sanitize_key( $_GET['posts_order'] );
+  if ( 'ASC' === $posts_order_raw ) {
+    $posts_order = 'ASC';
+  }
+}
 $args = array(
-'post_type' => array('wywiady','recenzje','debaty','felietony','dzwieki','nagrania','zdjecia'),
+'post_type' => array('wywiady','ksiazki','utwory','recenzje','debaty','felietony','dzwieki','nagrania','zdjecia','kartoteka_25'),
 'post_status' => 'publish',
 'posts_per_page' => -1, // you may edit this number
 'orderby' => 'date',
+/*'order' => $_GET['posts_order'],*/
+'order' => 'DESC',
 'tax_query' => array(
     array(
         'taxonomy' => 'autor',
@@ -177,16 +131,20 @@ $related_items = new WP_Query( $args );
 // loop over query
 if ($related_items->have_posts()) :
 while ( $related_items->have_posts() ) : $related_items->the_post();?>
-<div class="zasob">
-<p class="data_zasoby"><?php the_time('d/m/Y');?></p>
- <p class="content_zasoby">
-<?php 
+							<div class="item zasob <?php echo get_post_type( get_the_ID() ); ?>">
+								<p class="data_zasoby"><?php the_time('d/m/Y');?></p>
+								<p class="content_zasoby">
+									<?php 
  if ($post->post_type == "wywiady") {
 $term_list = wp_get_post_terms($post->ID, 'wywiady-kategorie', array("fields" => "all"));
 		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/wywiady/">wywiady</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
-		echo 'ss';
 
 }
+if ($post->post_type == "ksiazki") {
+	$term_list = wp_get_post_terms($post->ID, 'ksiazki-kategorie', array("fields" => "all"));
+			echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/ksiazki/">książki</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+	
+	}
  if ($post->post_type == "recenzje") {
 $term_list = wp_get_post_terms($post->ID, 'recenzje-kategorie', array("fields" => "all"));
 		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/recenzje/">recenzje</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
@@ -216,42 +174,70 @@ $term_list = wp_get_post_terms($post->ID, 'zdjecia-kategorie', array("fields" =>
 $term_list = wp_get_post_terms($post->ID, 'utwory-kategorie', array("fields" => "all"));
 		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/utwory/">utwory</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
 }
+if ($post->post_type == "kartoteka_25") {
+	$term_list = wp_get_post_terms($post->ID, 'kartoteka_25-kategorie', array("fields" => "all"));
+			echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/kartoteka_25/">kartoteka 25</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+	}
 ?>
-<span class="tax-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
-<span class="auth_name_zasoby"><?php echo the_field('imie', $term);?><span> <?php echo the_field('nazwisko', $term);?></span></span>
- </p> 
- 
+									<span class="tax-title"><a
+											href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 
- </div>
-<?php
+								</p>
+
+
+							</div>
+							<?php
 endwhile;
 
 endif;
 // Reset Post Data
 ?>
-<?php
+							<?php
 wp_reset_postdata();
 ?>
-  </div>
+						</div>
+					</div>
 
-</div>
 
 
+
+
+
+				</div>
+			</div>
+
+
+
+
+
+
+
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <script type="text/javascript">
-	$("#tabs").tabs();
+	$(document).ready(function () {
+		$('#filterOptions span a').click(function () {
+			// fetch the class of the clicked item
+			var ourClass = $(this).attr('class');
+
+			// reset the active class on all the buttons
+			$('#filterOptions span').removeClass('active');
+			// update the active state on our clicked button
+			$(this).parent().addClass('active');
+
+			if (ourClass == 'all') {
+				// show all our items
+				$('#ourHolder').children('div.item').show();
+			} else {
+				// hide all elements that don't share ourClass
+				$('#ourHolder').children('div:not(.' + ourClass + ')').hide();
+				// show all elements that do share ourClass
+				$('#ourHolder').children('div.' + ourClass).show();
+			}
+			return false;
+		});
+	});
 </script>
 
-</div>
-
-
-
-		<?php endif; ?>
-
-		
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
 <?php get_footer(); ?>
-

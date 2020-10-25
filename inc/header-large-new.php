@@ -110,8 +110,7 @@ endif;
 
 		<?php wp_nav_menu( array('menu' => 'menu-links-left', 'container'=>'','items_wrap' => '%3$s' )); ?>
 		<?php wp_nav_menu( array('menu' => 'menu-links-right', 'container'=>'','items_wrap' => '%3$s' )); ?>
-		<li id="menu-item-144956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-144956"><a
-				href="#">leksykon</a></li>
+
 	</div>
 
 
