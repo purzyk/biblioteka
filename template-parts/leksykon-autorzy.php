@@ -41,36 +41,36 @@ Sortuj
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="filters">
-<div class="filter" data-filter=".category-a">a</div>
-<div class="filter" data-filter=".category-b">b</div>
-<div class="filter" data-filter=".category-c">c</div>
-<div class="filter" data-filter=".category-d">d</div>
-<div class="filter" data-filter=".category-e">e</div>
-<div class="filter" data-filter=".category-ę">ę</div>
-<div class="filter" data-filter=".category-f">f</div>
-<div class="filter" data-filter=".category-g">g</div>
-<div class="filter" data-filter=".category-h">h</div>
-<div class="filter" data-filter=".category-i">i</div>
-<div class="filter" data-filter=".category-j">j</div>
-<div class="filter" data-filter=".category-k">k</div>
-<div class="filter" data-filter=".category-l">l</div>
-<div class="filter" data-filter=".category-ł">ł</div>
-<div class="filter" data-filter=".category-m">m</div>
-<div class="filter" data-filter=".category-n">n</div>
-<div class="filter" data-filter=".category-o">o</div>
-<div class="filter" data-filter=".category-p">p</div>
-<div class="filter" data-filter=".category-q">q</div>
-<div class="filter" data-filter=".category-r">r</div>
-<div class="filter" data-filter=".category-s">s</div>
-<div class="filter" data-filter=".category-t">t</div>
-<div class="filter" data-filter=".category-u">u</div>
-<div class="filter" data-filter=".category-w">w</div>
-<div class="filter" data-filter=".category-x">x</div>
-<div class="filter" data-filter=".category-y">y</div>
-<div class="filter" data-filter=".category-z">z</div>
-<div class="filter" data-filter=".category-ż">ż</div>
-<div class="filter" data-filter=".category-ź">ź</div>
-<div class="filter" data-filter="all">wszyscy</div>
+<div class="filter" data-filter=".category-a">A</div>
+<div class="filter" data-filter=".category-b">B</div>
+<div class="filter" data-filter=".category-c">C</div>
+<div class="filter" data-filter=".category-d">D</div>
+<div class="filter" data-filter=".category-e">E</div>
+<div class="filter" data-filter=".category-ę">Ę</div>
+<div class="filter" data-filter=".category-f">F</div>
+<div class="filter" data-filter=".category-g">G</div>
+<div class="filter" data-filter=".category-h">H</div>
+<div class="filter" data-filter=".category-i">I</div>
+<div class="filter" data-filter=".category-j">J</div>
+<div class="filter" data-filter=".category-k">K</div>
+<div class="filter" data-filter=".category-l">L</div>
+<div class="filter" data-filter=".category-ł">Ł</div>
+<div class="filter" data-filter=".category-m">M</div>
+<div class="filter" data-filter=".category-n">N</div>
+<div class="filter" data-filter=".category-o">O</div>
+<div class="filter" data-filter=".category-p">P</div>
+<div class="filter" data-filter=".category-q">Q</div>
+<div class="filter" data-filter=".category-r">R</div>
+<div class="filter" data-filter=".category-s">S</div>
+<div class="filter" data-filter=".category-t">T</div>
+<div class="filter" data-filter=".category-u">U</div>
+<div class="filter" data-filter=".category-w">W</div>
+<div class="filter" data-filter=".category-x">X</div>
+<div class="filter" data-filter=".category-y">Y</div>
+<div class="filter" data-filter=".category-z">Z</div>
+<div class="filter" data-filter=".category-ż">Ż</div>
+<div class="filter" data-filter=".category-ź">Ź</div>
+<div class="filter" data-filter="all">Wszyscy</div>
 </div>
 
 

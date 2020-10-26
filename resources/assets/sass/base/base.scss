@@ -725,7 +725,7 @@ footer .newsletter div.wpcf7 {
     display: flex;
     align-items: center;
  position: relative;
- top:-20px;
+ top:-27px;
  background-color: #f0f2f2;
  padding-left:10px;
 }
@@ -738,27 +738,33 @@ footer .newsletter div.wpcf7 {
     display:inline-block;
     height:44px;
     input{
-        padding: 8px;
-        width: 100%;
+        float: left;
+        margin: 17px 0 36px 0;
+        padding: 12px!important;
+        width: 240px;
         border: 2px solid #c6c6c6;
         border-radius: 0px;
-        height:44px;
-        line-height: 44px;
-    }
-    &:after{
-        position:absolute;
-        right:0;
-        top:0;
-        width:44px;
-        height: 44px;
-        display:block;
-        background: url(https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/arrow_right_search_sidebar.png) center center no-repeat;
-    background-size: 11px 25px;
-    content:'';
+        color: #666;
+        text-align: center;
+        font-size: 12px;
+        font-size: 0.75rem;
+        font-family: "Lato", "Arial", sans-serif;
+        &::placeholder{
+            text-transform: uppercase;
+        }
     }
 }
 
-
+.archive_sort select{
+    padding:11px 5px;
+    color: #666;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-family: "Lato", "Arial", sans-serif;
+    &::placeholder{
+        text-transform: uppercase;
+    }
+}
 .page-template-page-leksykon_autorzy .site-footer {
 margin-top:0;
 }
@@ -775,7 +781,7 @@ margin-top:0;
 
     .ksiazki_left{
         p{
-            color:#fff;
+            color:#fff!important;
         }
         h4, h4 a{
             color:#fff!important;
@@ -803,3 +809,180 @@ margin-top:0;
     .tax-autor .o_autorze_bio {
         font-size: 15px !important;
     }
+
+    .archive_right{
+        &.disable{
+            height:100%;
+        }
+    }
+
+    .Overnone{
+        overflow: hidden;
+    }
+
+    #preloader {
+        position: fixed;
+        top:80px;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color:#FFF; /* change if the mask should have another color then white */
+        z-index:99999; /* makes sure it stays on top */
+      }
+      #status {
+        width: 300px;
+        height: 100px;
+        position:absolute;
+        left:50%; /* centers the loading animation horizontally one the screen */
+        top:50%; /* centers the loading animation vertically one the screen */
+        
+        z-index:9999; /* path to your loading animation */
+        background-repeat:no-repeat;
+        background-position:center;
+        margin:-10px 0 0 -36px; /* is width and height divided by two */
+      }
+
+      .pulse {
+        animation: pulse 3s infinite;
+        margin: 0 auto;
+        display: table;
+        margin-top: 50px;
+        animation-direction: alternate;
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+      }
+          
+      @-webkit-keyframes pulse {
+        0% {
+          -webkit-transform: scale(1);
+        }
+        50% {
+          -webkit-transform: scale(1.3);
+        }
+        100% {
+          -webkit-transform: scale(1);
+        }
+      }
+          
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.3);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+
+      .tax-autor{
+        .site-content {
+            margin-top: 0;
+        }
+      }
+      .wybierz{
+          min-height:50vh;
+          p{
+margin-bottom:40px;
+font-family: 'Playfair Display', serif;
+    line-height: 28px;
+    font-size: 18px !important;
+          }
+          a{
+            color: #898989;
+            font-weight: 700;
+            display:block;
+          }
+      }
+
+      .autorzy_lista li h5 {
+        height: 35px;
+    }
+
+    .itemRow{
+        display:flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        &__data{
+            color: #898989!important;
+            font-size: 14px !important;
+            font-family: "Lato", "Arial", sans-serif;
+            margin-right:16px;
+        }
+        &__cat{
+            color: #ffc807!important;
+                color: #ffc807;
+            font-family: "Lato", "Arial", sans-serif;
+            text-transform: uppercase;
+            margin-right:16px;
+            font-weight: 700;
+            font-size: 14px !important;
+        }
+        &__autor{
+            color: #898989!important;
+            font-size: 14px !important;
+            font-family: "Lato", "Arial", sans-serif;
+            text-transform: uppercase;
+            margin-right:0;
+        }
+        &__autorzy{
+            
+            a{
+                &:after{
+                 content:', ';
+                }
+                &:last-child{
+                    &:after{
+                        content:'';
+                    }
+                }
+            }
+        }
+        &__title{
+            font-family: 'TungstenSemibold';
+            line-height: 60px;
+            font-size: 30px !important;
+            a{
+                color: #000!important;
+            }
+            }
+            &__excerpt{
+                font-family: 'Playfair Display', serif;
+    line-height: 28px;
+    font-size: 18px !important;
+    p{
+        text-transform: initial;
+    }
+}
+ 
+        }
+ 
+        #ourHolder{
+            display: block;
+            clear: both;
+            padding-top: 27px;
+            margin-top: 50px;
+            border-top: 1px solid black;
+        }
+.InputSearch{
+    float: left;
+    margin: 17px 0 36px 0;
+    padding: 12px!important;
+    width: 240px;
+    border: 2px solid #c6c6c6;
+    border-radius: 0px;
+    color: #666;
+    text-align: center;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-family: "Lato", "Arial", sans-serif;
+    &::placeholder{
+        text-transform: uppercase;
+    }
+}
+
+#main section.szukaj2{
+    float: initial;
+}

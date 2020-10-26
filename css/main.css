@@ -9070,56 +9070,6 @@ span.kategoria_debaty {
 
 /* line 935, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
 
-.szukaj2 {
-    padding: 28px 97px;
-    background-color: #fff;
-    text-align: left;
-}
-
-
-/* line 936, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-
-.szukaj2 article {
-    margin: 0 !important;
-    padding: 25px 0 !important;
-    border-bottom: 1px solid black;
-}
-
-
-/* line 941, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-
-.szukaj2 a {
-    color: #000;
-    text-align: left;
-}
-
-
-/* line 943, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-
-.szukaj2 a:visited,
-.szukaj2 a:hover {
-    color: #000;
-}
-
-
-/* line 951, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-
-.szukaj2 h4 {
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-    font-size: 30px !important;
-}
-
-
-/* line 957, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */
-
-.szukaj2 p {
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: left !important;
-    font-size: 18px !important;
-}
 
 
 /* line 966, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_archive.scss */

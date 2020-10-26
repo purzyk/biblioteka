@@ -132,59 +132,82 @@ $related_items = new WP_Query( $args );
 if ($related_items->have_posts()) :
 while ( $related_items->have_posts() ) : $related_items->the_post();?>
 							<div class="item zasob <?php echo get_post_type( get_the_ID() ); ?>">
-								<p class="data_zasoby"><?php the_time('d/m/Y');?></p>
-								<p class="content_zasoby">
-									<?php 
+							<div class="itemRow">
+							<div>
+<p class="itemRow__data"><?php the_time('d/m/Y');?></p>
+</div>
+<div>
+ <?php 
  if ($post->post_type == "wywiady") {
 $term_list = wp_get_post_terms($post->ID, 'wywiady-kategorie', array("fields" => "all"));
-		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/wywiady/">wywiady</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/wywiady/">wywiady</a>';
 
 }
 if ($post->post_type == "ksiazki") {
 	$term_list = wp_get_post_terms($post->ID, 'ksiazki-kategorie', array("fields" => "all"));
-			echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/ksiazki/">książki</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+			echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/ksiazki/">książki</a>';
 	
 	}
  if ($post->post_type == "recenzje") {
 $term_list = wp_get_post_terms($post->ID, 'recenzje-kategorie', array("fields" => "all"));
-		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/recenzje/">recenzje</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/recenzje/">recenzje</a>';
 }
  if ($post->post_type == "debaty") {
 $term_list = wp_get_post_terms($post->ID, 'debaty-kategorie', array("fields" => "all"));
-		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/debaty/">debaty</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/debaty/">debaty</a>';
 
 }
  if ($post->post_type == "felietony") {
 $term_list = wp_get_post_terms($post->ID, 'felietony-kategorie', array("fields" => "all"));
-		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/cykle/">cykle</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/cykle/">cykle</a>';
 }
  if ($post->post_type == "dzwieki") {
 $term_list = wp_get_post_terms($post->ID, 'dzwieki-kategorie', array("fields" => "all"));
-		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/dzwieki/">dźwięki</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/dzwieki/">dźwięki</a>';
 }
  if ($post->post_type == "nagrania") {
 $term_list = wp_get_post_terms($post->ID, 'nagrania-kategorie', array("fields" => "all"));
-		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/nagrania/">nagrania</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/nagrania/">nagrania</a>';
 }
  if ($post->post_type == "zdjecia") {
 $term_list = wp_get_post_terms($post->ID, 'zdjecia-kategorie', array("fields" => "all"));
-		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/zdjecia/">zdjecia</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/zdjecia/">zdjecia</a>';
 }
  if ($post->post_type == "utwory") {
 $term_list = wp_get_post_terms($post->ID, 'utwory-kategorie', array("fields" => "all"));
-		echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/utwory/">utwory</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/utwory/">utwory</a>';
 }
 if ($post->post_type == "kartoteka_25") {
 	$term_list = wp_get_post_terms($post->ID, 'kartoteka_25-kategorie', array("fields" => "all"));
-			echo '<span class="category"><a class="cat_lin" href="https://www.biuroliterackie.pl/biblioteka/kartoteka_25/">kartoteka 25</a> / <a class="cat_lin taxon" href="'.site_url().'/'.$term_list[0]->taxonomy .'/'.$term_list[0]->slug.'"><b>'.$term_list[0]->name.'</b></a></span>';
+			echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/kartoteka_25/">kartoteka 25</a>';
 	}
 ?>
-									<span class="tax-title"><a
-											href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+</div>
+<div class="itemRow__autorzy">
+<?php 
+$terms = get_the_terms( $post->ID , 'autor' );
+if($terms) {
+	foreach( $terms as $term ) { ?>
+	<?php $term_link = get_term_link( $term ); ?>
+		<a class="itemRow__autor" href="<?php echo $term_link; ?>"><span><?php echo the_field('imie', $term);?><span> <?php echo the_field('nazwisko', $term);?></span></span></a>
+		<?php 
+	}
+	
+} 
+?>
+</div>
+</div>
 
-								</p>
+<span class="itemRow__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> 
+ </span>
+ <div class="itemRow__excerpt">
+ <?php
+ the_excerpt();
+ ?>
+ </div>
 
 
+		
 							</div>
 							<?php
 endwhile;

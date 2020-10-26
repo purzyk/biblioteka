@@ -7,7 +7,7 @@
  * @package biblioteka
  */
 
-get_header(); ?>
+get_header('loader'); ?>
 <div class="right_bck">
 
 </div>
@@ -21,8 +21,7 @@ get_header(); ?>
 					</div>
 			</section>
 
-			<section class="archive_right">
-
+			<section class="archive_right disable">
 
 <?php get_template_part( 'template-parts/leksykon', 'indeks' ); ?>
 			</section>
