@@ -6,7 +6,11 @@
 <h5 class="search-title"><?php printf( esc_html__( 'Wyniki wyszukiwania dla: %s', 'biblioteka' ), '<span>' . get_search_query() . '</span>' ); ?></h5>	
 <div class="indexTekstow" id="ourHolder">
 <?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php 
+			         global $wp_query;
+					 $args = array_merge( $wp_query->query_vars, ['posts_per_page' => 10000 ] );
+					 query_posts( $args );					
+			while ( have_posts() ) : the_post(); ?>
 			
 			<div data-name="Czasu jest mało" class="zasob item category-<?php echo $post->post_type; ?>">
 <div class="itemRow">
@@ -78,9 +82,7 @@ if($terms) {
  <span class="itemRow__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> 
  </span>
  <div class="itemRow__excerpt">
- <?php
- the_excerpt();
- ?>
+ <?php echo strip_tags( get_the_excerpt(),'<em><br>' ); ?>
  </div>
  
  </div>
@@ -131,5 +133,3 @@ $(document).ready(function() {
 	});
 });
 </script>
-<?php $cur_page = intval(get_query_var('paged')); if ($cur_page == 0) {$cur_page=1;} ;  ?>
-<div class="pagination_links"><div class="pagination"><span><?php previous_posts_link('<img src="https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/pagination_left_grey.png" />'); ?><span><?php echo $cur_page; ?>/<span><?php echo $wp_query->max_num_pages;?><?php next_posts_link('<img src="https://www.biuroliterackie.pl/biblioteka/wp-content/themes/biblioteka/img/pagination_lright_grey.png" />'); ?></div></div>

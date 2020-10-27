@@ -37,8 +37,19 @@ get_header(); ?>
 			</section>
 <div class="archive_breadcrumbs wybierz">
 <p>Wybierz czy chcesz skorzystać z Indeksu autorów czy też Indeksu tekstów. </p>
-<a href="https://www.biuroliterackie.pl/leksykon/indeks-autorow/">INDEKS AUTORÓW</a>
-<a href="https://www.biuroliterackie.pl/leksykon/indeks-tekstow/">INDEKS TEKSTÓW</a>
+
+
+<div class="obrazki">
+<div class="obrazki__obrazek">
+	<a href="https://www.biuroliterackie.pl/leksykon/indeks-autorow/"><img src="<?php echo  get_template_directory_uri().'/img/Indeksy2.jpg'?>"></a>
+	</div>
+	<div class="obrazki__obrazek">
+	<a href="https://www.biuroliterackie.pl/leksykon/indeks-tekstow/"><img src="<?php echo  get_template_directory_uri().'/img/Indeksy1.jpg'?>"></a>
+	</div>
+
+
+
+</div>
 </div>
 
 			</section>

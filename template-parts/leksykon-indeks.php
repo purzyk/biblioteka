@@ -185,9 +185,7 @@ if($terms) {
  <span class="itemRow__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> 
  </span>
  <div class="itemRow__excerpt">
- <?php
- the_excerpt();
- ?>
+ <?php echo strip_tags( get_the_excerpt(),'<em><br>' ); ?>
  </div>
  
  </div>

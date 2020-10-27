@@ -117,8 +117,8 @@ $args = array(
 'post_status' => 'publish',
 'posts_per_page' => -1, // you may edit this number
 'orderby' => 'date',
-/*'order' => $_GET['posts_order'],*/
-'order' => 'DESC',
+'order' => $_GET['posts_order'],
+/*'order' => 'DESC',*/
 'tax_query' => array(
     array(
         'taxonomy' => 'autor',
@@ -201,9 +201,7 @@ if($terms) {
 <span class="itemRow__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> 
  </span>
  <div class="itemRow__excerpt">
- <?php
- the_excerpt();
- ?>
+ <?php echo strip_tags( get_the_excerpt(),'<em><br>' ); ?>
  </div>
 
 
@@ -241,6 +239,7 @@ wp_reset_postdata();
 <script type="text/javascript">
 	$(document).ready(function () {
 		$('#filterOptions span a').click(function () {
+			
 			// fetch the class of the clicked item
 			var ourClass = $(this).attr('class');
 

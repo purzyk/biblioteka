@@ -821,7 +821,7 @@ summary {
 
 /* line 10, D:/www/bl/wp/wp-content/themes/biblioteka/scss/utils/_transitions.scss */
 
-.page-template-biblioteka .content-area article:hover img {
+.bibliotekaTheme.content-area article:hover img {
     opacity: 0.8;
     transform: scale(1.03);
 }
@@ -829,14 +829,14 @@ summary {
 
 /* line 15, D:/www/bl/wp/wp-content/themes/biblioteka/scss/utils/_transitions.scss */
 
-.page-template-biblioteka .content-area img {
+.bibliotekaTheme.content-area img {
     transition: all 1s ease-in-out;
 }
 
 
 /* line 17, D:/www/bl/wp/wp-content/themes/biblioteka/scss/utils/_transitions.scss */
 
-.page-template-biblioteka .content-area img:hover {
+.bibliotekaTheme.content-area img:hover {
     opacity: 0.8;
     transform: scale(1.03);
 }
@@ -4921,7 +4921,7 @@ h4 a:focus {
 
 /* line 1164, D:/www/bl/wp/wp-content/themes/biblioteka/scss/pages/_home.scss */
 
-.page-template-biblioteka span.kategoria_debaty {
+.bibliotekaTheme span.kategoria_debaty {
     padding-top: 0;
 }
 
@@ -11901,7 +11901,7 @@ article.typ_1 a.cat_lin {
 .single-biuletyn #biueletyn__materialy-o-ksiazce .post-o-ksiazce li .excerpt {
     margin-top: 10px;
     max-width: 89%;
-    height: 96px;
+    /*height: 96px;*/
     font-size: 16.58px;
     line-height: 1.2;
 }

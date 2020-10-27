@@ -515,13 +515,7 @@ section.ksiazki .ksiazki_left .title_ksiazki {
     float: left!important;
     width: 100%!important;
 }
-@media (min-width: 1100px) {
-.ksiazki{
-    .slick-prev {
-        left: -50px;
-    }
-}
-}
+
 }
 
 .autorzy__leksykon .biogram{
@@ -731,6 +725,7 @@ footer .newsletter div.wpcf7 {
 }
 .smallerPadding{
     padding-bottom:10px;
+    min-height: 130px;
 }
 
 .inputSearch{
@@ -889,6 +884,7 @@ margin-bottom:40px;
 font-family: 'Playfair Display', serif;
     line-height: 28px;
     font-size: 18px !important;
+    text-transform: initial;
           }
           a{
             color: #898989;
@@ -909,16 +905,30 @@ font-family: 'Playfair Display', serif;
             color: #898989!important;
             font-size: 14px !important;
             font-family: "Lato", "Arial", sans-serif;
-            margin-right:16px;
+            padding-right: 20px;
+            position: relative;
+            &:after{
+                position: absolute;
+                right:0;
+                content:'/';
+                text-align: center;
+                width:20px;
+                display: inline-block;
+                color: #898989!important;
+                font-size: 14px!important;
+                font-family: Lato,Arial,sans-serif;
+            }
+            
         }
         &__cat{
             color: #ffc807!important;
                 color: #ffc807;
             font-family: "Lato", "Arial", sans-serif;
             text-transform: uppercase;
-            margin-right:16px;
+            
             font-weight: 700;
             font-size: 14px !important;
+
         }
         &__autor{
             color: #898989!important;
@@ -926,6 +936,7 @@ font-family: 'Playfair Display', serif;
             font-family: "Lato", "Arial", sans-serif;
             text-transform: uppercase;
             margin-right:0;
+  
         }
         &__autorzy{
             
@@ -938,6 +949,20 @@ font-family: 'Playfair Display', serif;
                         content:'';
                     }
                 }
+            }
+            padding-left: 20px;
+            position: relative;
+            &:before{
+                top: 5px;
+                content:'/';
+                position: absolute;
+                left:0;
+                text-align: center;
+                width:20px;
+                display: inline-block;
+                color: #898989!important;
+                font-size: 14px!important;
+                font-family: Lato,Arial,sans-serif;
             }
         }
         &__title{
@@ -952,8 +977,12 @@ font-family: 'Playfair Display', serif;
                 font-family: 'Playfair Display', serif;
     line-height: 28px;
     font-size: 18px !important;
+    text-transform: initial;
     p{
         text-transform: initial;
+    }
+    em{
+        font-style: italic;
     }
 }
  
@@ -985,4 +1014,49 @@ font-family: 'Playfair Display', serif;
 
 #main section.szukaj2{
     float: initial;
+}
+
+.obrazki{
+    display:flex;
+    justify-content: space-between;
+    &__obrazek{
+        width:48%;
+        text-align: center;
+    }
+}
+
+section.ksiazki .ksiazki_left .title_ksiazki span.category {
+    text-align: center;
+}
+section.ksiazki .ksiazki_left .title_ksiazki span.imie {
+    color: #fff;
+    text-align: center;
+}
+section.ksiazki .ksiazki_left .title_ksiazki h4 {
+    text-align: center;
+}
+
+.bibliotekaTheme .ksiazki p {
+    text-align: center;
+}
+section.ksiazki .ksiazki_left {
+
+    text-align: center;
+}
+@media (min-width: 1100px){
+section.ksiazki .ksiazki_right {
+
+    padding-right: 40px;
+}
+}
+
+.ksiazki__wrapTitle{
+    @media (min-width: 1100px){
+        h2{
+            text-align: center;
+        }
+    margin-right: 1.6949152542%;
+    width: 40.6779661017%;
+    text-align: center;
+}
 }
