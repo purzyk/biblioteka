@@ -7,8 +7,22 @@
 <div class="indexTekstow" id="ourHolder">
 <?php /* Start the Loop */ ?>
 			<?php 
-			         global $wp_query;
-					 $args = array_merge( $wp_query->query_vars, ['posts_per_page' => 10000 ] );
+					 global $wp_query;
+					 $posts_order = 'DESC';
+if ( ! empty( $_GET['posts_order'] ) ) {
+  $posts_order_raw = sanitize_key( $_GET['posts_order'] );
+  if ( 'DESC' === $posts_order_raw ) {
+    $posts_order = 'DESC';
+  }
+}
+$order_by = 'date';
+if ( ! empty( $_GET['order_by'] ) ) {
+  $order_by_raw = sanitize_key( $_GET['order_by'] );
+  if ( 'title' === $order_by_raw ) {
+    $order_by = 'title';
+  }
+}
+					 $args = array_merge( $wp_query->query_vars, ['posts_per_page' => 100000 ],['orderby' => $_GET['order_by']], ['order' => $_GET['posts_order']] );
 					 query_posts( $args );					
 			while ( have_posts() ) : the_post(); ?>
 			
@@ -20,63 +34,64 @@
 <div>
  <?php 
  if ($post->post_type == "wywiady") {
-$term_list = wp_get_post_terms($post->ID, 'wywiady-kategorie', array("fields" => "all"));
 		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/wywiady/">wywiady</a>';
 
 }
 if ($post->post_type == "ksiazki") {
-	$term_list = wp_get_post_terms($post->ID, 'ksiazki-kategorie', array("fields" => "all"));
 			echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/ksiazki/">książki</a>';
 	
 	}
  if ($post->post_type == "recenzje") {
-$term_list = wp_get_post_terms($post->ID, 'recenzje-kategorie', array("fields" => "all"));
 		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/recenzje/">recenzje</a>';
 }
  if ($post->post_type == "debaty") {
-$term_list = wp_get_post_terms($post->ID, 'debaty-kategorie', array("fields" => "all"));
 		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/debaty/">debaty</a>';
 
 }
  if ($post->post_type == "felietony") {
-$term_list = wp_get_post_terms($post->ID, 'felietony-kategorie', array("fields" => "all"));
 		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/cykle/">cykle</a>';
 }
  if ($post->post_type == "dzwieki") {
-$term_list = wp_get_post_terms($post->ID, 'dzwieki-kategorie', array("fields" => "all"));
 		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/dzwieki/">dźwięki</a>';
 }
  if ($post->post_type == "nagrania") {
-$term_list = wp_get_post_terms($post->ID, 'nagrania-kategorie', array("fields" => "all"));
 		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/nagrania/">nagrania</a>';
 }
  if ($post->post_type == "zdjecia") {
-$term_list = wp_get_post_terms($post->ID, 'zdjecia-kategorie', array("fields" => "all"));
 		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/zdjecia/">zdjecia</a>';
 }
  if ($post->post_type == "utwory") {
-$term_list = wp_get_post_terms($post->ID, 'utwory-kategorie', array("fields" => "all"));
 		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/utwory/">utwory</a>';
 }
 if ($post->post_type == "kartoteka_25") {
-	$term_list = wp_get_post_terms($post->ID, 'kartoteka_25-kategorie', array("fields" => "all"));
 			echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/kartoteka_25/">kartoteka 25</a>';
 	}
+	if ($post->post_type == "biuletyn") {	
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biuletyn/">biuletyn</a>';
+}
+if ($post->post_type == "projekty") {	
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/projekty/">projekty</a>';
+}
 ?>
 </div>
-<div class="itemRow__autorzy">
+
 <?php 
 $terms = get_the_terms( $post->ID , 'autor' );
 if($terms) {
+	?>
+<div class="itemRow__autorzy">
+	<?php
 	foreach( $terms as $term ) { ?>
 	<?php $term_link = get_term_link( $term ); ?>
 		<a class="itemRow__autor" href="<?php echo $term_link; ?>"><span><?php echo the_field('imie', $term);?><span> <?php echo the_field('nazwisko', $term);?></span></span></a>
 		<?php 
 	}
-	
-} 
 ?>
 </div>
+<?php	
+} 
+?>
+
  </div>
  
  <span class="itemRow__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> 

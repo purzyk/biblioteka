@@ -38,7 +38,16 @@ Sortuj
 <option value="category-kartoteka_25">kartoteka 25</option>
 
 </select>
+<div class="newSort__arrows">
+<div class="newSort__item">
+Data  <a href="?posts_order=ASC&order_by=date">&#9650;</a> <a href="?posts_order=DESC&order_by=date">&#9660;</a>
 </div>
+<div class="newSort__item">
+A-Z <a href="?posts_order=ASC&order_by=title">&#9650;</a> <a href="?posts_order=DESC&order_by=title">&#9660;</a>
+</div>
+</div>
+</div>
+
 	</div>
 	<div class="filters" id="filterOptions">
 	<li class="filter"><a class="category-a" href="#">A</a></li>
@@ -93,11 +102,26 @@ $(document).ready(function(){
 		 <?php 
 $custom_taxterms = wp_get_object_terms( $post->ID, 'autor', array('fields' => 'ids') );
 // arguments
+$posts_order = 'DESC';
+if ( ! empty( $_GET['posts_order'] ) ) {
+  $posts_order_raw = sanitize_key( $_GET['posts_order'] );
+  if ( 'ASC' === $posts_order_raw ) {
+    $posts_order = 'ASC';
+  }
+}
+$order_by = 'date';
+if ( ! empty( $_GET['order_by'] ) ) {
+  $order_by_raw = sanitize_key( $_GET['order_by'] );
+  if ( 'date' === $order_by_raw ) {
+    $order_by = 'date';
+  }
+}
 $args = array(
 	'post_type' => array('wywiady','ksiazki','utwory','recenzje','debaty','felietony','dzwieki','nagrania','zdjecia','kartoteka_25'),
 'post_status' => 'publish',
 'posts_per_page' => -1, // you may edit this number
-'orderby' => 'date',
+'orderby' => $_GET['order_by'],
+'order' => $_GET['posts_order'],
 );
 $related_items = new WP_Query( $args );
 // loop over query
@@ -123,48 +147,44 @@ $naz=0;
 <div>
  <?php 
  if ($post->post_type == "wywiady") {
-$term_list = wp_get_post_terms($post->ID, 'wywiady-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/wywiady/">wywiady</a>';
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/wywiady/">wywiady</a>';
 
 }
 if ($post->post_type == "ksiazki") {
-	$term_list = wp_get_post_terms($post->ID, 'ksiazki-kategorie', array("fields" => "all"));
-			echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/ksiazki/">książki</a>';
-	
-	}
- if ($post->post_type == "recenzje") {
-$term_list = wp_get_post_terms($post->ID, 'recenzje-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/recenzje/">recenzje</a>';
-}
- if ($post->post_type == "debaty") {
-$term_list = wp_get_post_terms($post->ID, 'debaty-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/debaty/">debaty</a>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/ksiazki/">książki</a>';
 
 }
- if ($post->post_type == "felietony") {
-$term_list = wp_get_post_terms($post->ID, 'felietony-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/cykle/">cykle</a>';
+if ($post->post_type == "recenzje") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/recenzje/">recenzje</a>';
 }
- if ($post->post_type == "dzwieki") {
-$term_list = wp_get_post_terms($post->ID, 'dzwieki-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/dzwieki/">dźwięki</a>';
+if ($post->post_type == "debaty") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/debaty/">debaty</a>';
+
 }
- if ($post->post_type == "nagrania") {
-$term_list = wp_get_post_terms($post->ID, 'nagrania-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/nagrania/">nagrania</a>';
+if ($post->post_type == "felietony") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/cykle/">cykle</a>';
 }
- if ($post->post_type == "zdjecia") {
-$term_list = wp_get_post_terms($post->ID, 'zdjecia-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/zdjecia/">zdjecia</a>';
+if ($post->post_type == "dzwieki") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/dzwieki/">dźwięki</a>';
 }
- if ($post->post_type == "utwory") {
-$term_list = wp_get_post_terms($post->ID, 'utwory-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/utwory/">utwory</a>';
+if ($post->post_type == "nagrania") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/nagrania/">nagrania</a>';
+}
+if ($post->post_type == "zdjecia") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/zdjecia/">zdjecia</a>';
+}
+if ($post->post_type == "utwory") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/utwory/">utwory</a>';
 }
 if ($post->post_type == "kartoteka_25") {
-	$term_list = wp_get_post_terms($post->ID, 'kartoteka_25-kategorie', array("fields" => "all"));
-			echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/kartoteka_25/">kartoteka 25</a>';
-	}
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/kartoteka_25/">kartoteka 25</a>';
+}
+if ($post->post_type == "biuletyn") {	
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biuletyn/">biuletyn</a>';
+}
+if ($post->post_type == "projekty") {	
+echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/projekty/">projekty</a>';
+}
 ?>
 </div>
 <div class="itemRow__autorzy">
@@ -202,6 +222,7 @@ wp_reset_postdata();
 <script type="text/javascript">
 $(document).ready(function() {
 	$('.archive_sort select').on('change', function() {
+		event.preventDefault();
 		var ourClass = this.value;
 		$('.inputSearch input').val('');
 		$('#filterOptions li').removeClass('active');
@@ -218,6 +239,7 @@ $(document).ready(function() {
 		return false;
 });
 	$('#filterOptions li a').click(function() {
+		event.preventDefault();
 		$('.archive_sort select').val("");
 		// fetch the class of the clicked item
 		var ourClass = $(this).attr('class');

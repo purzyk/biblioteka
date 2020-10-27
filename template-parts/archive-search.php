@@ -38,6 +38,14 @@ Sortuj
 <option value="category-kartoteka_25">kartoteka 25</option>
 
 </select>
+<div class="newSort__arrows">
+<div class="newSort__item">
+Data  <a href="?s=<?php echo wp_specialchars($s, 1); ?>&posts_order=ASC&order_by=date">&#9650;</a> <a href="?s=<?php echo wp_specialchars($s, 1); ?>&posts_order=DESC&order_by=date">&#9660;</a>
+</div>
+<div class="newSort__item">
+A-Z <a href="?s=<?php echo wp_specialchars($s, 1); ?>&posts_order=ASC&order_by=title">&#9650;</a> <a href="?s=<?php echo wp_specialchars($s, 1); ?>&posts_order=DESC&order_by=title">&#9660;</a>
+</div>
+</div>
 </div>
 <?php /* 
 <div class="archive_sort">

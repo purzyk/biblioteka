@@ -12,7 +12,7 @@
 		</section>
 <?php if ( have_posts() ) : ?>
 
-	<div class="archive_breadcrumbs">
+	<div class="archive_breadcrumbs smallerPadding">
 	<div class="bread_outside">
 <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
     <?php if(function_exists('bcn_display'))

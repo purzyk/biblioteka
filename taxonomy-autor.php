@@ -21,8 +21,6 @@ get_header(); ?>
 		</section>
 
 		<section class="archive_right">
-
-
 			<section class="top_articles">
 				<?php get_template_part( 'template-parts/loop', 'archwiumtop' ); ?>
 				<script type="text/javascript">
@@ -116,9 +114,9 @@ $args = array(
 'post_type' => array('wywiady','ksiazki','utwory','recenzje','debaty','felietony','dzwieki','nagrania','zdjecia','kartoteka_25'),
 'post_status' => 'publish',
 'posts_per_page' => -1, // you may edit this number
-'orderby' => 'date',
-'order' => $_GET['posts_order'],
-/*'order' => 'DESC',*/
+'orderby' => 'title',
+/*'order' => $_GET['posts_order'],*/
+'order' => 'ASC',
 'tax_query' => array(
     array(
         'taxonomy' => 'autor',
@@ -139,48 +137,44 @@ while ( $related_items->have_posts() ) : $related_items->the_post();?>
 <div>
  <?php 
  if ($post->post_type == "wywiady") {
-$term_list = wp_get_post_terms($post->ID, 'wywiady-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/wywiady/">wywiady</a>';
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/wywiady/">wywiady</a>';
 
 }
 if ($post->post_type == "ksiazki") {
-	$term_list = wp_get_post_terms($post->ID, 'ksiazki-kategorie', array("fields" => "all"));
-			echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/ksiazki/">książki</a>';
-	
-	}
- if ($post->post_type == "recenzje") {
-$term_list = wp_get_post_terms($post->ID, 'recenzje-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/recenzje/">recenzje</a>';
-}
- if ($post->post_type == "debaty") {
-$term_list = wp_get_post_terms($post->ID, 'debaty-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/debaty/">debaty</a>';
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/ksiazki/">książki</a>';
 
 }
- if ($post->post_type == "felietony") {
-$term_list = wp_get_post_terms($post->ID, 'felietony-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/cykle/">cykle</a>';
+if ($post->post_type == "recenzje") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/recenzje/">recenzje</a>';
 }
- if ($post->post_type == "dzwieki") {
-$term_list = wp_get_post_terms($post->ID, 'dzwieki-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/dzwieki/">dźwięki</a>';
+if ($post->post_type == "debaty") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/debaty/">debaty</a>';
+
 }
- if ($post->post_type == "nagrania") {
-$term_list = wp_get_post_terms($post->ID, 'nagrania-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/nagrania/">nagrania</a>';
+if ($post->post_type == "felietony") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/cykle/">cykle</a>';
 }
- if ($post->post_type == "zdjecia") {
-$term_list = wp_get_post_terms($post->ID, 'zdjecia-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/zdjecia/">zdjecia</a>';
+if ($post->post_type == "dzwieki") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/dzwieki/">dźwięki</a>';
 }
- if ($post->post_type == "utwory") {
-$term_list = wp_get_post_terms($post->ID, 'utwory-kategorie', array("fields" => "all"));
-		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/utwory/">utwory</a>';
+if ($post->post_type == "nagrania") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/nagrania/">nagrania</a>';
+}
+if ($post->post_type == "zdjecia") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/zdjecia/">zdjecia</a>';
+}
+if ($post->post_type == "utwory") {
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/utwory/">utwory</a>';
 }
 if ($post->post_type == "kartoteka_25") {
-	$term_list = wp_get_post_terms($post->ID, 'kartoteka_25-kategorie', array("fields" => "all"));
-			echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/kartoteka_25/">kartoteka 25</a>';
-	}
+		echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biblioteka/kartoteka_25/">kartoteka 25</a>';
+}
+if ($post->post_type == "biuletyn") {	
+	echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/biuletyn/">biuletyn</a>';
+}
+if ($post->post_type == "projekty") {	
+echo '<a class="itemRow__cat" href="https://www.biuroliterackie.pl/projekty/">projekty</a>';
+}
 ?>
 </div>
 <div class="itemRow__autorzy">
@@ -239,7 +233,7 @@ wp_reset_postdata();
 <script type="text/javascript">
 	$(document).ready(function () {
 		$('#filterOptions span a').click(function () {
-			
+			event.preventDefault();
 			// fetch the class of the clicked item
 			var ourClass = $(this).attr('class');
 
