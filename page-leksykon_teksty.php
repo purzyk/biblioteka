@@ -23,7 +23,7 @@ get_header('loader'); ?>
 
 			<section class="archive_right disable">
 
-<?php get_template_part( 'template-parts/leksykon', 'indeks' ); ?>
+<?php get_template_part( 'template-parts/leksykon', 'indeksTest' ); ?>
 			</section>
 
 		

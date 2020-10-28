@@ -713,15 +713,16 @@ footer .newsletter div.wpcf7 {
 }
 
 .newSort {
-    float: right;
-    width: 440px;
+    text-transform: initial;
+    
     text-align: right;
     display: flex;
     align-items: center;
  position: relative;
- top:-27px;
+ 
  background-color: #f0f2f2;
- padding-left:10px;
+ width: 440px;
+ justify-content: flex-end;
 }
 .smallerPadding{
     padding-bottom:10px;
@@ -731,7 +732,7 @@ footer .newsletter div.wpcf7 {
 .inputSearch{
     position: relative;
     display:inline-block;
-    height:44px;
+    
     input{
         float: left;
         margin: 17px 0 36px 0;
@@ -775,6 +776,7 @@ margin-top:0;
     }
 
     .ksiazki_left{
+        padding-top:50px;
         p{
             color:#fff!important;
         }
@@ -1073,4 +1075,32 @@ section.ksiazki .ksiazki_right {
 
 #input_6_29, #input_6_24 {
     font-family: "Playfair Display", serif !important;
+}
+
+.inputSearch{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 17px;
+       
+    input{
+        height: 44px;
+        margin:0;
+        width:240px!important;
+    }
+    .newSort__arrows{
+        color: #898989;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-size: 0.875rem;
+        font-family: "Lato", "Arial", sans-serif;
+    }
+}
+.search #searchform_sidebar2 {
+    margin-bottom: 0;
+
+}
+.szukaj2{
+margin-top: 12px;
 }

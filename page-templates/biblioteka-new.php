@@ -63,12 +63,12 @@ if( $featured_posts ): ?>
         </div>
 
         <div class="row" style="margin-top:70px">
+        <div class="col-xs-12">
+        <h2><span><a href="<?php echo get_post_type_archive_link('ksiazki'); ?>">książki</a></span></h2>
+                    <h3>Fragmenty premierowych publikacji</h3>
+        </div>
             <div class="col-xs-12">
                 <section class="ksiazki">
-                    <div class="ksiazki__wrapTitle">
-                    <h2><span><a href="<?php echo get_post_type_archive_link('ksiazki'); ?>">książki</a></span></h2>
-                    <h3>Fragmenty premierowych publikacji</h3>
-                    </div>
                     <?php get_template_part( $template_dir_new, 'ksiazki' ); ?>
                 </section>
                 <script type="text/javascript">

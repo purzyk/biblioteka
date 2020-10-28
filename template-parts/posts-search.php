@@ -1,32 +1,54 @@
+
+<div class="inputSearch">
 <form method="get" id="searchform_sidebar2" action="<?php bloginfo('home'); ?>/">
-			<div><input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="InputSearch" />
-			</div>
-			</form>
+<input type="text" value="<?php echo wp_specialchars($s, 1); ?>" name="s" id="s" class="InputSearch" />
+</form>
+
+<div class="archive_sort newSort">
+Sortuj
+<select name="kategorie" required>
+<option value="" disabled selected>wybierz</option>
+<option value="all">Wszystkie</option>
+<option value="category-wywiady">wywiady</option>
+<option value="category-ksiazki">książki</option>
+<option value="category-utwory">utwory</option>
+<option value="category-recenzje">recenzje</option>
+<option value="category-debaty">debaty</option>
+<option value="category-felietony">cykle</option>
+<option value="category-dzwieki">dżwieki</option>
+<option value="category-nagrania">nagrania</option>
+<option value="category-zdjecia">zdjęcia</option>
+<option value="category-kartoteka_25">kartoteka 25</option>
+
+</select>
+
+
+<div class="newSort__arrows">
+<div class="newSort__item">
+Data  <span id="sort-by-date-asc" style = "cursor: pointer;">&#9650;</span> <span id="sort-by-date-desc" style = "cursor: pointer;">&#9660;</span>
+</div>
+<div class="newSort__item">
+A-Z <span id="sort-by-name-desc" style = "cursor: pointer;">&#9650;</span> <span id="sort-by-name-asc" style = "cursor: pointer;">&#9660;</span>
+</div>
+</div>
+</div>
+</div>
+
+
+			
+			
 <section class="szukaj2">
 <h5 class="search-title"><?php printf( esc_html__( 'Wyniki wyszukiwania dla: %s', 'biblioteka' ), '<span>' . get_search_query() . '</span>' ); ?></h5>	
-<div class="indexTekstow" id="ourHolder">
+<div class="main-wrapper indexTekstow" id="ourHolder">
 <?php /* Start the Loop */ ?>
 			<?php 
 					 global $wp_query;
-					 $posts_order = 'DESC';
-if ( ! empty( $_GET['posts_order'] ) ) {
-  $posts_order_raw = sanitize_key( $_GET['posts_order'] );
-  if ( 'DESC' === $posts_order_raw ) {
-    $posts_order = 'DESC';
-  }
-}
-$order_by = 'date';
-if ( ! empty( $_GET['order_by'] ) ) {
-  $order_by_raw = sanitize_key( $_GET['order_by'] );
-  if ( 'title' === $order_by_raw ) {
-    $order_by = 'title';
-  }
-}
-					 $args = array_merge( $wp_query->query_vars, ['posts_per_page' => 100000 ],['orderby' => $_GET['order_by']], ['order' => $_GET['posts_order']] );
+
+					 $args = array_merge( $wp_query->query_vars, ['posts_per_page' => 100000 ] );
 					 query_posts( $args );					
 			while ( have_posts() ) : the_post(); ?>
 			
-			<div data-name="Czasu jest mało" class="zasob item category-<?php echo $post->post_type; ?>">
+			<div class="box-wrapper zasob item  category-<?php echo $post->post_type; ?>" data-site="<?php the_title();?>" data-price="<?php the_time('Y');?>">
 <div class="itemRow">
 <div>
 <p class="itemRow__data"><?php the_time('d/m/Y');?></p>
@@ -147,4 +169,69 @@ $(document).ready(function() {
 		return false;
 	});
 });
+</script>
+
+<script>
+function sortByDateAsc(){
+	var boxes = $(".box-wrapper").detach();
+	
+	boxes.sort(function (a, b) {
+				return +$(a).attr("data-price") < +$(b).attr("data-price") ? 1 : -1;
+			});
+	boxes.appendTo('.main-wrapper');
+}
+function sortByDateDesc(){
+	var boxes = $(".box-wrapper").detach();
+	
+	boxes.sort(function (a, b) {
+				return +$(a).attr("data-price") < +$(b).attr("data-price") ? -1 : 1;
+			});
+	boxes.appendTo('.main-wrapper');
+}
+function sortbynamedesc(){
+$("#ourHolder .box-wrapper").sort(function (a, b) {
+    if ( ($(a).attr("data-site").toLowerCase() > $(b).attr("data-site").toLowerCase()) )  { 
+        return 1;
+    } else if ( ($(a).attr("data-site").toLowerCase() == $(b).attr("data-site").toLowerCase()) ){
+        return 0;
+    } else {
+        return -1;
+    }
+}).each(function () {
+    var elem = $(this);
+    elem.remove();
+    $(elem).appendTo("#ourHolder");
+});
+}
+function sortbynameasc(){
+$("#ourHolder .box-wrapper").sort(function (a, b) {
+    if ( ($(a).attr("data-site").toLowerCase() > $(b).attr("data-site").toLowerCase()) )  { 
+        return -1;
+    } else if ( ($(a).attr("data-site").toLowerCase() == $(b).attr("data-site").toLowerCase()) ){
+        return 0;
+    } else {
+        return 1;
+    }
+}).each(function () {
+    var elem = $(this);
+    elem.remove();
+    $(elem).appendTo("#ourHolder");
+});
+}
+$(document).ready(function() {
+	$('#sort-by-name-desc').click(function(){
+		sortbynamedesc();
+	});
+  	$('#sort-by-name-asc').click(function(){
+		sortbynameasc();
+	});
+  	$('#sort-by-date-asc').click(function(){
+		sortByDateDesc();
+	});
+	$('#sort-by-date-desc').click(function(){
+		sortByDateAsc();
+	});
+}); 
+
+
 </script>

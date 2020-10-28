@@ -20,32 +20,7 @@
         bcn_display();
     }?>
     </div>
-</div>
-<div class="archive_sort newSort">
-Sortuj
-<select name="kategorie" required>
-<option value="" disabled selected>wybierz</option>
-<option value="all">Wszystkie</option>
-<option value="category-wywiady">wywiady</option>
-<option value="category-ksiazki">książki</option>
-<option value="category-utwory">utwory</option>
-<option value="category-recenzje">recenzje</option>
-<option value="category-debaty">debaty</option>
-<option value="category-felietony">cykle</option>
-<option value="category-dzwieki">dżwieki</option>
-<option value="category-nagrania">nagrania</option>
-<option value="category-zdjecia">zdjęcia</option>
-<option value="category-kartoteka_25">kartoteka 25</option>
 
-</select>
-<div class="newSort__arrows">
-<div class="newSort__item">
-Data  <a href="?s=<?php echo wp_specialchars($s, 1); ?>&posts_order=ASC&order_by=date">&#9650;</a> <a href="?s=<?php echo wp_specialchars($s, 1); ?>&posts_order=DESC&order_by=date">&#9660;</a>
-</div>
-<div class="newSort__item">
-A-Z <a href="?s=<?php echo wp_specialchars($s, 1); ?>&posts_order=ASC&order_by=title">&#9650;</a> <a href="?s=<?php echo wp_specialchars($s, 1); ?>&posts_order=DESC&order_by=title">&#9660;</a>
-</div>
-</div>
 </div>
 <?php /* 
 <div class="archive_sort">
