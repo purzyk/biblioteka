@@ -43,9 +43,6 @@ get_header(); ?>
 <div class="obrazki__obrazek">
 	<a href="https://www.biuroliterackie.pl/leksykon/indeks-autorow/"><img src="<?php echo  get_template_directory_uri().'/img/Indeksy2.jpg'?>"></a>
 	</div>
-	<div class="obrazki__obrazek">
-	<a href="https://www.biuroliterackie.pl/leksykon/indeks-tekstow/"><img src="<?php echo  get_template_directory_uri().'/img/Indeksy1.jpg'?>"></a>
-	</div>
 
 
 

@@ -936,3 +936,46 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 }
+function my_endpoint( $request_data ) {
+
+	// setup query argument
+	$args = array(
+		'post_type' => 'kartoteka_25',
+	);
+
+	// get posts
+	$posts = get_posts($args);
+
+	// add custom field data to posts array	
+	foreach ($posts as $key => $post) {
+			$posts[$key]->acf = get_fields($post->ID);
+			$posts[$key]->link = get_permalink($post->ID);
+			$posts[$key]->image = get_the_post_thumbnail_url($post->ID);
+	}
+	return $posts;
+}
+
+add_action( 'rest_api_init', function() {
+    register_rest_route( 'my/v1', '/projects', [
+      'methods' => 'GET',
+      'callback' => 'get_projects',
+    ] );
+  } );
+  
+  // Get recent projects
+  function get_projects( $params ) {
+    $projects =  get_posts( [
+        'post_type' => array('wywiady','ksiazki','utwory','recenzje','debaty','felietony','dzwieki','nagrania','zdjecia','kartoteka_25'),
+      'posts_per_page' => -1
+    ] );
+    $post_data = array();
+    foreach( $projects as $posts ) {
+        $post_id = $posts->ID;
+        $post_title = $posts->post_title;
+        $post_excerpt = $posts->post_excerpt;
+        $post_data[ $post_id ][ 'title' ] = $post_title;
+        $post_data[ $post_id ][ 'excerpt' ] = $post_excerpt;
+    }
+  
+    return $post_data;
+  }
